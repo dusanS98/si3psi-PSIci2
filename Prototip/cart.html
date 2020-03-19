@@ -1,0 +1,100 @@
+<!--Autor: Dušan Stanivuković-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Prototip - Korpa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand logo mb-2" href="index.html">
+            <img src="images/logo.jfif" class="logo-img img-fluid rounded" alt="Logo" />
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Početna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Registruj se</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pregled
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="pets.html">Ljubimci</a>
+                        <a class="dropdown-item" href="rooms.html">Smeštaj</a>
+                        <a class="dropdown-item" href="shop.html">Prodavnica</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Unos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="petsIn.html">Ljubimaca</a>
+                        <a class="dropdown-item" href="roomsIn.html">Smeštaja</a>
+                        <a class="dropdown-item" href="itemsIn.html">Proizvoda</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Korpa</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-secondary text-center mt-4" role="alert">
+                    Ovde se prikazuju proizvodi koje ste dodali u korpu
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-secondary text-center mt-4" role="alert">
+                    Hrana za pse 10kg - 1000rsd
+                    <button class="btn btn-outline-primary ml-4">
+                        Ukloni iz korpe
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button class="btn btn-primary my-4">
+                    Potvrdi kupovinu
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footerMin py-3 mt-auto bg-light">
+        <div class="container text-center">
+            <span class="text-dark">Hotel za kućne ljubimce, Copyright 2020</span>
+        </div>
+    </footer>
+
+    <script src="bootstrap/js/jquery.slim.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

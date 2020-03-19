@@ -1,0 +1,42 @@
+/*Autor: Dušan Stanivuković*/
+
+.logo {
+  max-width: 100px;
+  max-height: 50px;
+}
+
+.logo-img {
+  max-width: 100px;
+  max-height: 50px;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.footerMin {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+}
