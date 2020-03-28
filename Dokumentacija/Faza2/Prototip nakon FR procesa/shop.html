@@ -1,0 +1,191 @@
+<!--Autor: Dušan Stanivuković-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Prototip - Pregled prodavnice</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand logo mb-2" href="user.html">
+            <img src="images/logo.jfif" class="logo-img img-fluid rounded" alt="Logo" />
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="user.html">Početna</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pregled
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="pets.html">Ljubimci</a>
+                        <a class="dropdown-item" href="rooms.html">Smeštaj</a>
+                        <a class="dropdown-item active" href="#">Prodavnica</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Korpa</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Odjavi se</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="alert alert-secondary pt-3 mt-4" name="myForm">
+                    <span class="text-primary font-weight-bold font-italic mr-4">Kategorije:</span>
+                    <div class="custom-control custom-checkbox custom-control-inline mb-2">
+                        <input checked type="checkbox" id="customCheck1" value="name" class="custom-control-input">
+                        <label class="custom-control-label" for="customCheck1">Psi</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline mb-2">
+                        <input checked type="checkbox" id="customCheck2" value="location" class="custom-control-input">
+                        <label class="custom-control-label" for="customCheck2">Mačke</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline mb-2">
+                        <input type="checkbox" id="customCheck3" value="rate" class="custom-control-input">
+                        <label class="custom-control-label" for="customCheck3">Ptice</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline mb-2">
+                        <input type="checkbox" id="customCheck4" value="rate" class="custom-control-input">
+                        <label class="custom-control-label" for="customCheck4">Ribice</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline mb-2">
+                        <input type="checkbox" id="customCheck5" value="rate" class="custom-control-input">
+                        <label class="custom-control-label" for="customCheck5">Male životinje</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline mb-2">
+                        <input class="form-control mr-sm-2 ml-5" type="search" placeholder="Pretraži"
+                            aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pretraži</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col mb-4">
+                <div class="card mt-4">
+                    <img src="images/item1.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Posude za hranu za pse - 500rsd</h5>
+                        <p class="card-text">
+                            <a href="orders.html">Ovde</a> možete naručiti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card mt-4">
+                    <img src="images/item2.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Okovratnik za pse - 700rsd</h5>
+                        <p class="card-text">
+                            <a href="orders.html">Ovde</a> možete naručiti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card mt-4">
+                    <img src="images/item3.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Hrana za pse 5kg - 500rsd</h5>
+                        <p class="card-text">
+                            <a href="orders.html">Ovde</a> možete naručiti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card mt-4">
+                    <img src="images/item4.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Hrana za pse u konzervi - 800rsd</h5>
+                        <p class="card-text">
+                            <a href="orders.html">Ovde</a> možete naručiti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card mt-4">
+                    <img src="images/item5.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Hrana za pse 10kg - 1000rsd</h5>
+                        <p class="card-text">
+                            <a href="orders.html">Ovde</a> možete naručiti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card mt-4">
+                    <img src="images/item6.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Hrana za mačke - 600rsd</h5>
+                        <p class="card-text">
+                            <a href="orders.html">Ovde</a> možete naručiti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card mt-4">
+                    <img src="images/item7.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Hrana za mačke u konzervi - 900rsd</h5>
+                        <p class="card-text">
+                            <a href="orders.html">Ovde</a> možete naručiti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card mt-4">
+                    <img src="images/item8.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Posuda za hranu za mačke - 1200rsd</h5>
+                        <p class="card-text">
+                            <a href="orders.html">Ovde</a> možete naručiti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5"></div>
+
+    <footer class="footer py-3 mt-auto bg-light">
+        <div class="container text-center">
+            <span class="text-dark">Hotel za kućne ljubimce, Copyright 2020</span>
+        </div>
+    </footer>
+
+    <script src="bootstrap/js/jquery.slim.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

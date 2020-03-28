@@ -1,0 +1,3 @@
+Inicijalno postoje korisnici: 
+1. username=admin, password=admin - sa administratorskim privilegijama
+2. username=moderator, password=$1234 - sa moderatorskim privilegijama

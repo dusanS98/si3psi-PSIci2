@@ -1,0 +1,110 @@
+<!--Autor: Dušan Stanivuković-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Prototip - Rezervisanje smeštaja</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand logo mb-2" href="user.html">
+            <img src="images/logo.jfif" class="logo-img img-fluid rounded" alt="Logo" />
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="user.html">Početna</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pregled
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="pets.html">Ljubimci</a>
+                        <a class="dropdown-item" href="rooms.html">Smeštaj</a>
+                        <a class="dropdown-item" href="shop.html">Prodavnica</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Korpa</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Odjavi se</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto my-5 bg-light rounded">
+                <form>
+                    <div class="form-row mt-4">
+                        <div class=" col-md-4 mb-3 ml-auto">
+                            <label for="validationDefaultDateFrom">Datum od:</label>
+                        </div>
+                        <div class="col-md-4 mb-3 mr-auto">
+                            <input type="date" class="form-control" id="validationDefaultDateFrom" required />
+                        </div>
+                    </div>
+                    <div class="form-row mt-4">
+                        <div class=" col-md-4 mb-3 ml-auto">
+                            <label for="validationDefaultDateTo">Datum do:</label>
+                        </div>
+                        <div class="col-md-4 mb-3 mr-auto">
+                            <input type="date" class="form-control" id="validationDefaultDateTo" required />
+                        </div>
+                    </div>
+                    <div class="form-row mt-4">
+                        <div class=" col-md-4 mb-3 ml-auto">
+                            <label for="validationDefaultPets">Broj ljubimaca:</label>
+                        </div>
+                        <div class="col-md-4 mb-3 mr-auto">
+                            <input type="number" class="form-control" id="validationDefaultPets" required />
+                        </div>
+                    </div>
+                    <div class="form-row mt-4">
+                        <div class=" col-md-4 mb-3 ml-auto">
+                            <label for="validationDefaultPhone">Mobilni telefon:</label>
+                        </div>
+                        <div class="col-md-4 mb-3 mr-auto">
+                            <input type="number" class="form-control" id="validationDefaultPhone" required />
+                        </div>
+                    </div>
+                    <div class="form-row col-md-4 mx-auto mt-3 mb-4">
+                        <button class="btn btn-primary" type="submit" onclick="reserveRoom()">
+                            Rezerviši
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footerMin py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-dark">Hotel za kućne ljubimce, Copyright 2020</span>
+        </div>
+    </footer>
+
+    <script src="bootstrap/js/jquery.slim.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
