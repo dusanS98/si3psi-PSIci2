@@ -1,3 +1,5 @@
 Inicijalno postoje korisnici: 
 1. username=admin, password=admin - sa administratorskim privilegijama
 2. username=moderator, password=$1234 - sa moderatorskim privilegijama
+
+Nakon uspešne registracije korisnik se može ulogovati na poèetnoj stranici, sa odabranim korisnièkim imenom i lozinkom.
