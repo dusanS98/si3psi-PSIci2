@@ -1,200 +1,249 @@
--- phpMyAdmin SQL Dump
--- version 4.9.2
--- https://www.phpmyadmin.net/
+CREATE DATABASE  IF NOT EXISTS `pethotel` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `pethotel`;
+-- MySQL dump 10.13  Distrib 8.0.18, for Win64 (x86_64)
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Apr 10, 2020 at 09:07 PM
--- Server version: 8.0.18
--- PHP Version: 7.3.12
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
+-- Host: localhost    Database: pethotel
+-- ------------------------------------------------------
+-- Server version	8.0.18
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `pethotel`
---
-CREATE DATABASE IF NOT EXISTS `pethotel` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `pethotel`;
-
--- --------------------------------------------------------
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
 -- Table structure for table `article`
 --
 
 DROP TABLE IF EXISTS `article`;
-CREATE TABLE IF NOT EXISTS `article` (
-  `name` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `article` (
+  `name` varchar(32) NOT NULL,
   `price` float NOT NULL,
   `amount` int(11) NOT NULL,
   `articleId` int(11) NOT NULL,
-  `image` varchar(64) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(64) NOT NULL,
   PRIMARY KEY (`articleId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `article`
+--
+
+LOCK TABLES `article` WRITE;
+/*!40000 ALTER TABLE `article` DISABLE KEYS */;
+/*!40000 ALTER TABLE `article` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `orderarticle`
 --
 
 DROP TABLE IF EXISTS `orderarticle`;
-CREATE TABLE IF NOT EXISTS `orderarticle` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orderarticle` (
   `articlePrice` float NOT NULL,
   `orderId` int(11) NOT NULL,
   `articleId` int(11) NOT NULL,
   `amount` int(11) NOT NULL,
   PRIMARY KEY (`orderId`,`articleId`),
-  KEY `R_24` (`articleId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  KEY `R_24` (`articleId`),
+  CONSTRAINT `R_22` FOREIGN KEY (`orderId`) REFERENCES `userorder` (`orderId`),
+  CONSTRAINT `R_24` FOREIGN KEY (`articleId`) REFERENCES `article` (`articleId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `orderarticle`
+--
+
+LOCK TABLES `orderarticle` WRITE;
+/*!40000 ALTER TABLE `orderarticle` DISABLE KEYS */;
+/*!40000 ALTER TABLE `orderarticle` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `pet`
 --
 
 DROP TABLE IF EXISTS `pet`;
-CREATE TABLE IF NOT EXISTS `pet` (
-  `name` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `breed` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `pet` (
+  `name` varchar(32) NOT NULL,
+  `breed` varchar(32) NOT NULL,
   `dateOfBirth` date NOT NULL,
   `petId` int(11) NOT NULL,
-  `image` varchar(64) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(64) NOT NULL,
   PRIMARY KEY (`petId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `pet`
+--
+
+LOCK TABLES `pet` WRITE;
+/*!40000 ALTER TABLE `pet` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pet` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `reservationpet`
 --
 
 DROP TABLE IF EXISTS `reservationpet`;
-CREATE TABLE IF NOT EXISTS `reservationpet` (
-  `username` varchar(16) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `reservationpet` (
+  `username` varchar(16) NOT NULL,
   `petId` int(11) NOT NULL,
   `dateTime` timestamp NOT NULL,
   PRIMARY KEY (`username`,`petId`),
-  KEY `R_12` (`petId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  KEY `R_12` (`petId`),
+  CONSTRAINT `R_11` FOREIGN KEY (`username`) REFERENCES `user` (`username`),
+  CONSTRAINT `R_12` FOREIGN KEY (`petId`) REFERENCES `pet` (`petId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `reservationpet`
+--
+
+LOCK TABLES `reservationpet` WRITE;
+/*!40000 ALTER TABLE `reservationpet` DISABLE KEYS */;
+/*!40000 ALTER TABLE `reservationpet` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `reservationroom`
 --
 
 DROP TABLE IF EXISTS `reservationroom`;
-CREATE TABLE IF NOT EXISTS `reservationroom` (
-  `username` varchar(16) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `reservationroom` (
+  `username` varchar(16) NOT NULL,
   `dateFrom` date NOT NULL,
   `dateTo` date NOT NULL,
   `roomId` int(11) NOT NULL,
   PRIMARY KEY (`username`,`roomId`),
-  KEY `R_10` (`roomId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  KEY `R_10` (`roomId`),
+  CONSTRAINT `R_10` FOREIGN KEY (`roomId`) REFERENCES `room` (`roomId`),
+  CONSTRAINT `R_8` FOREIGN KEY (`username`) REFERENCES `user` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `reservationroom`
+--
+
+LOCK TABLES `reservationroom` WRITE;
+/*!40000 ALTER TABLE `reservationroom` DISABLE KEYS */;
+/*!40000 ALTER TABLE `reservationroom` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `room`
 --
 
 DROP TABLE IF EXISTS `room`;
-CREATE TABLE IF NOT EXISTS `room` (
-  `type` varchar(16) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `room` (
+  `type` varchar(16) NOT NULL,
   `roomId` int(11) NOT NULL,
-  `image` varchar(64) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(64) NOT NULL,
   PRIMARY KEY (`roomId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `room`
+--
+
+LOCK TABLES `room` WRITE;
+/*!40000 ALTER TABLE `room` DISABLE KEYS */;
+/*!40000 ALTER TABLE `room` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `user`
 --
 
 DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `username` varchar(16) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(16) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `firstName` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `lastName` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `phone` varchar(64) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `type` varchar(16) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user` (
+  `username` varchar(16) NOT NULL,
+  `password` varchar(16) NOT NULL,
+  `firstName` varchar(32) NOT NULL,
+  `lastName` varchar(32) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(64) NOT NULL,
+  `type` varchar(16) NOT NULL,
   PRIMARY KEY (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`username`, `password`, `firstName`, `lastName`, `email`, `phone`, `type`) VALUES
-('admin', 'Admin$1234', 'Admin', 'Admin', 'admin@mail.com', '012', 'admin');
-
--- --------------------------------------------------------
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES ('admin','Admin$1234','Admin','Admin','admin@mail.com','01234567','admin');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `userorder`
 --
 
 DROP TABLE IF EXISTS `userorder`;
-CREATE TABLE IF NOT EXISTS `userorder` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `userorder` (
   `orderId` int(11) NOT NULL,
-  `username` varchar(16) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(16) NOT NULL,
   `dateTime` timestamp NOT NULL,
-  `status` varchar(16) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `recipientAddress` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `recipientCity` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `recipientState` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `recipientPostalCode` varchar(16) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `status` varchar(16) NOT NULL,
+  `recipientAddress` varchar(32) DEFAULT NULL,
+  `recipientCity` varchar(32) DEFAULT NULL,
+  `recipientState` varchar(32) DEFAULT NULL,
+  `recipientPostalCode` varchar(16) DEFAULT NULL,
   `orderPrice` float DEFAULT NULL,
   PRIMARY KEY (`orderId`),
-  KEY `R_21` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  KEY `R_21` (`username`),
+  CONSTRAINT `R_21` FOREIGN KEY (`username`) REFERENCES `user` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Constraints for dumped tables
+-- Dumping data for table `userorder`
 --
 
---
--- Constraints for table `orderarticle`
---
-ALTER TABLE `orderarticle`
-  ADD CONSTRAINT `R_22` FOREIGN KEY (`orderId`) REFERENCES `userorder` (`orderId`),
-  ADD CONSTRAINT `R_24` FOREIGN KEY (`articleId`) REFERENCES `article` (`articleId`);
+LOCK TABLES `userorder` WRITE;
+/*!40000 ALTER TABLE `userorder` DISABLE KEYS */;
+/*!40000 ALTER TABLE `userorder` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
---
--- Constraints for table `reservationpet`
---
-ALTER TABLE `reservationpet`
-  ADD CONSTRAINT `R_11` FOREIGN KEY (`username`) REFERENCES `user` (`username`),
-  ADD CONSTRAINT `R_12` FOREIGN KEY (`petId`) REFERENCES `pet` (`petId`);
-
---
--- Constraints for table `reservationroom`
---
-ALTER TABLE `reservationroom`
-  ADD CONSTRAINT `R_10` FOREIGN KEY (`roomId`) REFERENCES `room` (`roomId`),
-  ADD CONSTRAINT `R_8` FOREIGN KEY (`username`) REFERENCES `user` (`username`);
-
---
--- Constraints for table `userorder`
---
-ALTER TABLE `userorder`
-  ADD CONSTRAINT `R_21` FOREIGN KEY (`username`) REFERENCES `user` (`username`);
-COMMIT;
-
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-04-11  1:14:13
