@@ -28,9 +28,10 @@ CREATE TABLE `article` (
   `name` varchar(32) NOT NULL,
   `price` float NOT NULL,
   `amount` int(11) NOT NULL,
-  `articleId` int(11) NOT NULL,
+  `articleId` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(64) NOT NULL,
-  PRIMARY KEY (`articleId`)
+  PRIMARY KEY (`articleId`),
+  UNIQUE KEY `articleId_UNIQUE` (`articleId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -57,8 +58,8 @@ CREATE TABLE `orderarticle` (
   `amount` int(11) NOT NULL,
   PRIMARY KEY (`orderId`,`articleId`),
   KEY `R_24` (`articleId`),
-  CONSTRAINT `R_22` FOREIGN KEY (`orderId`) REFERENCES `userorder` (`orderId`),
-  CONSTRAINT `R_24` FOREIGN KEY (`articleId`) REFERENCES `article` (`articleId`)
+  CONSTRAINT `R_22` FOREIGN KEY (`orderId`) REFERENCES `userorder` (`orderId`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `R_24` FOREIGN KEY (`articleId`) REFERENCES `article` (`articleId`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -82,9 +83,10 @@ CREATE TABLE `pet` (
   `name` varchar(32) NOT NULL,
   `breed` varchar(32) NOT NULL,
   `dateOfBirth` date NOT NULL,
-  `petId` int(11) NOT NULL,
+  `petId` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(64) NOT NULL,
-  PRIMARY KEY (`petId`)
+  PRIMARY KEY (`petId`),
+  UNIQUE KEY `petId_UNIQUE` (`petId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -110,8 +112,8 @@ CREATE TABLE `reservationpet` (
   `dateTime` timestamp NOT NULL,
   PRIMARY KEY (`username`,`petId`),
   KEY `R_12` (`petId`),
-  CONSTRAINT `R_11` FOREIGN KEY (`username`) REFERENCES `user` (`username`),
-  CONSTRAINT `R_12` FOREIGN KEY (`petId`) REFERENCES `pet` (`petId`)
+  CONSTRAINT `R_11` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `R_12` FOREIGN KEY (`petId`) REFERENCES `pet` (`petId`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -138,8 +140,8 @@ CREATE TABLE `reservationroom` (
   `roomId` int(11) NOT NULL,
   PRIMARY KEY (`username`,`roomId`),
   KEY `R_10` (`roomId`),
-  CONSTRAINT `R_10` FOREIGN KEY (`roomId`) REFERENCES `room` (`roomId`),
-  CONSTRAINT `R_8` FOREIGN KEY (`username`) REFERENCES `user` (`username`)
+  CONSTRAINT `R_10` FOREIGN KEY (`roomId`) REFERENCES `room` (`roomId`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `R_8` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -161,9 +163,10 @@ DROP TABLE IF EXISTS `room`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `room` (
   `type` varchar(16) NOT NULL,
-  `roomId` int(11) NOT NULL,
+  `roomId` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(64) NOT NULL,
-  PRIMARY KEY (`roomId`)
+  PRIMARY KEY (`roomId`),
+  UNIQUE KEY `roomId_UNIQUE` (`roomId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -191,7 +194,8 @@ CREATE TABLE `user` (
   `email` varchar(255) NOT NULL,
   `phone` varchar(64) NOT NULL,
   `type` varchar(16) NOT NULL,
-  PRIMARY KEY (`username`)
+  PRIMARY KEY (`username`),
+  UNIQUE KEY `username_UNIQUE` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -213,7 +217,7 @@ DROP TABLE IF EXISTS `userorder`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `userorder` (
-  `orderId` int(11) NOT NULL,
+  `orderId` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(16) NOT NULL,
   `dateTime` timestamp NOT NULL,
   `status` varchar(16) NOT NULL,
@@ -223,8 +227,9 @@ CREATE TABLE `userorder` (
   `recipientPostalCode` varchar(16) DEFAULT NULL,
   `orderPrice` float DEFAULT NULL,
   PRIMARY KEY (`orderId`),
+  UNIQUE KEY `orderId_UNIQUE` (`orderId`),
   KEY `R_21` (`username`),
-  CONSTRAINT `R_21` FOREIGN KEY (`username`) REFERENCES `user` (`username`)
+  CONSTRAINT `R_21` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -246,4 +251,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-11  1:14:13
+-- Dump completed on 2020-04-11 10:47:50
