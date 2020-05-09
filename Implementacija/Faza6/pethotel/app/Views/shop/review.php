@@ -57,28 +57,25 @@
                 <?php
 
                 $baseUrl = base_url();
+                $id = "form";
 
                 foreach ($articles as $article) {
                     $value = "                <div class='col-md-3'>\n";
-                    $value .= "                    <div class='card mb-4'>\n";
-                    $value .= "                         <img src=" . "$baseUrl/images/shop/" . $article["image"] . " class='card-img-top'>\n";
-                    $value .= "                         <div class='card-body'>\n";
-                    $value .= "                            <h5 class='card-title'>" . $article["name"] . "</h5>\n";
-                    $value .= "                            <p class='card-text'>\n";
-                    $value .= "                                Cena: <span class='font-weight-bold'>" . $article["price"] . " RSD</span><br>\n";
+                    $value .= "                    <form method='post' action='$baseUrl/Shop/article'>\n";
+                    $value .= "                        <div class='card text-center mb-4'>\n";
+                    $value .= "                            <img src=" . "$baseUrl/images/shop/" . $article["image"] . " class='card-img-top'>\n";
+                    $value .= "                            <div class='card-body'>\n";
+                    $value .= "                                 <input name='article' type='hidden' value='" . $article["articleId"] . "'>\n";
+                    $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='" . $article["name"] . "'>\n";
+                    $value .= "                                 <p class='card-text'>\n";
+                    $value .= "                                    Cena: <span class='font-weight-bold'>" . $article["price"] . " RSD</span><br>\n";
 
-                    $description = $article["description"];
-                    if ($description != null) {
-                        $description = explode("#", $description);
-                        if (sizeof($description) >= 2)
-                            $value .= "                                Opis: " . $description[1] . "<br>\n";
-                    }
-
-                    $value .= "                                <a href='#'>Ovde</a> možete naručiti.\n";
-                    $value .= "                            </p>\n";
-                    $value .= "                         </div>\n";
-                    $value .= "                    </div>\n";
-                    $value .= "                </div>\n";
+                    $value .= "                                    <input type='submit' class='btn btn-primary mt-2' value='Naruči'>\n";
+                    $value .= "                                </p>\n";
+                    $value .= "                            </div>\n";
+                    $value .= "                        </div>\n";
+                    $value .= "                    </form>\n";
+                    $value .= "               </div>\n";
                     echo $value;
                 }
 

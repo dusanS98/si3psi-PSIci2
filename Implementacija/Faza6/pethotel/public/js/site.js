@@ -36,3 +36,19 @@ $(document).ready(function () {
     });
 });
 
+function minus() {
+    var amount = parseInt($("#modalAmount").val());
+    if (amount > 1)
+        $("#modalAmount, #hiddenAmount").val(--amount);
+}
+
+function plus() {
+    var amount = parseInt($("#modalAmount").val());
+    $("#modalAmount, #hiddenAmount").val(++amount);
+}
+
+function updateAmount() {
+    var amount = parseInt($("#modalAmount").val());
+    if (amount >= 1)
+        $("#hiddenAmount").val(amount);
+}
