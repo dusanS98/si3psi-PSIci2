@@ -135,7 +135,7 @@ class Shop extends BaseController
         $prevDisabled = "";
         if ($page == 1) $prevDisabled = "disabled";
         echo "<li class='page-item $prevDisabled'>"
-            . "<a class='page-link' href='" . site_url('Shop/showCategories/' . $prevPage)
+            . "<a id='prev-page' class='page-link' href='" . site_url('Shop/showCategories/' . $prevPage)
             . "' tabindex='-1' aria-disabled='true'>Prethodna</a>"
             . "</li>";
 

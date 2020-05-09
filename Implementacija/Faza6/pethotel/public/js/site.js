@@ -24,6 +24,9 @@ $(document).ready(function () {
                     var res = response.split("#delimiter#");
 
                     if (res.length == 2) {
+                        if (res[0] == "" && page > 1) {
+                            window.location.href = baseUrl + "/Shop/showCategories/" + (page - 1);
+                        }
                         $("#articles").html(res[0]);
                         $("#pagination").html(res[1]);
                     }
