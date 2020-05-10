@@ -24,6 +24,9 @@ $(document).ready(function () {
                     var res = response.split("#delimiter#");
 
                     if (res.length == 2) {
+                        if (res[0] == "" && page > 1) {
+                            window.location.href = baseUrl + "/Shop/showCategories/" + (page - 1);
+                        }
                         $("#articles").html(res[0]);
                         $("#pagination").html(res[1]);
                     }
@@ -33,3 +36,19 @@ $(document).ready(function () {
     });
 });
 
+function minus() {
+    var amount = parseInt($("#modalAmount").val());
+    if (amount > 1)
+        $("#modalAmount, #hiddenAmount").val(--amount);
+}
+
+function plus() {
+    var amount = parseInt($("#modalAmount").val());
+    $("#modalAmount, #hiddenAmount").val(++amount);
+}
+
+function updateAmount() {
+    var amount = parseInt($("#modalAmount").val());
+    if (amount >= 1)
+        $("#hiddenAmount").val(amount);
+}

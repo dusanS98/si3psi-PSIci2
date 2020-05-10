@@ -105,25 +105,21 @@ class Shop extends BaseController
 
         foreach ($articles as $article) {
             $value = "                <div class='col-md-3'>\n";
-            $value .= "                    <div class='card mb-4'>\n";
-            $value .= "                         <img src=" . "$baseUrl/images/shop/" . $article["image"] . " class='card-img-top'>\n";
-            $value .= "                         <div class='card-body'>\n";
-            $value .= "                            <h5 class='card-title'>" . $article["name"] . "</h5>\n";
-            $value .= "                            <p class='card-text'>\n";
-            $value .= "                                Cena: <span class='font-weight-bold'>" . $article["price"] . " RSD</span><br>\n";
+            $value .= "                    <form method='post' action='$baseUrl/Shop/article'>\n";
+            $value .= "                        <div class='card text-center mb-4'>\n";
+            $value .= "                            <img src=" . "$baseUrl/images/shop/" . $article["image"] . " class='card-img-top'>\n";
+            $value .= "                            <div class='card-body'>\n";
+            $value .= "                                 <input name='article' type='hidden' value='" . $article["articleId"] . "'>\n";
+            $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='" . $article["name"] . "'>\n";
+            $value .= "                                 <p class='card-text'>\n";
+            $value .= "                                    Cena: <span class='font-weight-bold'>" . $article["price"] . " RSD</span><br>\n";
 
-            $description = $article["description"];
-            if ($description != null) {
-                $description = explode("#", $description);
-                if (sizeof($description) >= 2)
-                    $value .= "                                Opis: " . $description[1] . "<br>\n";
-            }
-
-            $value .= "                                <a href='#'>Ovde</a> možete naručiti.\n";
-            $value .= "                            </p>\n";
-            $value .= "                         </div>\n";
-            $value .= "                    </div>\n";
-            $value .= "                </div>\n";
+            $value .= "                                    <input name='order-btn' type='submit' class='btn btn-primary mt-2' value='Naruči'>\n";
+            $value .= "                                </p>\n";
+            $value .= "                            </div>\n";
+            $value .= "                        </div>\n";
+            $value .= "                    </form>\n";
+            $value .= "               </div>\n";
             echo $value;
         }
 
@@ -135,7 +131,7 @@ class Shop extends BaseController
         $prevDisabled = "";
         if ($page == 1) $prevDisabled = "disabled";
         echo "<li class='page-item $prevDisabled'>"
-            . "<a class='page-link' href='" . site_url('Shop/showCategories/' . $prevPage)
+            . "<a id='prev-page' class='page-link' href='" . site_url('Shop/showCategories/' . $prevPage)
             . "' tabindex='-1' aria-disabled='true'>Prethodna</a>"
             . "</li>";
 
@@ -177,5 +173,39 @@ class Shop extends BaseController
             . "'>Sledeća</a>"
             . "</li>";
     }
+
+    public function article()
+    {
+        $articleId = $this->request->getVar("article");
+        $shopModel = new ShopModel();
+        $article = $shopModel->find($articleId);
+        $data["title"] = "Proizvod " . $article["name"];
+        $data["name"] = "shop";
+        echo view("templates/header", ["data" => $data]);
+        echo view("shop/article", ["article" => $article]);
+        echo view("templates/footer");
+    }
+
+    public function order()
+    {
+        echo $this->request->getVar("amount");
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

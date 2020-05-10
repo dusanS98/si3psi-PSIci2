@@ -41,3 +41,16 @@ body {
     line-height: 50px;
     margin-top: 20px;
 }
+
+.button-link {
+    text-decoration: none;
+    color: #1b1b1b;
+    font-size: 1.2rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.button-link:hover{
+    text-decoration: none;
+    color: initial;
+}
