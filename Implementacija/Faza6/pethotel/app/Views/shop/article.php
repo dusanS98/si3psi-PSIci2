@@ -1,3 +1,5 @@
+<!--Autor: Dušan Stanivuković 2017/0605-->
+
 <?php
 $image = base_url() . "/images/shop/" . $article["image"];
 $articleName = $article["name"];
@@ -7,6 +9,11 @@ $category = substr($article["description"], 0, $pos);
 $description = substr($article["description"], $pos + 1);
 ?>
 <div class="container">
+    <?php
+    if (isset($errors)) {
+        echo "<div class='alert alert-info text-center mx-auto mt-4'>$errors</div>";
+    }
+    ?>
     <div class="card mx-auto my-4" style="max-width: 540px;">
         <div class="row no-gutters">
             <div class="col-md-4">
@@ -61,6 +68,7 @@ $description = substr($article["description"], $pos + 1);
             <div class="modal-footer">
                 <form method="post" action="<?php echo site_url('Shop/order'); ?>">
                     <input type="hidden" name="amount" id="hiddenAmount" value="1">
+                    <input type="hidden" name="articleId" value="<?php echo $article['articleId']; ?>">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
                     <button type="submit" class="btn btn-primary">Potvrdi</button>
                 </form>

@@ -1,3 +1,5 @@
+/*Autor: Dušan Stanivuković 2017/0605*/
+
 .logo {
     max-width: 100px;
     max-height: 50px;
@@ -50,7 +52,7 @@ body {
     font-weight: bold;
 }
 
-.button-link:hover{
+.button-link:hover {
     text-decoration: none;
     color: initial;
 }

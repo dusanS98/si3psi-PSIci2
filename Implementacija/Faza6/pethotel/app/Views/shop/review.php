@@ -1,4 +1,4 @@
-<!--Dušan Stanivuković 2017/0605-->
+<!--Autor: Dušan Stanivuković 2017/0605-->
 
 
 <div class='container-fluid'>
@@ -46,7 +46,7 @@
         </div>
         <div class='col-md-10'>
             <div class="input-group mb-4">
-                <input type="text" class="form-control" placeholder="Naziv proizvoda"
+                <input type="text" id="searchName" class="form-control" placeholder="Naziv proizvoda"
                        aria-label="Naziv proizvoda" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-primary" id="search-button" type="button">Pretraži</button>
@@ -58,6 +58,10 @@
 
                 $baseUrl = base_url();
                 $id = "form";
+
+                if (empty($articles)) {
+                    echo "<div class='alert alert-info text-center mx-auto my-4'>Nema proizvoda</div>";
+                }
 
                 foreach ($articles as $article) {
                     $value = "                <div class='col-md-3'>\n";
@@ -94,7 +98,8 @@
                     $prevPage = $pagination["page"] - 1;
                     $nextPage = $pagination["page"] + 1;
                     $controllerMethod = 'showArticles';
-                    if (isset($categories)) $controllerMethod = 'showCategories';
+                    if (isset($categories)) $controllerMethod = 'showArticlesByCategory';
+                    else if (isset($names)) $controllerMethod = 'showArticlesByName';
                     ?>
                     <li class="page-item <?php if ($pagination['page'] == 1) echo 'disabled' ?>">
                         <a id="prev-page" class="page-link"

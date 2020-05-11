@@ -1,3 +1,5 @@
+<!--Autor: Dušan Stanivuković 2017/0605-->
+
 <footer class="border-top footer text-muted">
     <div class="container text-center">
         &copy; Hotel za kućne ljubimce, Copyright 2020

@@ -1,4 +1,4 @@
-<!--Dušan Stanivuković 2017/0605-->
+<!--Autor: Dušan Stanivuković 2017/0605-->
 
 <!doctype html>
 <html lang="en">

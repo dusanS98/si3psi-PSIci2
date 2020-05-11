@@ -1,3 +1,5 @@
+//Autor: Dušan Stanivuković 2017/0605
+
 $(document).ready(function () {
     $(".custom-control-input").click(function () {
         var baseUrl = $("#base").val();
@@ -25,10 +27,44 @@ $(document).ready(function () {
 
                     if (res.length == 2) {
                         if (res[0] == "" && page > 1) {
-                            window.location.href = baseUrl + "/Shop/showCategories/" + (page - 1);
+                            window.location.href = baseUrl + "/Shop/showArticlesByCategory/" + (page - 1);
                         }
                         $("#articles").html(res[0]);
                         $("#pagination").html(res[1]);
+                    }
+                }
+            }
+        );
+    });
+
+    $("#search-button").click(function () {
+        var baseUrl = $("#base").val();
+        var name = $("#searchName").val();
+
+        $.ajax(
+            {
+                type: "post",
+                url: baseUrl + "/Shop/searchNames/",
+                data: {
+                    name: name
+                },
+                success: function (response) {
+                    var res = response.split("#delimiter#");
+
+                    if (res.length == 2) {
+                        $("#articles").html(res[0]);
+                        $("#pagination").html(res[1]);
+
+                        if (!$("#customCheckDogs").prop("checked"))
+                            $("#customCheckDogs").click();
+                        if (!$("#customCheckCats").prop("checked"))
+                            $("#customCheckCats").click();
+                        if (!$("#customCheckBirds").prop("checked"))
+                            $("#customCheckBirds").click();
+                        if (!$("#customCheckFishes").prop("checked"))
+                            $("#customCheckFishes").click();
+                        if (!$("#customCheckLittleAnimals").prop("checked"))
+                            $("#customCheckLittleAnimals").click();
                     }
                 }
             }
