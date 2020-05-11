@@ -26,7 +26,8 @@ $(document).ready(function () {
                     var res = response.split("#delimiter#");
 
                     if (res.length == 2) {
-                        if (res[0] == "" && page > 1) {
+                        if (res[0] == "<div class='alert alert-info text-center mx-auto my-4'>Nema proizvoda</div>"
+                            && page > 1) {
                             window.location.href = baseUrl + "/Shop/showArticlesByCategory/" + (page - 1);
                         }
                         $("#articles").html(res[0]);

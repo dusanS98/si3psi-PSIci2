@@ -133,6 +133,20 @@ class Shop extends BaseController
                 $articles = array_merge($articles, $shopModel->like("description", "littleAnimals#")->findAll());
         }
 
+        for ($i = 0; $i < sizeof($articles); $i++) {
+            $pos = strpos($articles[$i]["description"], "#");
+            $category = substr($articles[$i]["description"], 0, $pos);
+
+            if (($dogs != "true" && $category == "psi")
+                || ($cats != "true" && $category == "macke")
+                || ($birds != "true" && $category == "ptice")
+                || ($fishes != "true" && $category == "ribe")
+                || ($littleAnimals != "true" && $category == "maleZivotinje")) {
+                unset($articles[$i]);
+                $articles = array_values($articles);
+            }
+        }
+
         return $articles;
     }
 
