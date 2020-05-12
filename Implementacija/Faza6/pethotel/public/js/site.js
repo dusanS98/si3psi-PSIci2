@@ -26,7 +26,9 @@ $(document).ready(function () {
                     var res = response.split("#delimiter#");
 
                     if (res.length == 2) {
-                        if (res[0] == "<div class='alert alert-info text-center mx-auto my-4'>Nema proizvoda</div>"
+                        if (res[0] == "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>"
+                            + "<strong>Nema proizvoda</strong><button type='button' class='close' data-dismiss='alert' aria-label='Close'>"
+                            + "<span aria-hidden='true'>&times;</span></button></div>"
                             && page > 1) {
                             window.location.href = baseUrl + "/Shop/showArticlesByCategory/" + (page - 1);
                         }

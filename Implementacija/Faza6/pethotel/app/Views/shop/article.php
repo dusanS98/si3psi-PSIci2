@@ -10,8 +10,13 @@ $description = substr($article["description"], $pos + 1);
 ?>
 <div class="container">
     <?php
-    if (isset($errors)) {
-        echo "<div class='alert alert-info text-center mx-auto mt-4'>$errors</div>";
+    if (isset($messages)) {
+        echo "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>";
+        echo "<strong>$messages</strong>";
+        echo "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";
+        echo "<span aria-hidden='true'>&times;</span>";
+        echo "</button>";
+        echo "</div>";
     }
     ?>
     <div class="card mx-auto my-4" style="max-width: 540px;">

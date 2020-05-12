@@ -4,10 +4,11 @@
 namespace App\Controllers;
 
 use App\Models\ShopModel;
-use CodeIgniter\HTTP\Response;
 
 /**
  * Shop - klasa za prikaz, unos i naručivanje proizvoda iz prodavnice
+ *
+ * @package App\Controllers
  *
  * @version 1.0
  */
@@ -109,15 +110,15 @@ class Shop extends BaseController
                     ->like("name", $articleName)
                     ->findAll());
             if ($birds == "true")
-                $articles = array_merge($articles, $shopModel->like("description", "birds#")
+                $articles = array_merge($articles, $shopModel->like("description", "ptice#")
                     ->like("name", $articleName)
                     ->findAll());
             if ($fishes == "true")
-                $articles = array_merge($articles, $shopModel->like("description", "fishes#")
+                $articles = array_merge($articles, $shopModel->like("description", "ribe#")
                     ->like("name", $articleName)
                     ->findAll());
             if ($littleAnimals == "true")
-                $articles = array_merge($articles, $shopModel->like("description", "littleAnimals#")
+                $articles = array_merge($articles, $shopModel->like("description", "maleZivotinje#")
                     ->like("name", $articleName)
                     ->findAll());
         } else {
@@ -126,11 +127,11 @@ class Shop extends BaseController
             if ($cats == "true")
                 $articles = array_merge($articles, $shopModel->like("description", "macke#")->findAll());
             if ($birds == "true")
-                $articles = array_merge($articles, $shopModel->like("description", "birds#")->findAll());
+                $articles = array_merge($articles, $shopModel->like("description", "ptice#")->findAll());
             if ($fishes == "true")
-                $articles = array_merge($articles, $shopModel->like("description", "fishes#")->findAll());
+                $articles = array_merge($articles, $shopModel->like("description", "ribe#")->findAll());
             if ($littleAnimals == "true")
-                $articles = array_merge($articles, $shopModel->like("description", "littleAnimals#")->findAll());
+                $articles = array_merge($articles, $shopModel->like("description", "maleZivotinje#")->findAll());
         }
 
         for ($i = 0; $i < sizeof($articles); $i++) {
@@ -178,14 +179,19 @@ class Shop extends BaseController
         $articles = array_slice($articles, $offset, $this->itemsPerPage);
 
         if (empty($articles)) {
-            echo "<div class='alert alert-info text-center mx-auto my-4'>Nema proizvoda</div>";
+            echo "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>";
+            echo "<strong>Nema proizvoda</strong>";
+            echo "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";
+            echo "<span aria-hidden='true'>&times;</span>";
+            echo "</button>";
+            echo "</div>";
         }
 
         foreach ($articles as $article) {
             $value = "                <div class='col-md-3'>\n";
             $value .= "                    <form method='post' action='$baseUrl/Shop/article'>\n";
             $value .= "                        <div class='card text-center mb-4'>\n";
-            $value .= "                            <img src=" . "$baseUrl/images/shop/" . $article["image"] . " class='card-img-top'>\n";
+            $value .= "                            <input type='image' src=" . "$baseUrl/images/shop/" . $article["image"] . " class='card-img-top'>\n";
             $value .= "                            <div class='card-body'>\n";
             $value .= "                                 <input name='article' type='hidden' value='" . $article["articleId"] . "'>\n";
             $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='" . $article["name"] . "'>\n";
@@ -289,14 +295,19 @@ class Shop extends BaseController
         $baseUrl = base_url();
 
         if (empty($articles)) {
-            echo "<div class='alert alert-info text-center mx-auto my-4'>Nema proizvoda</div>";
+            echo "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>";
+            echo "<strong>Nema proizvoda</strong>";
+            echo "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";
+            echo "<span aria-hidden='true'>&times;</span>";
+            echo "</button>";
+            echo "</div>";
         }
 
         foreach ($articles as $article) {
             $value = "                <div class='col-md-3'>\n";
             $value .= "                    <form method='post' action='$baseUrl/Shop/article'>\n";
             $value .= "                        <div class='card text-center mb-4'>\n";
-            $value .= "                            <img src=" . "$baseUrl/images/shop/" . $article["image"] . " class='card-img-top'>\n";
+            $value .= "                            <input type='image' src=" . "$baseUrl/images/shop/" . $article["image"] . " class='card-img-top'>\n";
             $value .= "                            <div class='card-body'>\n";
             $value .= "                                 <input name='article' type='hidden' value='" . $article["articleId"] . "'>\n";
             $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='" . $article["name"] . "'>\n";
@@ -383,9 +394,75 @@ class Shop extends BaseController
         $article = $shopModel->find($articleId);
         $data["title"] = "Proizvod " . $article["name"];
         $data["name"] = "shop";
-        $errors = "Proizvod nije na stanju";
+
         echo view("templates/header", ["data" => $data]);
-        echo view("shop/article", ["article" => $article, "errors" => $errors]);
+        if ($article["amount"] - intval($amount) >= 0) {
+            $article["amount"] -= intval($amount);
+            $shopModel->update($articleId, $article);
+            $messages = "Proizvod je dodat u korpu";
+            echo view("shop/article", ["article" => $article, "messages" => $messages]);
+        } else {
+            if ($article["amount"] > 0)
+                $messages = "Proizvod nije dostupan u odabranoj količini";
+            else
+                $messages = "Proizvod nije na stanju";
+            echo view("shop/article", ["article" => $article, "messages" => $messages]);
+        }
+        echo view("templates/footer");
+    }
+
+    public function insertForm()
+    {
+        $data["title"] = "Unos proizvoda";
+        $data["name"] = "shop";
+
+        echo view("templates/header", ["data" => $data]);
+        echo view("shop/articleInput");
+        echo view("templates/footer");
+    }
+
+    public function insertArticle()
+    {
+        $data["title"] = "Unos proizvoda";
+        $data["name"] = "shop";
+
+        if (!$this->validate([
+            "name" => "required|min_length[3]|max_length[32]",
+            "price" => "required",
+            "amount" => "required",
+            "image" => "uploaded[image]|max_size[image,5120]|ext_in[image,jpg,jpeg,png,jfif,gif]",
+            "category" => "required",
+            "description" => "max_length[240]"
+        ])) {
+            echo view("templates/header", ["data" => $data]);
+            echo view("shop/articleInput", ["messages" => $this->validator->listErrors()]);
+            echo view("templates/footer");
+            return;
+        }
+
+        $name = $this->request->getVar("name");
+        $price = $this->request->getVar("price");
+        $amount = $this->request->getVar("amount");
+        $image = $this->request->getFile("image");
+        $category = $this->request->getVar("category");
+        $description = $this->request->getVar("description");
+
+        $image->move(ROOTPATH . "/public/images/shop");
+
+        $shopModel = new ShopModel();
+
+        $descriptionCategory = $category . "#" . $description;
+
+        $shopModel->save([
+            "name" => $name,
+            "price" => $price,
+            "amount" => $amount,
+            "image" => $image->getName(),
+            "description" => $descriptionCategory
+        ]);
+
+        echo view("templates/header", ["data" => $data]);
+        echo view("shop/articleInput", ["messages" => "Uspešno ste uneli proizvod"]);
         echo view("templates/footer");
     }
 

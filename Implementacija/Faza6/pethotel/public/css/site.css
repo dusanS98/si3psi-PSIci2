@@ -47,9 +47,15 @@ body {
 .button-link {
     text-decoration: none;
     color: #1b1b1b;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+    .button-link {
+        font-size: 5vw;
+    }
 }
 
 .button-link:hover {
