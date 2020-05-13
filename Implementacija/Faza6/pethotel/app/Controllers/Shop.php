@@ -411,6 +411,11 @@ class Shop extends BaseController
         echo view("templates/footer");
     }
 
+    /**
+     * Funkcija za prikaz forme za unos proizvoda
+     *
+     * @return string
+     */
     public function insertForm()
     {
         $data["title"] = "Unos proizvoda";
@@ -421,6 +426,13 @@ class Shop extends BaseController
         echo view("templates/footer");
     }
 
+    /**
+     * Funkcija za unos proizvoda u bazu podataka
+     *
+     * @return string
+     *
+     * @throws \ReflectionException
+     */
     public function insertArticle()
     {
         $data["title"] = "Unos proizvoda";
@@ -435,7 +447,7 @@ class Shop extends BaseController
             "description" => "max_length[240]"
         ])) {
             echo view("templates/header", ["data" => $data]);
-            echo view("shop/articleInput", ["messages" => $this->validator->listErrors()]);
+            echo view("admin/articleInput", ["messages" => $this->validator->listErrors()]);
             echo view("templates/footer");
             return;
         }
@@ -464,6 +476,53 @@ class Shop extends BaseController
         echo view("templates/header", ["data" => $data]);
         echo view("shop/articleInput", ["messages" => "Uspešno ste uneli proizvod"]);
         echo view("templates/footer");
+    }
+
+    /**
+     * Funkcija za brisanje proizvoda iz baze podataka
+     *
+     * @return \CodeIgniter\HTTP\RedirectResponse
+     */
+    public function deleteArticle()
+    {
+        $articleId = $this->request->getVar("delete");
+        $shopModel = new ShopModel();
+        $article = $shopModel->find($articleId);
+        unlink(realpath(ROOTPATH . "/public/images/shop/" . $article["image"]));
+        $shopModel->delete($articleId);
+        return redirect()->to(site_url("Shop/showArticles"));
+    }
+
+    /**
+     * Funkcija za promenu podataka o proizvodu
+     *
+     * @return string
+     */
+    public function changeArticle()
+    {
+        $articleId = $this->request->getVar("change");
+        $shopModel = new ShopModel();
+        $article = $shopModel->find($articleId);
+        $data["title"] = "Proizvod " . $article["name"];
+        $data["name"] = "shop";
+        echo view("templates/header", ["data" => $data]);
+        echo view("shop/changeArticle", ["article" => $article]);
+        echo view("templates/footer");
+    }
+
+    public function saveChanges()
+    {
+        if (!$this->validate([
+            "name" => "required|min_length[3]|max_length[32]",
+            "price" => "required",
+            "amount" => "required",
+            "image" => "uploaded[image]|max_size[image,5120]|ext_in[image,jpg,jpeg,png,jfif,gif]",
+            "category" => "required",
+            "description" => "max_length[240]"
+        ])) {
+            return redirect()->back()
+                ->with("messages", $this->validator->listErrors());
+        }
     }
 
 }
