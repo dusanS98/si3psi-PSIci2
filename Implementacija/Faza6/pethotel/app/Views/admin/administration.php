@@ -2,7 +2,7 @@
 
 
 <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
-    <a class="navbar-brand" href="<?php echo site_url('Home/index'); ?>">
+    <a class="navbar-brand" href="<?php echo site_url('Admin/index'); ?>">
         <img src="<?php echo base_url() . '/images/logo.jfif'; ?>" class="logo-img img-fluid rounded" alt="Logo"/>
     </a>
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i>
