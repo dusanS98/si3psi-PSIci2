@@ -34,8 +34,8 @@
             <li class="nav-item <?php if ($data["name"] == "shop") echo "active"; ?>">
                 <a class="nav-link" href="<?php echo site_url('Shop/showArticles/1') ?>">Prodavnica</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo site_url('Home/index') ?>">Ljubimci</a>
+            <li class="nav-item <?php if ($data["name"] == "pets") echo "active"; ?>">
+                <a class="nav-link" href="<?php echo site_url('Pet/showPets') ?>">Ljubimci</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo site_url('Home/index') ?>">Smeštaj</a>

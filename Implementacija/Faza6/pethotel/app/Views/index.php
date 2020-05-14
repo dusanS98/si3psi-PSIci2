@@ -11,13 +11,13 @@
             </div>
         </div>
         <div class="col-md-5 mx-auto my-5 bg-light rounded">
-            <form>
+            <form method="post" action="<?php echo site_url('Autorizacija/logovanje'); ?>">
                 <div class="form-row mt-4">
                     <div class=" col-md-4 mb-3 ml-auto">
                         <label for="validationDefaultUsername">Korisničko ime:</label>
                     </div>
                     <div class="col-md-4 mb-3 mr-auto">
-                        <input type="text" class="form-control" id="validationDefaultUsername" required/>
+                        <input type="text" class="form-control" id="username" name="username" required/>
                     </div>
                 </div>
                 <div class="form-row">
@@ -25,7 +25,7 @@
                         <label for="validationDefaultPassword">Lozinka:</label>
                     </div>
                     <div class="col-md-4 mb-3 mr-auto">
-                        <input type="password" class="form-control" id="validationDefaultPassword" required/>
+                        <input type="password" class="form-control" id="password" name="password" required/>
                     </div>
                 </div>
                 <div class="form-row col-md-8 mx-auto mt-3 mb-4">
@@ -36,6 +36,12 @@
                             onclick="window.location.href='#'">
                         Zaboravljena lozinka
                     </button>
+                </div>
+                <div class="form-row">
+                    <?php
+                        if (!empty($netacniPodaci))
+                        echo $netacniPodaci
+                    ?>
                 </div>
             </form>
         </div>

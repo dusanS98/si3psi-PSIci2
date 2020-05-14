@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" serverName="localhost">
     <serverData>
       <paths name="localhost">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$/Implementacija/Faza6/pethotel/public" web="" />
+            <mapping local="$PROJECT_DIR$/Implementacija/Faza6/pethotel/public" web="/" />
           </mappings>
         </serverdata>
       </paths>
