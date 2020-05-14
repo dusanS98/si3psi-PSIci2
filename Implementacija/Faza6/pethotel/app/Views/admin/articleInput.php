@@ -50,8 +50,18 @@
                     </div>
                 </nav>
                 <div class="nav">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="<?php echo site_url("Admin/manageArticles"); ?>">
                         Brisanje i izmena sadržaja
+                    </a>
+                    <div class="sb-sidenav-menu-heading">Standardne funkcije</div>
+                    <a class="nav-link" href="<?php echo site_url("Shop/showArticles"); ?>">
+                        Pregled prodavnice
+                    </a>
+                    <a class="nav-link" href="<?php echo site_url(""); ?>">
+                        Pregled ljubimaca
+                    </a>
+                    <a class="nav-link" href="<?php echo site_url(""); ?>">
+                        Pregled smeštaja
                     </a>
                 </div>
             </div>

@@ -3,6 +3,7 @@
 
 namespace App\Controllers;
 
+use App\Models\ShopModel;
 use App\Models\UserModel;
 
 /**
@@ -81,6 +82,19 @@ class Admin extends BaseController
 
         echo view("templates/header", ["data" => $data]);
         echo view("admin/articleInput");
+        echo view("templates/footer", ["data" => $data]);
+    }
+
+    public function manageArticles()
+    {
+        $data["title"] = "Administracija sistema";
+        $data["name"] = "admin";
+
+        $shopModel = new ShopModel();
+        $articles = $shopModel->findAll();
+
+        echo view("templates/header", ["data" => $data]);
+        echo view("admin/articleManaging", ["articles" => $articles]);
         echo view("templates/footer", ["data" => $data]);
     }
 }

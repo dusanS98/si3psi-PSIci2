@@ -2,7 +2,7 @@
 
 
 <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
-    <a class="navbar-brand" href="<?php echo site_url('Home/index'); ?>">
+    <a class="navbar-brand" href="<?php echo site_url('Admin/index'); ?>">
         <img src="<?php echo base_url() . '/images/logo.jfif'; ?>" class="logo-img img-fluid rounded" alt="Logo"/>
     </a>
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i>
@@ -74,63 +74,52 @@
             <div class="container-fluid">
                 <h1 class="mt-4">Administracija</h1>
                 <ol class="breadcrumb mb-4">
-                    <li class="breadcrumb-item active">Administracija</li>
+                    <li class="breadcrumb-item">Administracija</li>
+                    <li class="breadcrumb-item active">Upravljanje proizvodima</li>
                 </ol>
                 <div class="card mb-4">
-                    <div class="card-header"><i class="fas fa-table mr-1"></i>Tabela korisnika</div>
+                    <div class="card-header"><i class="fas fa-table mr-1"></i>Tabela proizvoda</div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                 <tr>
-                                    <th>Ime i prezime</th>
-                                    <th>Korisničko ime</th>
-                                    <th>E-mail</th>
-                                    <th>Telefon</th>
-                                    <th>Tip naloga</th>
+                                    <th>Naziv</th>
+                                    <th>Cena</th>
+                                    <th>Količina</th>
+                                    <th>Detalji</th>
                                     <th>Akcije</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
-                                    <th>Ime i prezime</th>
-                                    <th>Korisničko ime</th>
-                                    <th>E-mail</th>
-                                    <th>Telefon</th>
-                                    <th>Tip naloga</th>
+                                    <th>Naziv</th>
+                                    <th>Cena</th>
+                                    <th>Količina</th>
+                                    <th>Detalji</th>
                                     <th>Akcije</th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
                                 <?php
-                                if (isset($users)) {
-                                    foreach ($users as $user) {
+                                if (isset($articles)) {
+                                    foreach ($articles as $article) {
                                         echo "<tr>";
-                                        echo "<td>" . $user["firstName"] . " " . $user["lastName"] . "</td>";
-                                        echo "<td>" . $user["username"] . "</td>";
-                                        echo "<td>" . $user["email"] . "</td>";
-                                        echo "<td>" . $user["phone"] . "</td>";
-                                        echo "<td>" . $user["type"] . "</td>";
-                                        if ($user["type"] == "admin") {
-                                            echo "<td></td>";
-                                        } else {
-                                            if ($user["type"] != "admin")
-                                                echo "<td><form style='float: left;' method='post' action='"
-                                                    . site_url("Admin/deleteUser") . "'>
-                                                        <button name='delete' value='" . $user["username"] . "' type='submit' class='btn bg-transparent'>
+                                        echo "<td>" . $article["name"] . "</td>";
+                                        echo "<td>" . $article["price"] . "</td>";
+                                        echo "<td>" . $article["amount"] . "</td>";
+                                        echo "<td><form method='post' action='"
+                                            . site_url("Shop/article") . "'>
+                                                        <button name='article' value='" . $article["articleId"] . "' type='submit' class='btn btn-info'>
+                                                        Detalji</button></form></td>";
+                                        echo "<td><form style='float: left;' method='post' action='"
+                                            . site_url("Shop/deleteArticle") . "'>
+                                                        <button name='delete' value='" . $article["articleId"] . "' type='submit' class='btn bg-transparent'>
                                                         <i class='far fa-trash-alt'></i></button></form>";
-                                            if ($user["type"] == "standard")
-                                                echo "<form method='post' action='"
-                                                    . site_url("Admin/menagePrivileges") . "'>
-                                                        <button name='privileges' value='" . $user["username"] . "' type='submit' class='btn btn-success'>
-                                                        Dodeli privilegije</button></form>";
-                                            if ($user["type"] == "moderator")
-                                                echo "<form method='post' action='"
-                                                    . site_url("Admin/menagePrivileges") . "'>
-                                                        <button name='privileges' value='" . $user["username"] . "' type='submit' class='btn btn-danger'>
-                                                        Oduzmi privilegije</button></form>";
-                                            echo "</td>";
-                                        }
+                                        echo "<form method='post' action='"
+                                            . site_url("Shop/changeArticle") . "'>
+                                                        <button name='change' value='" . $article["articleId"] . "' type='submit' class='btn btn-warning'>
+                                                        Izmeni</button></form></td>";
                                         echo "</tr>";
                                     }
                                 }
