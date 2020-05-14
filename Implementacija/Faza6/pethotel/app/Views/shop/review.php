@@ -49,7 +49,7 @@
                 <input type="text" id="searchName" class="form-control" placeholder="Naziv proizvoda"
                        aria-label="Naziv proizvoda" aria-describedby="basic-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-primary" id="search-button" type="button">Pretraži</button>
+                    <button class="btn btn-primary" id="searchButton" type="button">Pretraži</button>
                 </div>
             </div>
             <div class='row row-cols-1 row-cols-md-4 mr-2' id="articles">

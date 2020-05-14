@@ -40,7 +40,7 @@ $(document).ready(function () {
         );
     });
 
-    $("#search-button").click(function () {
+    $("#searchButton").click(function () {
         var baseUrl = $("#base").val();
         var name = $("#searchName").val();
 
