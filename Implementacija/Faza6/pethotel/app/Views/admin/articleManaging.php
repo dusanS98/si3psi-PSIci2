@@ -47,10 +47,24 @@
                         </nav>
                     </div>
                 </nav>
-                <div class="nav">
-                    <a class="nav-link" href="<?php echo site_url("Admin/manageArticles"); ?>">
+                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages2">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth2"
+                       aria-expanded="false" aria-controls="pagesCollapseAuth">
                         Brisanje i izmena sadržaja
+                        <div class="sb-sidenav-collapse-arrow">
+                            <i class="fas fa-angle-down"></i>
+                        </div>
                     </a>
+                    <div class="collapse" id="pagesCollapseAuth2" aria-labelledby="headingOne"
+                         data-parent="#sidenavAccordionPages2">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="<?php echo site_url("Admin/manageArticles"); ?>">Proizvodi</a>
+                            <a class="nav-link" href="#">Ljubimci</a>
+                            <a class="nav-link" href="#">Smeštaj</a>
+                        </nav>
+                    </div>
+                </nav>
+                <div class="nav">
                     <div class="sb-sidenav-menu-heading">Standardne funkcije</div>
                     <a class="nav-link" href="<?php echo site_url("Shop/showArticles"); ?>">
                         Pregled prodavnice
