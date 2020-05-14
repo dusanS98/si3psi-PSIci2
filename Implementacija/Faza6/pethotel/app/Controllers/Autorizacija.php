@@ -10,7 +10,7 @@ class Autorizacija extends BaseController
 {
     public function logovanje()
     {
-        $usern =  $this->request->getVar("username");
+        $usern = $this->request->getVar("username");
         $pass = $this->request->getVar("password");
 
         $userModel = new UserModel();
@@ -22,9 +22,11 @@ class Autorizacija extends BaseController
             echo view("templates/header", ["data" => $data]);
             echo view('index', ["netacniPodaci" => "Korisnicko ime i/ili lozinka nisu ispravni!"]);
             echo view("templates/footer");
-        } else{
-            if ($user["type"] == "Administrator") {
-                echo view("autorizacija/administrator");
+        } else {
+            session()->set("username", $user["username"]);
+            session()->set("userType", $user["type"]);
+            if ($user["type"] == "admin") {
+                return redirect()->to(site_url("Admin/index"));
             } else if ($user["type"] == "Moderator") {
                 echo view("autorizacija/moderator");
             } else {

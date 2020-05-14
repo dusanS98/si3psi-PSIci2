@@ -10,8 +10,13 @@ $description = substr($article["description"], $pos + 1);
 ?>
 <div class="container">
     <?php
-    if (isset($errors)) {
-        echo "<div class='alert alert-info text-center mx-auto mt-4'>$errors</div>";
+    if (isset($messages)) {
+        echo "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>";
+        echo "<strong>$messages</strong>";
+        echo "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";
+        echo "<span aria-hidden='true'>&times;</span>";
+        echo "</button>";
+        echo "</div>";
     }
     ?>
     <div class="card mx-auto my-4" style="max-width: 540px;">
@@ -32,10 +37,29 @@ $description = substr($article["description"], $pos + 1);
                         <p class="card-text">
                             Opis proizvoda: <span class="font-weight-bold"><?php echo $description; ?></span>
                         </p>
-                        <p class="card-text">
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                        <p class="card-text mb-2">
+                            <button style="float: left;" class="btn btn-primary mb-2" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
                                 Dodaj u korpu
                             </button>
+                            <?php
+                            if (session()->get("userType") == "admin" || session()->get("userType") == "moderator") {
+                                echo '
+                                    <form style="float: left;" method="post" action="' . site_url("Shop/changeArticle") . '">
+                                        <button class="btn btn-info ml-3" type="submit" name="change" value="'
+                                    . $article["articleId"] . '">
+                                        Izmeni
+                                        </button>
+                                    </form>
+                                    <form method="post" action="' . site_url("Shop/deleteArticle") . '">
+                                        <button class="btn btn-danger ml-2" type="submit" name="delete" value="'
+                                    . $article["articleId"] . '">
+                                        Izbriši
+                                        </button>
+                                    </form>
+                                ';
+                            }
+                            ?>
                         </p>
                     </div>
                 </div>

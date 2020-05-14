@@ -59,28 +59,26 @@
                 $baseUrl = base_url();
                 $id = "form";
 
-                if (empty($articles)) {
-                    echo "<div class='alert alert-info text-center mx-auto my-4'>Nema proizvoda</div>";
-                }
+                if (isset($articles)) {
+                    foreach ($articles as $article) {
+                        $value = "                <div class='col-md-3'>\n";
+                        $value .= "                    <form method='post' action='$baseUrl/Shop/article'>\n";
+                        $value .= "                        <div class='card text-center mb-4'>\n";
+                        $value .= "                            <input type='image' src=" . "$baseUrl/images/shop/" . $article["image"] . " class='card-img-top'>\n";
+                        $value .= "                            <div class='card-body'>\n";
+                        $value .= "                                 <input name='article' type='hidden' value='" . $article["articleId"] . "'>\n";
+                        $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='" . $article["name"] . "'>\n";
+                        $value .= "                                 <p class='card-text'>\n";
+                        $value .= "                                    Cena: <span class='font-weight-bold'>" . $article["price"] . " RSD</span><br>\n";
 
-                foreach ($articles as $article) {
-                    $value = "                <div class='col-md-3'>\n";
-                    $value .= "                    <form method='post' action='$baseUrl/Shop/article'>\n";
-                    $value .= "                        <div class='card text-center mb-4'>\n";
-                    $value .= "                            <img src=" . "$baseUrl/images/shop/" . $article["image"] . " class='card-img-top'>\n";
-                    $value .= "                            <div class='card-body'>\n";
-                    $value .= "                                 <input name='article' type='hidden' value='" . $article["articleId"] . "'>\n";
-                    $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='" . $article["name"] . "'>\n";
-                    $value .= "                                 <p class='card-text'>\n";
-                    $value .= "                                    Cena: <span class='font-weight-bold'>" . $article["price"] . " RSD</span><br>\n";
-
-                    $value .= "                                    <input type='submit' class='btn btn-primary mt-2' value='Naruči'>\n";
-                    $value .= "                                </p>\n";
-                    $value .= "                            </div>\n";
-                    $value .= "                        </div>\n";
-                    $value .= "                    </form>\n";
-                    $value .= "               </div>\n";
-                    echo $value;
+                        $value .= "                                    <input type='submit' class='btn btn-primary mt-2' value='Naruči'>\n";
+                        $value .= "                                </p>\n";
+                        $value .= "                            </div>\n";
+                        $value .= "                        </div>\n";
+                        $value .= "                    </form>\n";
+                        $value .= "               </div>\n";
+                        echo $value;
+                    }
                 }
 
                 ?>

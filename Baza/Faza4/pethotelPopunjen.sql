@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 10, 2020 at 10:21 AM
+-- Generation Time: May 12, 2020 at 05:57 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.12
 
@@ -40,19 +40,19 @@ CREATE TABLE IF NOT EXISTS `article` (
   `description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`articleId`),
   UNIQUE KEY `articleId_UNIQUE` (`articleId`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `article`
 --
 
 INSERT INTO `article` (`name`, `price`, `amount`, `articleId`, `image`, `description`) VALUES
-('Posude za hranu', 500, 12, 1, 'item1.jfif', 'psi#Pozude za hranu za pse'),
+('Posude za hranu', 500, 11, 1, 'item1.jfif', 'psi#Pozude za hranu za pse'),
 ('Okovratnik', 300, 15, 2, 'item2.jfif', 'psi#Okovratnik za pse'),
-('Hrana za pse', 500, 20, 3, 'item3.jpg', 'psi#Hrana za pse 5kg'),
+('Hrana za pse', 500, 0, 3, 'item3.jpg', 'psi#Hrana za pse 5kg'),
 ('Hrana za pse', 800, 30, 4, 'item4.jfif', 'psi#Hrana za pse u konzervi'),
-('Hrana za pse', 1000, 7, 5, 'item5.jfif', 'psi#Hrana za pse 10kg'),
-('Hrana za mačke', 600, 22, 6, 'item6.jpg', 'macke#Hrana za mačke 3kg'),
+('Hrana za pse', 1000, 6, 5, 'item5.jfif', 'psi#Hrana za pse 10kg'),
+('Hrana za mačke', 600, 16, 6, 'item6.jpg', 'macke#Hrana za mačke 3kg'),
 ('Hrana za mačke', 900, 17, 7, 'item7.jfif', 'macke#Hrana za mačke u konzervi'),
 ('Posuda za hranu', 400, 9, 8, 'item8.jfif', 'macke#Posuda za hranu za mačke'),
 ('Posude za hranu', 200, 10, 9, 'item9.jfif', 'psi#Posude za hranu za pse'),
@@ -70,7 +70,9 @@ INSERT INTO `article` (`name`, `price`, `amount`, `articleId`, `image`, `descrip
 ('Hrana za pse', 800, 30, 25, 'item21.jfif', 'psi#Hrana za pse u konzervi'),
 ('Hrana za pse', 500, 20, 26, 'item22.jpg', 'psi#Hrana za pse 5kg'),
 ('Okovratnik', 300, 15, 27, 'item23.jfif', 'psi#Okovratnik za pse'),
-('Posude za hranu', 500, 12, 28, 'item24.jfif', 'psi#Posude za hranu za pse');
+('Posude za hranu', 500, 12, 28, 'item24.jfif', 'psi#Posude za hranu za pse'),
+('Hrana za hrčke', 250, 2, 29, 'photo.jpg', 'maleZivotinje#Hrana za male životinje'),
+('Hrana za ribe', 320, 3, 30, 'photo_1.jpg', 'ribe#Hrana za ribe');
 
 -- --------------------------------------------------------
 
