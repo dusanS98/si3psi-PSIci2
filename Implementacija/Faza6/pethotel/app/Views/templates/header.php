@@ -46,13 +46,18 @@ if ($data["name"] != "admin") {
                 <a class="nav-link" href="' . site_url('Shop/showArticles') . '">Prodavnica</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="' . site_url('Home/index') . '">Ljubimci</a>
+                <a class="nav-link" href="' . site_url('Pet/showPets') . '">Ljubimci</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="' . site_url('Home/index') . '">Smeštaj</a>
             </li>
-        </ul>
-    </div>
+        </ul>';
+    if (session()->has("username")) {
+        echo '<ul class="navbar-nav ml-auto mt-2 mt-lg-0"><li class="nav-item">
+                <a class="nav-link" href="' . site_url('Admin/logout') . '">Izloguj se</a>
+            </li></ul>';
+    }
+    echo '</div>
 </nav>';
 
 }

@@ -38,11 +38,13 @@ $description = substr($article["description"], $pos + 1);
                             Opis proizvoda: <span class="font-weight-bold"><?php echo $description; ?></span>
                         </p>
                         <p class="card-text mb-2">
-                            <button style="float: left;" class="btn btn-primary mb-2" data-toggle="modal"
+                            <?php
+                            if (session()->has("username")) {
+                                echo '<button style="float: left;" class="btn btn-primary mb-2" data-toggle="modal"
                                     data-target="#exampleModalCenter">
                                 Dodaj u korpu
-                            </button>
-                            <?php
+                            </button>';
+                            }
                             if (session()->get("userType") == "admin" || session()->get("userType") == "moderator") {
                                 echo '
                                     <form style="float: left;" method="post" action="' . site_url("Shop/changeArticle") . '">

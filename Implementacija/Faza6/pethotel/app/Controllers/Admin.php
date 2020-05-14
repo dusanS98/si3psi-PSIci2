@@ -98,6 +98,11 @@ class Admin extends BaseController
         echo view("templates/footer", ["data" => $data]);
     }
 
+    /**
+     * Logout funkcija
+     *
+     * @return \CodeIgniter\HTTP\RedirectResponse
+     */
     public function logout()
     {
         session()->destroy();

@@ -69,7 +69,7 @@
                     <a class="nav-link" href="<?php echo site_url("Shop/showArticles"); ?>">
                         Pregled prodavnice
                     </a>
-                    <a class="nav-link" href="<?php echo site_url(""); ?>">
+                    <a class="nav-link" href="<?php echo site_url("Pet/showPets"); ?>">
                         Pregled ljubimaca
                     </a>
                     <a class="nav-link" href="<?php echo site_url(""); ?>">
