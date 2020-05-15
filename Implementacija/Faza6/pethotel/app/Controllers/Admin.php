@@ -24,6 +24,7 @@ class Admin extends BaseController
     {
         $data["title"] = "Administracija sistema";
         $data["name"] = "admin";
+        $data["active"] = "index";
 
         $userModel = new UserModel();
         $users = $userModel->findAll();
@@ -84,6 +85,8 @@ class Admin extends BaseController
     {
         $data["title"] = "Administracija sistema";
         $data["name"] = "admin";
+        $data["active"] = "input";
+        $data["type"] = "articles";
 
         echo view("templates/header", ["data" => $data]);
         echo view("admin/articleInput");
@@ -99,6 +102,8 @@ class Admin extends BaseController
     {
         $data["title"] = "Administracija sistema";
         $data["name"] = "admin";
+        $data["active"] = "modifications";
+        $data["type"] = "articles";
 
         $shopModel = new ShopModel();
         $articles = $shopModel->findAll();

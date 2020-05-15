@@ -64,5 +64,94 @@ if ($data["name"] != "admin") {
     echo '</div>
 </nav>';
 
+} else {
+    echo '<nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+    <a class="navbar-brand" href="<?php echo site_url(\'Admin/index\'); ?>">
+        <img src="' . base_url() . "/images/logo.jfif" . '" class="logo-img img-fluid rounded" alt="Logo"/>
+    </a>
+    <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="' . site_url("Logout/logout") . '">Izloguj se</a>
+            </div>
+        </li>
+    </ul>
+</nav>';
+
+    echo '<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <div class="sb-sidenav-menu-heading">Administracija</div>
+                    <a class="nav-link' . ($data["active"] == "index" ? " active" : "") . '" href="' . site_url("Admin/index") . '">
+                        Upravljanje korisnicima
+                    </a>
+                    <div class="sb-sidenav-menu-heading">Moredacija</div>
+                </div>
+                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                    <a class="nav-link collapsed' . ($data["active"] == "input" ? " active" : "") . '" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth"
+                       aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        Unos sadržaja
+                        <div class="sb-sidenav-collapse-arrow">
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </a>
+                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                         data-parent="#sidenavAccordionPages">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link' . (($data["active"] == "input" && $data["type"] == "articles") ? " active" : "")
+        . '" href="' . site_url("Admin/insertArticle") . '">Unos proizvoda</a>
+                            <a class="nav-link' . (($data["active"] == "input" && $data["type"] == "pets") ? " active" : "")
+        . '" href="#">Unos ljubimaca</a>
+                            <a class="nav-link' . (($data["active"] == "input" && $data["type"] == "rooms") ? " active" : "")
+        . '" href="#">Unos smeštaja</a>
+                        </nav>
+                    </div>
+                </nav>
+                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages2">
+                    <a class="nav-link collapsed' . ($data["active"] == "modifications" ? " active" : "") . '" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth2"
+                       aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        Brisanje i izmena sadržaja
+                        <div class="sb-sidenav-collapse-arrow">
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </a>
+                    <div class="collapse" id="pagesCollapseAuth2" aria-labelledby="headingOne"
+                         data-parent="#sidenavAccordionPages2">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link' . (($data["active"] == "modifications" && $data["type"] == "articles") ? " active" : "")
+        . '" href="' . site_url("Admin/manageArticles") . '">Proizvodi</a>
+                            <a class="nav-link' . (($data["active"] == "modifications" && $data["type"] == "pets") ? " active" : "")
+        . '" href="#">Ljubimci</a>
+                            <a class="nav-link' . (($data["active"] == "modifications" && $data["type"] == "rooms") ? " active" : "")
+        . '" href="#">Smeštaj</a>
+                        </nav>
+                    </div>
+                </nav>
+                <div class="nav">
+                    <div class="sb-sidenav-menu-heading">Standardne funkcije</div>
+                    <a class="nav-link" href="' . site_url("Shop/showArticles") . '">
+                        Pregled prodavnice
+                    </a>
+                    <a class="nav-link" href="' . site_url("Pet/showPets") . '">
+                        Pregled ljubimaca
+                    </a>
+                    <a class="nav-link" href="' . site_url("") . '">
+                        Pregled smeštaja
+                    </a>
+                </div>
+            </div>
+            <div class="sb-sidenav-footer">
+                <div class="small">Ulogovani ste kao:</div>'
+        . session()->get("username") .
+        '</div>
+        </nav>
+    </div>';
 }
 ?>

@@ -3,8 +3,20 @@
 
 namespace App\Controllers;
 
+/**
+ * Klasa za prikaz sadržaja sa goste sajta
+ *
+ * @package App\Controllers
+ *
+ * @version 1.0
+ */
 class Home extends BaseController
 {
+    /**
+     * Funkcija za prikaz početne stranice
+     *
+     * @return string
+     */
     public function index()
     {
         $data["title"] = "Početna stranica";
