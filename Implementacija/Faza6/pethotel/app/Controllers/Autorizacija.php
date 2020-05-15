@@ -27,10 +27,10 @@ class Autorizacija extends BaseController
             session()->set("userType", $user["type"]);
             if ($user["type"] == "admin") {
                 return redirect()->to(site_url("Admin/index"));
-            } else if ($user["type"] == "Moderator") {
+            } else if ($user["type"] == "moderator") {
                 echo view("autorizacija/moderator");
             } else {
-                echo view("autorizacija/registrovaniKorisnik");
+                return redirect()->to(site_url("User/index"));
             }
         }
 

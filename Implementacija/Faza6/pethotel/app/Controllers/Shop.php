@@ -279,6 +279,8 @@ class Shop extends BaseController
     /**
      * Funkcija za pretragu proizvoda po imenima koja vraća određene proizvode kao odgovor na ajax zahtev
      *
+     * @param int $page Redni broj stranice sa proizvodima
+     *
      * @return string
      */
     public function searchNames($page = 1)
@@ -435,9 +437,6 @@ class Shop extends BaseController
      */
     public function insertArticle()
     {
-        $data["title"] = "Unos proizvoda";
-        $data["name"] = "shop";
-
         if (!$this->validate([
             "name" => "required|min_length[3]|max_length[32]",
             "price" => "required",
@@ -446,10 +445,12 @@ class Shop extends BaseController
             "category" => "required",
             "description" => "max_length[240]"
         ])) {
-            echo view("templates/header", ["data" => $data]);
-            echo view("admin/articleInput", ["messages" => $this->validator->listErrors()]);
-            echo view("templates/footer");
-            return;
+            $userType = session()->get("userType");
+            if ($userType == "admin")
+                return redirect()->to(site_url("Admin/insertArticle"))->with(
+                    "messages", $this->validator->listErrors());
+            else if ($userType == "moderator")
+                return redirect()->to(site_url(""));
         }
 
         $name = $this->request->getVar("name");
@@ -473,9 +474,12 @@ class Shop extends BaseController
             "description" => $descriptionCategory
         ]);
 
-        echo view("templates/header", ["data" => $data]);
-        echo view("shop/articleInput", ["messages" => "Uspešno ste uneli proizvod"]);
-        echo view("templates/footer");
+        $userType = session()->get("userType");
+        if ($userType == "admin")
+            return redirect()->to(site_url("Admin/insertArticle"))->with(
+                "messages", "Uspešno ste uneli proizvod");
+        else if ($userType == "moderator")
+            return redirect()->to(site_url(""));
     }
 
     /**
@@ -490,17 +494,23 @@ class Shop extends BaseController
         $article = $shopModel->find($articleId);
         unlink(realpath(ROOTPATH . "/public/images/shop/" . $article["image"]));
         $shopModel->delete($articleId);
-        return redirect()->to(site_url("Shop/showArticles"));
+        if (session()->get("userType") == "admin")
+            return redirect()->to(site_url("Admin/manageArticles"));
+        else
+            return redirect()->to(site_url(""));
     }
 
     /**
      * Funkcija za promenu podataka o proizvodu
      *
+     * @param int $articleId Identifikator proizvoda u bazi podataka
+     *
      * @return string
      */
-    public function changeArticle()
+    public function changeArticle($articleId = null)
     {
-        $articleId = $this->request->getVar("change");
+        if ($articleId == null)
+            $articleId = $this->request->getVar("change");
         $shopModel = new ShopModel();
         $article = $shopModel->find($articleId);
         $data["title"] = "Proizvod " . $article["name"];
@@ -510,19 +520,55 @@ class Shop extends BaseController
         echo view("templates/footer");
     }
 
+    /**
+     * Funkcija za izmenu podataka o proizvodu
+     *
+     * @return \CodeIgniter\HTTP\RedirectResponse
+     *
+     * @throws \ReflectionException
+     */
     public function saveChanges()
     {
+        $userType = session()->get("userType");
+        $articleId = $this->request->getVar("articleId");
+
         if (!$this->validate([
             "name" => "required|min_length[3]|max_length[32]",
             "price" => "required",
             "amount" => "required",
-            "image" => "uploaded[image]|max_size[image,5120]|ext_in[image,jpg,jpeg,png,jfif,gif]",
             "category" => "required",
             "description" => "max_length[240]"
         ])) {
-            return redirect()->back()
-                ->with("messages", $this->validator->listErrors());
+            if ($userType == "admin")
+                return redirect()->to(site_url("Shop/changeArticle/" . $articleId))->with(
+                    "messages", $this->validator->listErrors());
+            else if ($userType == "moderator")
+                return redirect()->to(site_url(""));
         }
+
+        $name = $this->request->getVar("name");
+        $price = $this->request->getVar("price");
+        $amount = $this->request->getVar("amount");
+        $category = $this->request->getVar("category");
+        $description = $this->request->getVar("description");
+
+        $shopModel = new ShopModel();
+        $article = $shopModel->find($articleId);
+
+        $descriptionCategory = $category . "#" . $description;
+
+        $article["name"] = $name;
+        $article["price"] = $price;
+        $article["amount"] = $amount;
+        $article["description"] = $descriptionCategory;
+
+        $shopModel->update($articleId, $article);
+
+        if ($userType == "admin")
+            return redirect()->to(site_url("Shop/changeArticle/" . $articleId))->with(
+                "messages", "Uspešno ste izmenili podatke o proizvodu");
+        else if ($userType == "moderator")
+            return redirect()->to(site_url(""));
     }
 
 }

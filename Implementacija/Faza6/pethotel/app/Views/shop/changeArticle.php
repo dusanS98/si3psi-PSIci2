@@ -76,6 +76,7 @@
                     </div>
                 </div>
                 <div class="form-row col-md-4 mx-auto mt-3 mb-4">
+                    <input type="hidden" name="articleId" value="<?php echo $article['articleId']; ?>">
                     <button class="btn btn-primary" type="submit">
                         Sačuvaj
                     </button>

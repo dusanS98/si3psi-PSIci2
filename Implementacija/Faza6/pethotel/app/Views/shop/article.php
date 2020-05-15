@@ -6,6 +6,7 @@ $articleName = $article["name"];
 $articlePrice = $article["price"];
 $pos = strpos($article["description"], "#");
 $category = substr($article["description"], 0, $pos);
+if ($category == "maleZivotinje") $category = "Male Životinje";
 $description = substr($article["description"], $pos + 1);
 ?>
 <div class="container">
