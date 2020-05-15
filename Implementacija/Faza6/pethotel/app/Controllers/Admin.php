@@ -75,6 +75,11 @@ class Admin extends BaseController
         return redirect()->to(site_url("Admin/index"));
     }
 
+    /**
+     * Funkcija za prikaz forme za unos proizvoda
+     *
+     * @return string
+     */
     public function insertArticle()
     {
         $data["title"] = "Administracija sistema";
@@ -85,6 +90,11 @@ class Admin extends BaseController
         echo view("templates/footer", ["data" => $data]);
     }
 
+    /**
+     * Funkcija za prikaz forme za izmenu informacija o proizvodima
+     *
+     * @return string
+     */
     public function manageArticles()
     {
         $data["title"] = "Administracija sistema";
@@ -96,17 +106,6 @@ class Admin extends BaseController
         echo view("templates/header", ["data" => $data]);
         echo view("admin/articleManaging", ["articles" => $articles]);
         echo view("templates/footer", ["data" => $data]);
-    }
-
-    /**
-     * Logout funkcija
-     *
-     * @return \CodeIgniter\HTTP\RedirectResponse
-     */
-    public function logout()
-    {
-        session()->destroy();
-        return redirect()->to(site_url("/"));
     }
 
 }

@@ -12,6 +12,7 @@ class Filters extends BaseConfig
         'toolbar' => \CodeIgniter\Filters\DebugToolbar::class,
         'honeypot' => \CodeIgniter\Filters\Honeypot::class,
         'user' => \App\Filters\UserFilter::class,
+        'admin' => \App\Filters\AdminFilter::class,
         'guest' => \App\Filters\GuestFilter::class
     ];
 
@@ -36,7 +37,8 @@ class Filters extends BaseConfig
     // that they should run on, like:
     //    'isLoggedIn' => ['before' => ['account/*', 'profiles/*']],
     public $filters = [
-        'user' => ['before' => ['Admin/*', 'Admin', 'User/*', 'User']],
+        'user' => ['before' => ['User/*', 'User']],
+        'admin' => ['before' => ['Admin/*', 'Admin']],
         'guest' => ['before' => ['Home/*', 'Home', '/']]
     ];
 }

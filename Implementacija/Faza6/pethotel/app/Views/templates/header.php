@@ -58,7 +58,7 @@ if ($data["name"] != "admin") {
     echo '</ul>';
     if (session()->has("username")) {
         echo '<ul class="navbar-nav ml-auto mt-2 mt-lg-0"><li class="nav-item">
-                <a class="nav-link" href="' . site_url('Admin/logout') . '">Izloguj se</a>
+                <a class="nav-link" href="' . site_url('Logout/logout') . '">Izloguj se</a>
             </li></ul>';
     }
     echo '</div>

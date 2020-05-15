@@ -1,4 +1,7 @@
-<?php namespace App\Controllers;
+<?php
+//Autor: Dušan Stanivuković 2017/0605
+
+namespace App\Controllers;
 
 class Home extends BaseController
 {
@@ -10,7 +13,5 @@ class Home extends BaseController
         echo view('index');
         echo view("templates/footer");
     }
-
-    //--------------------------------------------------------------------
 
 }

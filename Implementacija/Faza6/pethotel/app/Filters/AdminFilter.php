@@ -14,7 +14,7 @@ use CodeIgniter\HTTP\ResponseInterface;
  *
  * @version 1.0
  */
-class UserFilter implements \CodeIgniter\Filters\FilterInterface
+class AdminFilter implements \CodeIgniter\Filters\FilterInterface
 {
 
     /**
@@ -25,7 +25,7 @@ class UserFilter implements \CodeIgniter\Filters\FilterInterface
     public function before(RequestInterface $request)
     {
         if (!session()->has("username") ||
-            session()->has("username") && session()->get("userType") != "standard")
+            session()->has("username") && session()->get("userType") != "admin")
             return redirect()->to(site_url("Home/index"));
     }
 
