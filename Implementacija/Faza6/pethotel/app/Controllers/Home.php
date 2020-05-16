@@ -4,7 +4,7 @@
 namespace App\Controllers;
 
 /**
- * Klasa za prikaz sadržaja sa goste sajta
+ * Home - Klasa za prikaz sadržaja sa goste sajta
  *
  * @package App\Controllers
  *

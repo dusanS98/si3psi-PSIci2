@@ -92,3 +92,18 @@ function updateAmount() {
         $("#hiddenAmount").val(amount);
 }
 
+function showAmount(amountId) {
+    amountId = amountId.split("#");
+    $("#modalAmount").val(amountId[0]);
+    $("#modalHiddenAmount").val(amountId[0]);
+    $("#modalHiddenArticleId").val(amountId[1]);
+}
+
+function changeAmount() {
+    var baseUrl = $("#base").val();
+    var amount = $("#modalAmount").val();
+    var articleId = $("#modalHiddenArticleId").val();
+
+    alert(amount + " " + articleId);
+}
+

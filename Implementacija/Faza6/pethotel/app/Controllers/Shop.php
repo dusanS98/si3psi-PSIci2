@@ -3,7 +3,10 @@
 
 namespace App\Controllers;
 
+use App\Models\OrderArticleModel;
 use App\Models\ShopModel;
+use App\Models\UserOrderModel;
+use CodeIgniter\Exceptions\ModelException;
 
 /**
  * Shop - klasa za prikaz, unos i naručivanje proizvoda iz prodavnice
@@ -369,11 +372,14 @@ class Shop extends BaseController
     /**
      * Funkcija za prikaz detalja o pojedinačnim proizvodima
      *
+     * @param int $articleId Identifikator proizvoda
+     *
      * @return string
      */
-    public function article()
+    public function article($articleId = null)
     {
-        $articleId = $this->request->getVar("article");
+        if ($articleId == null)
+            $articleId = $this->request->getVar("article");
         $shopModel = new ShopModel();
         $article = $shopModel->find($articleId);
         $data["title"] = "Proizvod " . $article["name"];
@@ -386,31 +392,88 @@ class Shop extends BaseController
     /**
      * Funkcija za naručivanje proizvoda
      *
-     * @return string
+     * @return \CodeIgniter\HTTP\RedirectResponse
+     *
+     * @throws \ReflectionException
      */
     public function order()
     {
-        $amount = $this->request->getVar("amount") . "<br>";
-        $articleId = $this->request->getVar("articleId") . "<br>";
+        $amount = $this->request->getVar("amount");
+        $articleId = $this->request->getVar("articleId");
         $shopModel = new ShopModel();
         $article = $shopModel->find($articleId);
         $data["title"] = "Proizvod " . $article["name"];
         $data["name"] = "shop";
 
-        echo view("templates/header", ["data" => $data]);
+        date_default_timezone_set("Europe/Belgrade");
+
         if ($article["amount"] - intval($amount) >= 0) {
             $article["amount"] -= intval($amount);
             $shopModel->update($articleId, $article);
             $messages = "Proizvod je dodat u korpu";
-            echo view("shop/article", ["article" => $article, "messages" => $messages]);
+
+            $username = session()->get("username");
+
+            $userOrderModel = new UserOrderModel();
+            $orderArticleModel = new OrderArticleModel();
+
+            $order = $userOrderModel->where("username", $username)->where("status", "open")->findAll(1);
+            if ($order != null)
+                $order = $order[0];
+
+            if ($order == null) {
+                $messages .= " i kreirana je narudžbina";
+
+                $userOrderModel->save([
+                    "username" => $username,
+                    "dateTime" => date("Y-m-d H:i:s"),
+                    "status" => "open",
+                    "orderPrice" => 0
+                ]);
+
+                $orderArticleModel->setPrimaryKey("articleId");
+                $item = $orderArticleModel->where("orderId", $userOrderModel->getInsertID())->find($articleId);
+
+                if ($item != null) {
+                    $item["amount"] += $amount;
+                    $orderArticleModel->where("orderId", $order["orderId"])->update($articleId, $item);
+                } else {
+                    $orderArticleModel->setPrimaryKey("");
+                    $orderArticleModel->save([
+                        "orderId" => $userOrderModel->getInsertID(),
+                        "articleId" => $articleId,
+                        "articlePrice" => $article["price"],
+                        "amount" => $amount
+                    ]);
+                }
+
+                return redirect()->to(site_url("Shop/article/" . $articleId))->with("messages", $messages);
+            } else {
+                $orderArticleModel->setPrimaryKey("articleId");
+                $item = $orderArticleModel->where("orderId", $order["orderId"])->find($articleId);
+
+                if ($item != null) {
+                    $item["amount"] += $amount;
+                    $orderArticleModel->where("orderId", $order["orderId"])->update($articleId, $item);
+                } else {
+                    $orderArticleModel->setPrimaryKey("");
+                    $orderArticleModel->save([
+                        "orderId" => $order["orderId"],
+                        "articleId" => $articleId,
+                        "articlePrice" => $article["price"],
+                        "amount" => $amount
+                    ]);
+                }
+
+                return redirect()->to(site_url("Shop/article/" . $articleId))->with("messages", $messages);
+            }
         } else {
             if ($article["amount"] > 0)
                 $messages = "Proizvod nije dostupan u odabranoj količini";
             else
                 $messages = "Proizvod nije na stanju";
-            echo view("shop/article", ["article" => $article, "messages" => $messages]);
+            return redirect()->to(site_url("Shop/article/" . $articleId))->with("messages", $messages);
         }
-        echo view("templates/footer");
     }
 
     /**
@@ -431,7 +494,7 @@ class Shop extends BaseController
     /**
      * Funkcija za unos proizvoda u bazu podataka
      *
-     * @return string
+     * @return \CodeIgniter\HTTP\RedirectResponse
      *
      * @throws \ReflectionException
      */
@@ -569,6 +632,50 @@ class Shop extends BaseController
                 "messages", "Uspešno ste izmenili podatke o proizvodu");
         else if ($userType == "moderator")
             return redirect()->to(site_url(""));
+    }
+
+    public function cart()
+    {
+        $data["title"] = "Korpa";
+        $data["name"] = "cart";
+
+        $username = session()->get("username");
+
+        $userOrderModel = new UserOrderModel();
+
+        $orders = $userOrderModel->where("username", $username)->findAll();
+
+        echo view("templates/header", ["data" => $data]);
+        echo view("shop/cart", ["orders" => $orders]);
+        echo view("templates/footer");
+    }
+
+    public function showOrder()
+    {
+        $data["title"] = "Prikaz narudžbine";
+        $data["name"] = "cart";
+
+        $orderId = $this->request->getVar("orderId");
+        $userOrderModel = new UserOrderModel();
+        $order = $userOrderModel->find($orderId);
+
+        $orderArticleModel = new OrderArticleModel();
+        $orderArticles = $orderArticleModel->where("orderId", $orderId)->findAll();
+
+        $articles = [];
+        $shopModel = new ShopModel();
+        foreach ($orderArticles as $orderArticle) {
+            $articles = array_merge($articles, $shopModel->where("articleId", $orderArticle["articleId"])->findAll());
+        }
+
+        echo view("templates/header", ["data" => $data]);
+        echo view("shop/order", ["order" => $order, "orderArticles" => $orderArticles, "articles" => $articles]);
+        echo view("templates/footer");
+    }
+
+    public function removeFromCart()
+    {
+        echo "22";
     }
 
 }

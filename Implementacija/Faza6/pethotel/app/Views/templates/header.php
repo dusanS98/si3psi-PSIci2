@@ -21,6 +21,9 @@
                         crossorigin="anonymous"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
                         crossorigin="anonymous"></script>';
+    } else if ($data["name"] == "cart") {
+        echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+                        crossorigin="anonymous"></script>';
     }
     ?>
 </head>
@@ -52,8 +55,8 @@ if ($data["name"] != "admin") {
                 <a class="nav-link" href="' . site_url('Home/index') . '">Smeštaj</a>
             </li>';
     if (session()->has("username"))
-        echo '<li class="nav-item">
-                <a class="nav-link" href="' . site_url('Home/index') . '">Korpa</a>
+        echo '<li class="nav-item' . ($data["name"] == "cart" ? " active" : "") . '">
+                <a class="nav-link" href="' . site_url('Shop/cart') . '">Korpa</a>
             </li>';
     echo '</ul>';
     if (session()->has("username")) {
@@ -66,7 +69,7 @@ if ($data["name"] != "admin") {
 
 } else {
     echo '<nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
-    <a class="navbar-brand" href="<?php echo site_url(\'Admin/index\'); ?>">
+    <a class="navbar-brand" href="' . site_url("Home/index") . '">
         <img src="' . base_url() . "/images/logo.jfif" . '" class="logo-img img-fluid rounded" alt="Logo"/>
     </a>
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i>
@@ -108,7 +111,7 @@ if ($data["name"] != "admin") {
                             <a class="nav-link' . (($data["active"] == "input" && $data["type"] == "articles") ? " active" : "")
         . '" href="' . site_url("Admin/insertArticle") . '">Unos proizvoda</a>
                             <a class="nav-link' . (($data["active"] == "input" && $data["type"] == "pets") ? " active" : "")
-        . '" href="#">Unos ljubimaca</a>
+        . '" href="' . site_url("Pet/unosLjubimca") . '">Unos ljubimaca</a>
                             <a class="nav-link' . (($data["active"] == "input" && $data["type"] == "rooms") ? " active" : "")
         . '" href="#">Unos smeštaja</a>
                         </nav>

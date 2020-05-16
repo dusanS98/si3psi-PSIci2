@@ -5,7 +5,7 @@
 namespace App\Controllers;
 
 /**
- * Klasa prikaz sadržaja za registrovane korisnike
+ * User - Klasa za prikaz sadržaja za registrovane korisnike
  *
  * @package App\Controllers
  *

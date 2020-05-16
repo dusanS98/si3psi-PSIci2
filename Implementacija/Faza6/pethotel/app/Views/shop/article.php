@@ -18,6 +18,13 @@ $description = substr($article["description"], $pos + 1);
         echo "<span aria-hidden='true'>&times;</span>";
         echo "</button>";
         echo "</div>";
+    } else if (session()->getFlashdata("messages") != null) {
+        echo "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>";
+        echo "<strong>" . session()->getFlashdata("messages") . "</strong>";
+        echo "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";
+        echo "<span aria-hidden='true'>&times;</span>";
+        echo "</button>";
+        echo "</div>";
     }
     ?>
     <div class="card mx-auto my-4" style="max-width: 540px;">
