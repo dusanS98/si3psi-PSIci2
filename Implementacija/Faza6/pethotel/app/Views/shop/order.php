@@ -20,7 +20,7 @@
                 $value .= "                                 <input name='article' type='hidden' value='" . $article["articleId"] . "'>\n";
                 $value .= "                                 <h5 class='card-title'>" . $article["name"] . "</h5>\n";
                 $value .= "                                 <p class='card-text'>\n";
-                $value .= "                                    Cena: <span class='font-weight-bold'>" . $amount[0] . "x" . $article["price"] . " = " . intval($amount[0] * $article["price"]) . " RSD</span><br>\n";
+                $value .= "                                    Cena: <span id='article" . $article["articleId"] . "' class='font-weight-bold'>" . $amount[0] . "x" . $article["price"] . " = " . intval($amount[0] * $article["price"]) . " RSD</span><br>\n";
 
                 $value .= "                                    <button type='submit' class='btn bg-transparent'><i class='far fa-trash-alt'></i></button>\n";
                 $value .= "                                    <button data-toggle='modal' data-target='#exampleModalCenter' onclick='showAmount(\"" . $amountId . "\")' type='button' class='btn btn-primary mt-2'>Promeni količinu</button>\n";
@@ -41,6 +41,10 @@
             }
             return "";
         }
+
+        $orderId = 0;
+        if (isset($order))
+            $orderId = $order["orderId"];
 
         ?>
     </div>
@@ -70,7 +74,7 @@
             <div class="modal-footer">
                 <input type="hidden" name="amount" id="modalHiddenAmount" value="1">
                 <input type="hidden" name="articleId" id="modalHiddenArticleId" value="1">
-                <input type="hidden" name="orderId" id="modalHiddenOrderId" value="1">
+                <input type="hidden" name="orderId" id="modalHiddenOrderId" value="<?php echo $orderId; ?>">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
                 <button type="button" class="btn btn-primary" onclick="changeAmount()">Potvrdi</button>
             </div>

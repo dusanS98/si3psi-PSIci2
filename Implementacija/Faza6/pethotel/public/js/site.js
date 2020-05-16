@@ -147,7 +147,23 @@ function changeAmount() {
     var baseUrl = $("#base").val();
     var amount = $("#modalAmount").val();
     var articleId = $("#modalHiddenArticleId").val();
+    var orderId = $("#modalHiddenOrderId").val();
 
-    alert(amount + " " + articleId);
+    $.ajax(
+        {
+            type: "post",
+            url: baseUrl + "/Shop/changeAmount",
+            data: {
+                amount: amount,
+                articleId: articleId,
+                orderId: orderId
+            },
+            success: function (response) {
+                if (response != "error") {
+                    $("#article" + articleId).html(response);
+                }
+            }
+        }
+    );
 }
 

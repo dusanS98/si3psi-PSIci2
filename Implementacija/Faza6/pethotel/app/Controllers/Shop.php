@@ -634,6 +634,11 @@ class Shop extends BaseController
             return redirect()->to(site_url(""));
     }
 
+    /**
+     * Funkcija za prikaz korpe sa narudžbinama
+     *
+     * @return string
+     */
     public function cart()
     {
         $data["title"] = "Korpa";
@@ -650,6 +655,11 @@ class Shop extends BaseController
         echo view("templates/footer");
     }
 
+    /**
+     * Funkcija za prikaz detalja o narudžbini
+     *
+     * @return string
+     */
     public function showOrder()
     {
         $data["title"] = "Prikaz narudžbine";
@@ -676,6 +686,43 @@ class Shop extends BaseController
     public function removeFromCart()
     {
         echo "22";
+    }
+
+    public function changeAmount()
+    {
+        $amount = $this->request->getVar("amount");
+        $articleId = $this->request->getVar("articleId");
+        $orderId = $this->request->getVar("orderId");
+
+        $orderArticleModel = new OrderArticleModel();
+        $orderArticle = $orderArticleModel->where("orderId", $orderId)->find($articleId);
+
+        $shopModel = new ShopModel();
+        $article = $shopModel->find($articleId);
+
+        if ($amount == $orderArticle["amount"]) {
+            return "error";
+        }
+
+        if ($amount < $orderArticle["amount"]) {
+            $article["amount"] += ($orderArticle["amount"] - $amount);
+            $orderArticle["amount"] = $amount;
+
+            $shopModel->update($articleId, $article);
+            $orderArticleModel->where("orderId", $orderId)->update($articleId, $orderArticle);
+
+            return $amount . "x" . $article["price"] . " = " . ($amount * $article["price"]) . " RSD";
+        } else if ($amount - $orderArticle["amount"] <= $article["amount"]) {
+            $article["amount"] -= ($amount - $orderArticle["amount"]);
+            $orderArticle["amount"] = $amount;
+
+            $shopModel->update($articleId, $article);
+            $orderArticleModel->where("orderId", $orderId)->update($articleId, $orderArticle);
+
+            return $amount . "x" . $article["price"] . " = " . ($amount * $article["price"]) . " RSD";
+        }
+
+        return "error";
     }
 
 }
