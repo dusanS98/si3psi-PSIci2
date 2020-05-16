@@ -42,23 +42,13 @@
                         </form>
                     </div><br/><br/>
                     <div class="card-text">
-                        <form method='post' action="<?php echo site_url('Pet/unosLjubimca'); ?>">
-                            <input type='submit' class='btn btn-primary mt-2' value='Unesi ljubimca'>
-                        </form>
+                        <?php if ($data["usertype"] == "admin" ||$data["usertype"] == "moderator" ) echo "<form method='post' action='" . site_url('Pet/unosLjubimca') . "'> <input type='submit' class='btn btn-primary mt-2' value='Unesi ljubimca'> </form>"; ?>
                     </div>
                 </div>
             </div>
         </div>
         <div class='col-md-10'>
-            <div class="input-group mb-4">
-                <input type="text" class="form-control" placeholder="Vrsta ljubimca"
-                       aria-label="Vrsta ljubimca" aria-describedby="basic-addon2">
 
-                <div class="input-group-append">
-                    <button class="btn btn-primary"  id="search-button" type="button">Pretraži</button>
-
-                </div>
-            </div>
             <div class='row row-cols-1 row-cols-md-4 mr-2' id="pets">
 
                 <?php

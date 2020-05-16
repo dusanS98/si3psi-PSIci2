@@ -48,7 +48,7 @@ if ($data["name"] != "admin") {
             <li class="nav-item' . ($data["name"] == "shop" ? " active" : "") . '">
                 <a class="nav-link" href="' . site_url('Shop/showArticles') . '">Prodavnica</a>
             </li>
-            <li class="nav-item' . ($data["name"] == "pets" ? " active" : "") . '">
+            <li class="nav-item' . ($data["name"] == "pets" || $data["name"] == "unosLjubimca" ? " active" : "") . '">
                 <a class="nav-link" href="' . site_url('Pet/showPets') . '">Ljubimci</a>
             </li>
             <li class="nav-item">

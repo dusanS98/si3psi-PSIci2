@@ -39,6 +39,50 @@ $(document).ready(function () {
             }
         );
     });
+    $("#petCheckDogs").click(customPetCheck);
+    $("#petCheckCats").click(customPetCheck);
+    $("#petCheckFishes").click(customPetCheck);
+    $("#petCheckBirds").click(customPetCheck);
+    $("#petCheckLittleAnimals").click(customPetCheck);
+
+    function customPetCheck() {
+        var baseUrl = $("#base").val();
+        var page = $("#page").val();
+
+        var dogs = $("#petCheckDogs").prop("checked");
+        var cats = $("#petCheckCats").prop("checked");
+        var birds = $("#petCheckBirds").prop("checked");
+        var fishes = $("#petCheckFishes").prop("checked");
+        var littleAnimals = $("#petCheckLittleAnimals").prop("checked");
+
+        $.ajax(
+            {
+                type: "post",
+                url: baseUrl + "/Pet/searchCategoriesPets/" + page,
+                data: {
+                    dogs: dogs,
+                    cats: cats,
+                    birds: birds,
+                    fishes: fishes,
+                    littleAnimals: littleAnimals
+                },
+                success: function (response) {
+                    var res = response.split("#delimiter#");
+
+                    if (res.length == 2) {
+                        if (res[0] == "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>"
+                            + "<strong>Nema proizvoda</strong><button type='button' class='close' data-dismiss='alert' aria-label='Close'>"
+                            + "<span aria-hidden='true'>&times;</span></button></div>"
+                            && page > 1) {
+                            window.location.href = baseUrl + "/Pet/showPetsByCategory/" + (page - 1);
+                        }
+                        $("#pets").html(res[0]);
+                        $("#pagination").html(res[1]);
+                    }
+                }
+            }
+        );
+    }
 
     $("#searchButton").click(function () {
         var baseUrl = $("#base").val();
