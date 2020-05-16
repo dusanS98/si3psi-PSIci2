@@ -22,6 +22,7 @@ class Pet extends BaseController
         $pets = $petModel->findAll($this->itemsPerPage, ($page - 1) * $this->itemsPerPage);
         $data["title"] = "Pregled ljubimaca";
         $data["name"] = "pets";
+        $data["usertype"] = session()->get("userType");
         $pagination["page"] = $page;
         $pagination["numOfPages"] = ceil($petModel->countAll() / $this->itemsPerPage);
         echo view("templates/header", ["data" => $data]);
@@ -109,12 +110,19 @@ class Pet extends BaseController
                 ->orLike("breed", "Zec")
                 ->orLike("breed", "Hrcak")
                 ->findAll());
-
+        
         $baseUrl = base_url();
 
         $offset = ($page - 1) * $this->itemsPerPage;
         $pets = array_slice($pets, $offset, $this->itemsPerPage);
-
+        if (empty($pets)) {
+            echo "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>";
+            echo "<strong>Nema trazenog ljubimca</strong>";
+            echo "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";
+            echo "<span aria-hidden='true'>&times;</span>";
+            echo "</button>";
+            echo "</div>";
+        }
         foreach ($pets as $pet) {
             $value = "                <div class='col-md-3'>\n";
             $value .= "                    <form method='post' action='$baseUrl/Pet/pet'>\n";
@@ -205,7 +213,7 @@ class Pet extends BaseController
     public function unosLjubimca($poruka = "")
     {
         $data["title"] = "Unos ljubimca";
-        $data["name"] = "shop";
+        $data["name"] = "unosLjubimca";
         $data["poruka"] = $poruka;
         echo view("templates/header", ["data" => $data]);
         echo view("shop/unosLjubimca");
