@@ -26,7 +26,7 @@
                 } else if (session()->getFlashdata("messages") != null) {
                     echo "<div class='col-md-10 mx-auto mt-4'>";
                     echo "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>";
-                    echo "<strong>" . session()->get("messages") . "</strong>";
+                    echo "<strong>" . session()->getFlashdata("messages") . "</strong>";
                     echo "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";
                     echo "<span aria-hidden='true'>&times;</span>";
                     echo "</button>";

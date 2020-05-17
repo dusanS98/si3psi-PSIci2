@@ -51,7 +51,7 @@ if ($data["name"] != "admin") {
             <li class="nav-item' . ($data["name"] == "pets" || $data["name"] == "unosLjubimca" ? " active" : "") . '">
                 <a class="nav-link" href="' . site_url('Pet/showPets') . '">Ljubimci</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item' . ($data["name"] == "rooms" ? " active" : "") . '">
                 <a class="nav-link" href="' . site_url('Home/index') . '">Smeštaj</a>
             </li>';
     if (session()->has("username"))
@@ -131,9 +131,9 @@ if ($data["name"] != "admin") {
                             <a class="nav-link' . (($data["active"] == "modifications" && $data["type"] == "articles") ? " active" : "")
         . '" href="' . site_url("Admin/manageArticles") . '">Proizvodi</a>
                             <a class="nav-link' . (($data["active"] == "modifications" && $data["type"] == "pets") ? " active" : "")
-        . '" href="#">Ljubimci</a>
+        . '" href="' . site_url("Admin/managePets") . '">Ljubimci</a>
                             <a class="nav-link' . (($data["active"] == "modifications" && $data["type"] == "rooms") ? " active" : "")
-        . '" href="#">Smeštaj</a>
+        . '" href="' . site_url("Admin/manageRooms") . '">Smeštaj</a>
                         </nav>
                     </div>
                 </nav>

@@ -3,6 +3,8 @@
 
 namespace App\Controllers;
 
+use App\Models\PetModel;
+use App\Models\RoomModel;
 use App\Models\ShopModel;
 use App\Models\UserModel;
 
@@ -83,7 +85,7 @@ class Admin extends BaseController
      */
     public function insertArticle()
     {
-        $data["title"] = "Administracija sistema";
+        $data["title"] = "Unos proizvoda";
         $data["name"] = "admin";
         $data["active"] = "input";
         $data["type"] = "articles";
@@ -100,7 +102,7 @@ class Admin extends BaseController
      */
     public function manageArticles()
     {
-        $data["title"] = "Administracija sistema";
+        $data["title"] = "Upravljanje proizvodima";
         $data["name"] = "admin";
         $data["active"] = "modifications";
         $data["type"] = "articles";
@@ -110,6 +112,36 @@ class Admin extends BaseController
 
         echo view("templates/header", ["data" => $data]);
         echo view("admin/articleManaging", ["articles" => $articles]);
+        echo view("templates/footer", ["data" => $data]);
+    }
+
+    public function managePets()
+    {
+        $data["title"] = "Upravljanje ljubimcima";
+        $data["name"] = "admin";
+        $data["active"] = "modifications";
+        $data["type"] = "pets";
+
+        $petModel = new PetModel();
+        $pets = $petModel->findAll();
+
+        echo view("templates/header", ["data" => $data]);
+        echo view("admin/petManaging", ["pets" => $pets]);
+        echo view("templates/footer", ["data" => $data]);
+    }
+
+    public function manageRooms()
+    {
+        $data["title"] = "Upravljanje smeštajem";
+        $data["name"] = "admin";
+        $data["active"] = "modifications";
+        $data["type"] = "rooms";
+
+        $roomModel = new RoomModel();
+        $rooms = $roomModel->findAll();
+
+        echo view("templates/header", ["data" => $data]);
+        echo view("admin/roomManaging", ["rooms" => $rooms]);
         echo view("templates/footer", ["data" => $data]);
     }
 

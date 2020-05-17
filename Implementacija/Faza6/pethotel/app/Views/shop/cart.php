@@ -24,7 +24,7 @@
                     if ($order["status"] == "open") {
                         $dateTime = explode(" ", $order["dateTime"]);
                         echo '<form method="post" action="' . site_url("Shop/showOrder") . '">
-                                  <div class="card mx-auto mt-4" style="width: 18rem;">
+                                  <div class="card mx-auto my-4" style="width: 18rem;">
                                       <div class="card-body">
                                         <h5 class="card-title">Aktivna narudžbina</h5>
                                         <p class="card-text">'
@@ -52,7 +52,7 @@
                             echo '<div class="card-group">';
 
                         $dateTime = explode(" ", $order["dateTime"]);
-                        echo '<div class="card mx-auto mt-4" style="width: 18rem;">
+                        echo '<div class="card mx-auto my-3" style="width: 18rem;">
                                   <form method="post" action="' . site_url("Shop/showOrder") . '">
                                       <div class="card-body">
                                         <h5 class="card-title">Obrađena narudžbina</h5>
@@ -72,6 +72,7 @@
                             echo '</div>';
                     }
                 }
+                if ($i % 3 != 0) echo "</div>";
             }
             ?>
         </div>

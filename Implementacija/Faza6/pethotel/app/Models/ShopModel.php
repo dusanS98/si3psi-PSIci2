@@ -1,5 +1,5 @@
 <?php
-//Dušan Stanivuković 2017/0605
+//Autor: Dušan Stanivuković 2017/0605
 
 namespace App\Models;
 

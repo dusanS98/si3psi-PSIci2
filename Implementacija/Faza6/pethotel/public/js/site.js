@@ -138,7 +138,8 @@ function updateAmount() {
 
 function showAmount(amountId) {
     amountId = amountId.split("#");
-    $("#modalAmount").val(amountId[0]);
+    var amount = $("#articleAmount" + amountId[1]).html();
+    $("#modalAmount").val(amount);
     $("#modalHiddenAmount").val(amountId[0]);
     $("#modalHiddenArticleId").val(amountId[1]);
 }
@@ -148,6 +149,8 @@ function changeAmount() {
     var amount = $("#modalAmount").val();
     var articleId = $("#modalHiddenArticleId").val();
     var orderId = $("#modalHiddenOrderId").val();
+
+    if (amount <= 0) amount = 1;
 
     $.ajax(
         {
@@ -160,7 +163,37 @@ function changeAmount() {
             },
             success: function (response) {
                 if (response != "error") {
-                    $("#article" + articleId).html(response);
+                    var res = response.split("#");
+                    if (res.length == 3) {
+                        $("#articleAmount" + articleId).html(res[0]);
+                        $("#articlePrice" + articleId).html(res[1]);
+                        $("#priceAlert").html(res[2]);
+                    }
+                }
+                $("#modalCloseButton").click();
+            }
+        }
+    );
+}
+
+function removeArticle(articleId) {
+    var baseUrl = $("#base").val();
+    var orderId = $("#modalHiddenOrderId").val();
+    articleId = parseInt(articleId);
+
+    $.ajax(
+        {
+            type: "post",
+            url: baseUrl + "/Shop/removeArticleFromCart",
+            data: {
+                articleId: articleId,
+                orderId: orderId
+            },
+            success: function (response) {
+                var res = response.split("#delimiter#");
+                if (res.length == 2) {
+                    $("#priceAlert").html(res[0]);
+                    $("#articles").html(res[1]);
                 }
             }
         }

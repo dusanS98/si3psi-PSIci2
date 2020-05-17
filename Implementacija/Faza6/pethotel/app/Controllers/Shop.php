@@ -447,6 +447,10 @@ class Shop extends BaseController
                     ]);
                 }
 
+                $order = $userOrderModel->find($userOrderModel->getInsertID());
+                $order["orderPrice"] += ($amount * $article["price"]);
+                $userOrderModel->update($order["orderId"], $order);
+
                 return redirect()->to(site_url("Shop/article/" . $articleId))->with("messages", $messages);
             } else {
                 $orderArticleModel->setPrimaryKey("articleId");
@@ -464,6 +468,9 @@ class Shop extends BaseController
                         "amount" => $amount
                     ]);
                 }
+
+                $order["orderPrice"] += ($amount * $article["price"]);
+                $userOrderModel->update($order["orderId"], $order);
 
                 return redirect()->to(site_url("Shop/article/" . $articleId))->with("messages", $messages);
             }
@@ -564,7 +571,7 @@ class Shop extends BaseController
     }
 
     /**
-     * Funkcija za promenu podataka o proizvodu
+     * Funkcija za prikaz forme za promenu podataka o proizvodu
      *
      * @param int $articleId Identifikator proizvoda u bazi podataka
      *
@@ -683,11 +690,101 @@ class Shop extends BaseController
         echo view("templates/footer");
     }
 
-    public function removeFromCart()
+    /**
+     * Pomoćna funkcija za pronalaženje količine proizvoda
+     *
+     * @param array $orderArticles Niz stavki narudžbina
+     * @param array $article Niz sa podacima o proizvodu
+     *
+     * @return string
+     */
+    private function findAmount($orderArticles, $article)
     {
-        echo "22";
+        foreach ($orderArticles as $orderArticle) {
+            if ($orderArticle["articleId"] == $article["articleId"])
+                return $orderArticle["amount"] . "#" . $article["articleId"];
+        }
+        return "";
     }
 
+    /**
+     * Funkcija za uklanjanje proizvoda iz korpe
+     *
+     * @return string
+     *
+     * @throws \ReflectionException
+     */
+    public function removeArticleFromCart()
+    {
+        $articleId = $this->request->getVar("articleId");
+        $orderId = $this->request->getVar("orderId");
+
+        $orderArticleModel = new OrderArticleModel();
+        $orderArticle = $orderArticleModel->where("orderId", $orderId)->find($articleId);
+        $amount = $orderArticle["amount"];
+
+        $orderArticleModel->where("orderId", $orderId)->where("articleId", $articleId)->delete();
+
+        $shopModel = new ShopModel();
+        $article = $shopModel->find($articleId);
+        $article["amount"] += $amount;
+        $shopModel->update($articleId, $article);
+
+        $userOrderModel = new UserOrderModel();
+        $order = $userOrderModel->find($orderId);
+        $order["orderPrice"] -= ($amount * $article["price"]);
+        $userOrderModel->update($orderId, $order);
+
+        echo "Ukupan iznos: " . $order["orderPrice"] . " RSD#delimiter#";
+
+        $orderArticles = $orderArticleModel->where("orderId", $orderId)->findAll();
+
+        $articles = [];
+        $shopModel = new ShopModel();
+        foreach ($orderArticles as $orderArticle) {
+            $articles = array_merge($articles, $shopModel->where("articleId", $orderArticle["articleId"])->findAll());
+        }
+
+        $baseUrl = base_url();
+
+        echo '<input type="hidden" id="base" value="' . $baseUrl . '">';
+
+        foreach ($articles as $article) {
+            $amountId = $this->findAmount($orderArticles, $article);
+            $amount = explode("#", $amountId);
+
+            $value = "                <div class='col-md-3'>\n";
+            $value .= "                    <div class='card text-center mb-4'>\n";
+            $value .= "                         <img src=" . "$baseUrl/images/shop/" . $article["image"] . " class='card-img-top'>\n";
+            $value .= "                         <div class='card-body'>\n";
+            $value .= "                             <input name='article' type='hidden' value='" . $article["articleId"] . "'>\n";
+            $value .= "                             <h5 class='card-title'>" . $article["name"] . "</h5>\n";
+            $value .= "                             <p class='card-text'>\n";
+            $value .= "                                 Količina: <span id='articleAmount" . $article["articleId"] . "' class='font-weight-bold'>"
+                . $amount[0] . "</span><br>\n";
+            $value .= "                                 Cena: <span class='font-weight-bold'>" . $article["price"] . " RSD</span><br>\n";
+            $value .= "                                 Ukupna cena: <span id='articlePrice" . $article["articleId"] . "' class='font-weight-bold'>"
+                . intval($amount[0] * $article["price"]) . " RSD</span><br>\n";
+
+            $value .= "                                 <button type='button' onclick='removeArticle(\"" . $article["articleId"]
+                . "\")' class='btn bg-transparent'><i class='far fa-trash-alt'></i></button>\n";
+            $value .= "                                 <button data-toggle='modal' data-target='#exampleModalCenter' onclick='showAmount(\""
+                . $amountId . "\")' type='button' class='btn btn-primary mt-2'>Promeni količinu</button>\n";
+            $value .= "                             </p>\n";
+            $value .= "                         </div>\n";
+            $value .= "                    </div>\n";
+            $value .= "               </div>\n";
+            echo $value;
+        }
+    }
+
+    /**
+     * Funkcija za promenu količine naručenog proizvoda
+     *
+     * @return string
+     *
+     * @throws \ReflectionException
+     */
     public function changeAmount()
     {
         $amount = $this->request->getVar("amount");
@@ -704,6 +801,11 @@ class Shop extends BaseController
             return "error";
         }
 
+        $userOrderModel = new UserOrderModel();
+        $order = $userOrderModel->find($orderId);
+
+        $oldAmount = $orderArticle["amount"];
+
         if ($amount < $orderArticle["amount"]) {
             $article["amount"] += ($orderArticle["amount"] - $amount);
             $orderArticle["amount"] = $amount;
@@ -711,7 +813,10 @@ class Shop extends BaseController
             $shopModel->update($articleId, $article);
             $orderArticleModel->where("orderId", $orderId)->update($articleId, $orderArticle);
 
-            return $amount . "x" . $article["price"] . " = " . ($amount * $article["price"]) . " RSD";
+            $order["orderPrice"] -= (($oldAmount - $amount) * $article["price"]);
+            $userOrderModel->update($orderId, $order);
+
+            return $amount . "#" . ($amount * $article["price"]) . " RSD#Ukupan iznos: " . $order["orderPrice"] . " RSD";
         } else if ($amount - $orderArticle["amount"] <= $article["amount"]) {
             $article["amount"] -= ($amount - $orderArticle["amount"]);
             $orderArticle["amount"] = $amount;
@@ -719,10 +824,99 @@ class Shop extends BaseController
             $shopModel->update($articleId, $article);
             $orderArticleModel->where("orderId", $orderId)->update($articleId, $orderArticle);
 
-            return $amount . "x" . $article["price"] . " = " . ($amount * $article["price"]) . " RSD";
+            $order["orderPrice"] += (($amount - $oldAmount) * $article["price"]);
+            $userOrderModel->update($orderId, $order);
+
+            return $amount . "#" . ($amount * $article["price"]) . " RSD#Ukupan iznos: " . $order["orderPrice"] . " RSD";
         }
 
         return "error";
+    }
+
+    /**
+     * Funkcija za otkazivanje narudžbine
+     *
+     * @return \CodeIgniter\HTTP\RedirectResponse
+     *
+     * @throws \ReflectionException
+     */
+    public function cancelOrder()
+    {
+        $orderId = $this->request->getVar("orderId");
+
+        $orderArticleModel = new OrderArticleModel();
+        $orderArticles = $orderArticleModel->where("orderId", $orderId)->findAll();
+
+        $shopModel = new ShopModel();
+
+        foreach ($orderArticles as $orderArticle) {
+            $article = $shopModel->find($orderArticle["articleId"]);
+            $article["amount"] += $orderArticle["amount"];
+            $shopModel->update($article["articleId"], $article);
+        }
+
+        $userOrderModel = new UserOrderModel();
+        $userOrderModel->delete($orderId);
+
+        return redirect()->to(site_url("Shop/cart"));
+    }
+
+    /**
+     * Funkcija za prikaz forme za potvrdu narudžbine
+     *
+     * @return string
+     */
+    public function finishOrderForm()
+    {
+        $data["title"] = "Potvrda narudžbine";
+        $data["name"] = "cart";
+
+        $orderId = $this->request->getVar("orderId");
+
+        echo view("templates/header", ["data" => $data]);
+        echo view("shop/finishOrder", ["orderId" => $orderId]);
+        echo view("templates/footer");
+    }
+
+    /**
+     * Funkcija za potvrđivanje narudžbine
+     *
+     * @return \CodeIgniter\HTTP\RedirectResponse
+     *
+     * @throws \ReflectionException
+     */
+    public function finishOrder()
+    {
+        $orderId = $this->request->getVar("orderId");
+        session()->set("orderId", $orderId);
+
+        if (!$this->validate([
+            "street" => "required|min_length[5]|max_length[32]",
+            "city" => "required|min_length[3]|max_length[32]",
+            "postalCode" => "required|min_length[5]|max_length[5]"
+        ])) {
+            return redirect()->to(site_url("Shop/finishOrderForm"))->with("messages", $this->validator->listErrors());
+        }
+
+        $street = $this->request->getVar("street");
+        $city = $this->request->getVar("city");
+        $state = $this->request->getVar("state");
+        $postalCode = $this->request->getVar("postalCode");
+
+        $userOrderModel = new UserOrderModel();
+        $order = $userOrderModel->find($orderId);
+
+        $order["status"] = "closed";
+        $order["recipientAddress"] = $street;
+        $order["recipientCity"] = $city;
+        $order["recipientState"] = $state;
+        $order["recipientPostalCode"] = $postalCode;
+
+        $userOrderModel->update($orderId, $order);
+
+        session()->remove("orderId");
+
+        return redirect()->to(site_url("Shop/cart"));
     }
 
 }

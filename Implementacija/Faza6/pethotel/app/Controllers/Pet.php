@@ -110,7 +110,7 @@ class Pet extends BaseController
                 ->orLike("breed", "Zec")
                 ->orLike("breed", "Hrcak")
                 ->findAll());
-        
+
         $baseUrl = base_url();
 
         $offset = ($page - 1) * $this->itemsPerPage;
@@ -225,17 +225,16 @@ class Pet extends BaseController
         $petName = $this->request->getVar("petName");
 
         $petBreed = $this->request->getVar("petBreed");
-        if (strcmp($petBreed,"Pas") != 0 &&
-            strcmp($petBreed,"Macka") != 0 &&
-            strcmp($petBreed,"Macak") != 0 &&
-            strcmp($petBreed,"Ptica") != 0 &&
-            strcmp($petBreed,"Ribica") != 0 &&
-            strcmp($petBreed,"Hrcak") != 0 &&
-            strcmp($petBreed,"Lasica") != 0 &&
-            strcmp($petBreed,"Kornjaca") != 0 &&
-            strcmp($petBreed,"Zeka") != 0 &&
-            strcmp($petBreed,"Zec") != 0)
-        {
+        if (strcmp($petBreed, "Pas") != 0 &&
+            strcmp($petBreed, "Macka") != 0 &&
+            strcmp($petBreed, "Macak") != 0 &&
+            strcmp($petBreed, "Ptica") != 0 &&
+            strcmp($petBreed, "Ribica") != 0 &&
+            strcmp($petBreed, "Hrcak") != 0 &&
+            strcmp($petBreed, "Lasica") != 0 &&
+            strcmp($petBreed, "Kornjaca") != 0 &&
+            strcmp($petBreed, "Zeka") != 0 &&
+            strcmp($petBreed, "Zec") != 0) {
             $this->unosLjubimca("Uneta rasa je nevalidna. Moguce opcije su Pas, Macka/Macak, "
                 . "Ptica, Ribica i male zivotinje (Hrcak, Lasica, Kornjaca, Zeka/Zec).");
             return;
@@ -247,20 +246,105 @@ class Pet extends BaseController
 
         $petBirthDate = $this->request->getVar("birthDate");
 
-        $image =  $this->request->getVar("imageFile");
+        $image = $this->request->getVar("imageFile");
 
         $data = array(
-            'name'=>$petName,
-            'breed'=>$petBreed,
-            'dateOfBirth'=>$petBirthDate,
-            'image'=>$image,
-            'description'=>$petDescr
+            'name' => $petName,
+            'breed' => $petBreed,
+            'dateOfBirth' => $petBirthDate,
+            'image' => $image,
+            'description' => $petDescr
         );
 
         $petModel = new PetModel();
         $petModel->insert($data);
 
         $this->unosLjubimca("Ljubimac uspesno sacuvan");
+    }
+
+    /**
+     * Funkcija za brisanje ljubimaca iz baze
+     *
+     * @return \CodeIgniter\HTTP\RedirectResponse
+     */
+    public function deletePet()
+    {
+        $petId = $this->request->getVar("delete");
+        $petModel = new PetModel();
+        $pet = $petModel->find($petId);
+        unlink(realpath(ROOTPATH . "/public/images/pets/" . $pet["image"]));
+        $petModel->delete($petId);
+        if (session()->get("userType") == "admin")
+            return redirect()->to(site_url("Admin/managePets"));
+        else
+            return redirect()->to(site_url(""));
+    }
+
+    /**
+     * Funkcija za prikaz forme za promenu podataka o ljubimcima
+     *
+     * @param int $petId Identifikator ljubimca
+     *
+     * @return string
+     */
+    public function changePet($petId = null)
+    {
+        if ($petId == null)
+            $petId = $this->request->getVar("change");
+        $petModel = new PetModel();
+        $pet = $petModel->find($petId);
+        $data["title"] = "Ljubimac " . $pet["name"];
+        $data["name"] = "pets";
+        echo view("templates/header", ["data" => $data]);
+        echo view("pets/changePet", ["pet" => $pet]);
+        echo view("templates/footer");
+    }
+
+    /**
+     * Funkcija za čuvanje novih podataka o ljubimcima u bazi
+     *
+     * @return \CodeIgniter\HTTP\RedirectResponse
+     *
+     * @throws \ReflectionException
+     */
+    public function saveChanges()
+    {
+        $userType = session()->get("userType");
+        $petId = $this->request->getVar("petId");
+
+        if (!$this->validate([
+            "name" => "required|min_length[3]|max_length[32]",
+            "breed" => "required",
+            "date" => "required",
+            "description" => "max_length[240]"
+        ])) {
+            if ($userType == "admin")
+                return redirect()->to(site_url("Pet/changeArticle/" . $petId))->with(
+                    "messages", $this->validator->listErrors());
+            else if ($userType == "moderator")
+                return redirect()->to(site_url(""));
+        }
+
+        $name = $this->request->getVar("name");
+        $breed = $this->request->getVar("breed");
+        $dateOfBirth = $this->request->getVar("date");
+        $description = $this->request->getVar("description");
+
+        $petModel = new PetModel();
+        $pet = $petModel->find($petId);
+
+        $pet["name"] = $name;
+        $pet["breed"] = $breed;
+        $pet["dateOfBirth"] = $dateOfBirth;
+        $pet["description"] = $description;
+
+        $petModel->update($petId, $pet);
+
+        if ($userType == "admin")
+            return redirect()->to(site_url("Pet/changePet/" . $petId))->with(
+                "messages", "Uspešno ste izmenili podatke o ljubimcu");
+        else if ($userType == "moderator")
+            return redirect()->to(site_url(""));
     }
 
 }
