@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 12, 2020 at 05:57 PM
+-- Generation Time: May 17, 2020 at 09:36 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.12
 
@@ -21,6 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `pethotel`
 --
+DROP DATABASE IF EXISTS `pethotel`;
 CREATE DATABASE IF NOT EXISTS `pethotel` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 USE `pethotel`;
 
@@ -40,24 +41,22 @@ CREATE TABLE IF NOT EXISTS `article` (
   `description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`articleId`),
   UNIQUE KEY `articleId_UNIQUE` (`articleId`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `article`
 --
 
 INSERT INTO `article` (`name`, `price`, `amount`, `articleId`, `image`, `description`) VALUES
-('Posude za hranu', 500, 11, 1, 'item1.jfif', 'psi#Pozude za hranu za pse'),
-('Okovratnik', 300, 15, 2, 'item2.jfif', 'psi#Okovratnik za pse'),
-('Hrana za pse', 500, 0, 3, 'item3.jpg', 'psi#Hrana za pse 5kg'),
-('Hrana za pse', 800, 30, 4, 'item4.jfif', 'psi#Hrana za pse u konzervi'),
-('Hrana za pse', 1000, 6, 5, 'item5.jfif', 'psi#Hrana za pse 10kg'),
-('Hrana za mačke', 600, 16, 6, 'item6.jpg', 'macke#Hrana za mačke 3kg'),
-('Hrana za mačke', 900, 17, 7, 'item7.jfif', 'macke#Hrana za mačke u konzervi'),
-('Posuda za hranu', 400, 9, 8, 'item8.jfif', 'macke#Posuda za hranu za mačke'),
-('Posude za hranu', 200, 10, 9, 'item9.jfif', 'psi#Posude za hranu za pse'),
-('Okovratnik', 700, 23, 10, 'item10.jfif', 'psi#Okovratnik za pse'),
-('Hrana za pse', 500, 20, 11, 'item11.jpg', 'psi#Hrana za pse 5kg'),
+('Posude za hranu', 500, 132, 1, 'item1.jfif', 'psi#Pozude za hranu za pse'),
+('Okovratnik', 300, 96, 2, 'item2.jfif', 'psi#Okovratnik za pse'),
+('Hrana za pse', 800, 26, 4, 'item4.jfif', 'psi#Hrana za pse u konzervi'),
+('Hrana za pse', 1000, 29, 5, 'item5.jfif', 'psi#Hrana za pse 10kg'),
+('Hrana za mačke', 600, 11, 6, 'item6.jpg', 'macke#Hrana za mačke 3kg'),
+('Hrana za mačke', 900, 14, 7, 'item7.jfif', 'macke#Hrana za mačke u konzervi'),
+('Posuda za hranu', 400, 8, 8, 'item8.jfif', 'macke#Posuda za hranu za mačke'),
+('Posude za hranu', 200, 5, 9, 'item9.jfif', 'psi#Posude za hranu za pse'),
+('Hrana za pse', 500, 13, 11, 'item11.jpg', 'psi#Hrana za pse 5kg'),
 ('Hrana za pse', 800, 30, 12, 'item12.jfif', 'psi#Hrana za pse u konzervi'),
 ('Hrana za pse', 1000, 7, 13, 'item13.jfif', 'psi#Hrana za pse 10kg'),
 ('Hrana za mačke', 600, 22, 14, 'item14.jpg', 'macke#Hrana za mačke 3kg'),
@@ -69,10 +68,15 @@ INSERT INTO `article` (`name`, `price`, `amount`, `articleId`, `image`, `descrip
 ('Hrana za pse', 1000, 7, 24, 'item20.jfif', 'psi#Hrana za pse 10kg'),
 ('Hrana za pse', 800, 30, 25, 'item21.jfif', 'psi#Hrana za pse u konzervi'),
 ('Hrana za pse', 500, 20, 26, 'item22.jpg', 'psi#Hrana za pse 5kg'),
-('Okovratnik', 300, 15, 27, 'item23.jfif', 'psi#Okovratnik za pse'),
-('Posude za hranu', 500, 12, 28, 'item24.jfif', 'psi#Posude za hranu za pse'),
-('Hrana za hrčke', 250, 2, 29, 'photo.jpg', 'maleZivotinje#Hrana za male životinje'),
-('Hrana za ribe', 320, 3, 30, 'photo_1.jpg', 'ribe#Hrana za ribe');
+('Okovratnik', 400, 15, 27, 'item23.jfif', 'psi#Okovratnik za pse                        '),
+('Hrana za hrčke', 250, 1, 29, 'photo.jpg', 'maleZivotinje#Hrana za male životinje                                                                                    '),
+('Hrana za ribe', 320, 1, 30, 'photo_1.jpg', 'ribe#Hrana za ribe'),
+('Hrana za ptice', 150, 9, 32, 'ptice1.jpg', 'ptice#Hrana za ptice 800g                                    '),
+('Hrana za ptice', 450, 6, 33, 'ptice2.jpg', 'ptice#Hrana za ptice 1kg          '),
+('Hrana za ribe', 800, 9, 34, 'ribe1.jpg', 'ribe#Hrana namenjena ribicama biljojedima. Namenjena je somićima, živorotkama i cilidima biljojedima                       '),
+('Hrana za ribe', 900, 8, 35, 'ribe2.jpg', 'ribe#Hrana za morske ribe                                 '),
+('Hrana za zečeve', 450, 9, 36, 'zecevi1.jpg', 'maleZivotinje#Classic Cuni 500gr je klasična mešavina semenki, žitarica, presovanih žitarica, peleta i ekstrudiranih peleta namenjena svakodnevnoj ishrani kunića i patuljastih kunića.                       '),
+('Hrana za ribe', 500, 3, 37, 'ribe3.jpg', 'ribe#Balance briketi za ribe                        ');
 
 -- --------------------------------------------------------
 
@@ -90,6 +94,23 @@ CREATE TABLE IF NOT EXISTS `orderarticle` (
   KEY `R_24` (`articleId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Dumping data for table `orderarticle`
+--
+
+INSERT INTO `orderarticle` (`articlePrice`, `orderId`, `articleId`, `amount`) VALUES
+(500, 61, 1, 6),
+(200, 61, 9, 5),
+(500, 64, 1, 2),
+(500, 65, 1, 3),
+(800, 65, 4, 2),
+(500, 66, 1, 4),
+(500, 66, 11, 6),
+(250, 66, 29, 1),
+(400, 67, 8, 1),
+(320, 67, 30, 2),
+(500, 68, 1, 11);
+
 -- --------------------------------------------------------
 
 --
@@ -106,7 +127,36 @@ CREATE TABLE IF NOT EXISTS `pet` (
   `description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`petId`),
   UNIQUE KEY `petId_UNIQUE` (`petId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `pet`
+--
+
+INSERT INTO `pet` (`name`, `breed`, `dateOfBirth`, `petId`, `image`, `description`) VALUES
+('Astor', 'Pas', '2020-05-12', 1, 'dog.jpg', 'Opis nekog psa'),
+('Vuki', 'Pas', '2020-05-05', 2, 'puppy.jpeg', 'Opis psa'),
+('Keti', 'Macka', '2020-05-07', 3, 'cat.jpg', 'Opis macke'),
+('Jole', 'Macak', '2020-05-03', 4, 'catM.jfif', 'Opis macke'),
+('Kikica', 'Pas', '2020-05-02', 5, 'f1.jpg', 'Opis psa'),
+('Gile', 'Hrcak', '2020-05-03', 6, 'h1.jpg', 'Opis hrcka'),
+('Sara', 'Kornjaca', '2020-05-07', 7, 'k1.jpg', 'Opis kornjace'),
+('Petronije', 'Kornjaca', '2020-05-05', 8, 'k2.jpg', 'Opis kornjace'),
+('Mimi', 'Lasica', '2020-05-09', 9, 'l1.jpg', 'Opis lasice'),
+('Koko Sanel', 'Lasica', '2020-05-14', 10, 'l2.jpg', 'Opis lasice'),
+('Napoleon', 'Ptica', '2020-05-16', 11, 'p1.jpg', 'Opis papagaja'),
+('Hrvoje', 'Ptica', '2020-05-11', 12, 'p2.jpg', 'Opis papagaja'),
+('Mudja', 'Ptica', '2020-04-13', 13, 'p3.jpg', 'Opis papagaja'),
+('Bubi', 'Ptica', '2020-05-05', 14, 'p4.jpg', 'Opis papagaja'),
+('Nata', 'Zeka', '2020-05-01', 15, 'z1.jpg', 'Opis zeke'),
+('Tutko', 'Zeka', '2020-05-04', 16, 'z2.jpg', 'Opis zeke'),
+('Masa', 'Ribica', '2020-05-05', 17, 'r1.jpg', 'Opis ribice'),
+('Meda', 'Ptica', '2020-05-07', 18, 'meda.jpg', 'Bla bla'),
+('Deos', 'Pas', '2020-05-05', 20, 'puppy.jpeg', 'puppy.jpeg'),
+('Latifa', 'Macka', '2020-05-14', 22, 'catM.jfif', 'catM.jfif'),
+('Suncica', 'Ptica', '2020-05-07', 27, 'p3.jpg', 'p3.jpg'),
+('Mimi', 'Pas', '2020-04-29', 28, 'puppy.jpeg', 'puppy.jpeg'),
+('Astor1', 'Pas', '2020-05-12', 29, 'dog-Copy.jpg', 'Opis nekog psa                                                ');
 
 -- --------------------------------------------------------
 
@@ -153,7 +203,17 @@ CREATE TABLE IF NOT EXISTS `room` (
   `description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`roomId`),
   UNIQUE KEY `roomId_UNIQUE` (`roomId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `room`
+--
+
+INSERT INTO `room` (`type`, `roomId`, `image`, `description`) VALUES
+('Smestaj 1', 5, 'box1.jpg', 'Opis 1               '),
+('Smestaj 2', 6, 'box2.jpg', 'Opis 2'),
+('Smestaj 3', 7, 'box3.jpg', 'Opis 3'),
+('Smestaj 4', 8, 'box4.jpg', 'Opis 4');
 
 -- --------------------------------------------------------
 
@@ -183,7 +243,10 @@ INSERT INTO `user` (`username`, `password`, `firstName`, `lastName`, `email`, `p
 ('dusan', 'dusan123', 'Dušan', 'Stanivuković', 'dusan@mail.com', '01234567', 'admin'),
 ('jovan', 'jovan123', 'Jovan', 'Penezić', 'jovan@mail.com', '01234567', 'admin'),
 ('milicaJ', 'milicaj123', 'Milica', 'Janković', 'milicaj@mail.com', '01234567', 'admin'),
-('milicaK', 'milicak123', 'Milica', 'Kaitović', 'milicak@mail.com', '01234567', 'admin');
+('milicaK', 'milicak123', 'Milica', 'Kaitović', 'milicak@mail.com', '01234567', 'admin'),
+('moderator123', 'sifra123', 'Marko', 'Marković', 'marko@gmail.com', '239168', 'moderator'),
+('pera', 'sifra123', 'Petar', 'Petrović', 'petar.petrovic@gmail.com', '0602498321', 'standard'),
+('user123', 'sifra123', 'Pera', 'Perić', 'pera@gmail.com', '123412', 'standard');
 
 -- --------------------------------------------------------
 
@@ -205,7 +268,19 @@ CREATE TABLE IF NOT EXISTS `userorder` (
   PRIMARY KEY (`orderId`),
   UNIQUE KEY `orderId_UNIQUE` (`orderId`),
   KEY `R_21` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `userorder`
+--
+
+INSERT INTO `userorder` (`orderId`, `username`, `dateTime`, `status`, `recipientAddress`, `recipientCity`, `recipientState`, `recipientPostalCode`, `orderPrice`) VALUES
+(61, 'dusan', '2020-05-17 14:59:14', 'closed', 'Ulica 123', 'Beograd', 'Srbija', '11000', 4000),
+(64, 'admin', '2020-05-17 16:34:36', 'closed', 'Vojislava Ilica 63', 'Krusevac', 'Srbija', '37000', 1000),
+(65, 'admin', '2020-05-17 17:47:22', 'open', NULL, NULL, NULL, NULL, 3100),
+(66, 'user123', '2020-05-17 18:26:21', 'closed', 'Ulica 75', 'Beograd', 'Srbija', '11000', 5250),
+(67, 'user123', '2020-05-17 18:29:56', 'closed', 'Ulica 23', 'Beograd', 'Srbija', '11000', 1040),
+(68, 'user123', '2020-05-17 18:57:51', 'closed', 'Ulica 12', 'Beograd', 'Srbija', '11000', 5500);
 
 --
 -- Constraints for dumped tables
