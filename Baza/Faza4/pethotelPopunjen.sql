@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 17, 2020 at 09:36 PM
+-- Generation Time: May 17, 2020 at 09:46 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.12
 
@@ -276,7 +276,7 @@ CREATE TABLE IF NOT EXISTS `userorder` (
 
 INSERT INTO `userorder` (`orderId`, `username`, `dateTime`, `status`, `recipientAddress`, `recipientCity`, `recipientState`, `recipientPostalCode`, `orderPrice`) VALUES
 (61, 'dusan', '2020-05-17 14:59:14', 'closed', 'Ulica 123', 'Beograd', 'Srbija', '11000', 4000),
-(64, 'admin', '2020-05-17 16:34:36', 'closed', 'Vojislava Ilica 63', 'Krusevac', 'Srbija', '37000', 1000),
+(64, 'admin', '2020-05-17 16:34:36', 'closed', 'Ulica 77', 'Krusevac', 'Srbija', '37000', 1000),
 (65, 'admin', '2020-05-17 17:47:22', 'open', NULL, NULL, NULL, NULL, 3100),
 (66, 'user123', '2020-05-17 18:26:21', 'closed', 'Ulica 75', 'Beograd', 'Srbija', '11000', 5250),
 (67, 'user123', '2020-05-17 18:29:56', 'closed', 'Ulica 23', 'Beograd', 'Srbija', '11000', 1040),
