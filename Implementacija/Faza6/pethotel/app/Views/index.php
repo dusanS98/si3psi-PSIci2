@@ -33,9 +33,12 @@
                         Prijavi me
                     </button>
                     <button class="btn btn-primary mx-auto my-1" type="button"
-                            onclick="window.location.href='#'">
+                            onclick="window.location='<?php echo site_url("Forgetpassword/forget");?>'">
                         Zaboravljena lozinka
                     </button>
+                    <div class="col-md-12 col-sm-6 text-center mt-2">
+                        <a href="/register">Nemate profil? Registrujte se </a>
+                    </div>
                 </div>
                 <div class="form-row">
                     <?php
