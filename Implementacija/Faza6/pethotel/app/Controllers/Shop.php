@@ -6,7 +6,6 @@ namespace App\Controllers;
 use App\Models\OrderArticleModel;
 use App\Models\ShopModel;
 use App\Models\UserOrderModel;
-use CodeIgniter\Exceptions\ModelException;
 
 /**
  * Shop - klasa za prikaz, unos i naručivanje proizvoda iz prodavnice
@@ -404,8 +403,6 @@ class Shop extends BaseController
         $article = $shopModel->find($articleId);
         $data["title"] = "Proizvod " . $article["name"];
         $data["name"] = "shop";
-
-        date_default_timezone_set("Europe/Belgrade");
 
         if ($article["amount"] - intval($amount) >= 0) {
             $article["amount"] -= intval($amount);
@@ -919,6 +916,22 @@ class Shop extends BaseController
             "street" => "required|min_length[5]|max_length[32]",
             "city" => "required|min_length[3]|max_length[32]",
             "postalCode" => "required|min_length[5]|max_length[5]"
+        ], [
+            "street" => [
+                "required" => "Morate uneti ulicu",
+                "min_length" => "Ulica mora sadržati najmanje 5 karaktera",
+                "max_length" => "Ulica može sadržati najviše 32 karaktera",
+            ],
+            "city" => [
+                "required" => "Morate uneti grad",
+                "min_length" => "Grad mora sadržati najmanje 3 karaktera",
+                "max_length" => "Grad može sadržati najviše 32 karaktera",
+            ],
+            "postalCode" => [
+                "required" => "Morate uneti poštanski broj",
+                "min_length" => "Poštanski broj mora sadržati tačno 5 karaktera",
+                "max_length" => "Poštanski broj mora sadržati tačno 5 karaktera",
+            ]
         ])) {
             return redirect()->to(site_url("Shop/finishOrderForm"))->with("messages", $this->validator->listErrors());
         }
