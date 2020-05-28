@@ -67,6 +67,12 @@ class Room extends BaseController
         if (!$this->validate([
             "type" => "required|max_length[16]",
             "description" => "max_length[240]"
+        ], [
+            "type" => [
+                "required" => "Morate uneti tip",
+                "max_length" => "Tip može sadržati najviše 16 karaktera"
+            ],
+            "description" => ["max_length" => "Opis može sadržati najviše 240 karaktera"]
         ])) {
             if ($userType == "admin")
                 return redirect()->to(site_url("Room/changeRoom/" . $roomId))->with(

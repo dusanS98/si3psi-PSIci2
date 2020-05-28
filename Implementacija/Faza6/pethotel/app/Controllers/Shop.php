@@ -514,6 +514,21 @@ class Shop extends BaseController
             "image" => "uploaded[image]|max_size[image,5120]|ext_in[image,jpg,jpeg,png,jfif,gif]",
             "category" => "required",
             "description" => "max_length[240]"
+        ], [
+            "name" => [
+                "required" => "Morate uneti naziv",
+                "min_length" => "Naziv mora sadržati najmanje 3 karaktera",
+                "max_length" => "Naziv može sadržati najviše 32 karaktera"
+            ],
+            "price" => ["required" => "Morate uneti cenu"],
+            "amount" => ["required" => "Morate uneti količinu"],
+            "image" => [
+                "uploaded" => "Morate odabrati sliku",
+                "max_size" => "Veličina slike je veća od dozvoljene",
+                "ext_in" => "Pogrešna ekstenzija odabrane slike"
+            ],
+            "category" => ["required" => "Morate odabrati kategoriju"],
+            "description" => ["max_length" => "Opis može sadržati najviše 240 karaktera"]
         ])) {
             $userType = session()->get("userType");
             if ($userType == "admin")
@@ -608,6 +623,16 @@ class Shop extends BaseController
             "amount" => "required",
             "category" => "required",
             "description" => "max_length[240]"
+        ], [
+            "name" => [
+                "required" => "Morate uneti naziv",
+                "min_length" => "Naziv mora sadržati najmanje 3 karaktera",
+                "max_length" => "Naziv može sadržati najviše 32 karaktera"
+            ],
+            "price" => ["required" => "Morate uneti cenu"],
+            "amount" => ["required" => "Morate uneti količinu"],
+            "category" => ["required" => "Morate odabrati kategoriju"],
+            "description" => ["max_length" => "Opis može sadržati najviše 240 karaktera"]
         ])) {
             if ($userType == "admin")
                 return redirect()->to(site_url("Shop/changeArticle/" . $articleId))->with(

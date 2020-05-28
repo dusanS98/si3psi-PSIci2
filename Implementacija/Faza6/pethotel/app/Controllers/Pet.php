@@ -317,9 +317,18 @@ class Pet extends BaseController
             "breed" => "required",
             "date" => "required",
             "description" => "max_length[240]"
+        ], [
+            "name" => [
+                "required" => "Morate uneti ime",
+                "min_length" => "Ime mora sadržati najmanje 3 karaktera",
+                "max_length" => "Ime može sadržati najviše 32 karaktera"
+            ],
+            "breed" => ["required" => "Morate uneti rasu"],
+            "date" => ["required" => "Morate odabrati datum"],
+            "description" => ["max_length" => "Opis može sadržati najviše 240 karaktera"]
         ])) {
             if ($userType == "admin")
-                return redirect()->to(site_url("Pet/changeArticle/" . $petId))->with(
+                return redirect()->to(site_url("Pet/changePet/" . $petId))->with(
                     "messages", $this->validator->listErrors());
             else if ($userType == "moderator")
                 return redirect()->to(site_url(""));
