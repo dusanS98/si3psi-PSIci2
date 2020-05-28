@@ -12,6 +12,9 @@ class Registration extends BaseController {
        $data=[];
        helper(['form']);
        
+      if(session()->get('username'))
+          return redirect ()->to ("/");
+       
        if($this->request->getMethod()=='post'){
            
            $rules =[
@@ -83,7 +86,6 @@ class Registration extends BaseController {
         echo view('registration/register',$data);
         echo view("templates/footer"); 
           
-
-}	
+    }	
 }
 ?>
