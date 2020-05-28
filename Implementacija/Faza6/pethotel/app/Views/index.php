@@ -1,4 +1,11 @@
 <div class="container-fluid">
+    
+    <?php if(session()->get('uspesno')) : ?>
+        <div class="alert alert-success" role="alert">
+            <?= session()->get('uspesno') ?>
+        </div>
+       <?php endif; ?>
+    
     <div class="row">
         <div class="col-md-6 my-5">
             <div class="media mt-5">
@@ -9,7 +16,7 @@
                     Možete se ulogovati na sledećoj formi.
                 </div>
             </div>
-        </div>
+        </div>       
         <div class="col-md-5 mx-auto my-5 bg-light rounded">
             <form method="post" action="<?php echo site_url('Autorizacija/logovanje'); ?>">
                 <div class="form-row mt-4">
