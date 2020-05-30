@@ -1,0 +1,83 @@
+date/time         : 2020-05-29, 15:44:36, 254ms
+computer name     : DESKTOP-12CIHHF
+user name         : MILICA
+registered owner  : MILICA
+operating system  : Windows NT New x64 build 9200
+system language   : English
+system up time    : 1 hour 3 minutes
+program up time   : 10 seconds
+processors        : 4x Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz
+physical memory   : 3614/8080 MB (free/total)
+free disk space   : (C:) 524.04 GB
+display mode      : 1366x768, 32 bit
+process id        : $1b20
+allocated memory  : 21.00 MB
+command line      : C:\wamp64\sendmail\sendmail.exe -t -f mkaitovic@gmail.com
+executable        : sendmail.exe
+exec. date/time   : 2020-05-29 00:07
+compiled with     : Delphi 2006/07
+madExcept version : 3.0l
+callstack crc     : $297aecaf, $b1303699, $b1303699
+exception number  : 1
+exception class   : EIdConnClosedGracefully
+exception message : Connection Closed Gracefully.
+
+main thread ($10e4):
+0043e503 +002f sendmail.exe IdIOHandler      1929  +23 TIdIOHandler.RaiseConnClosedGracefully
+00440d55 +0051 sendmail.exe IdIOHandlerStack  396  +17 TIdIOHandlerStack.CheckForDisconnect
+0043dada +01fe sendmail.exe IdIOHandler      1508  +60 TIdIOHandler.ReadFromSource
+0043d559 +0159 sendmail.exe IdIOHandler      1315  +57 TIdIOHandler.ReadLn
+0043d380 +0024 sendmail.exe IdIOHandler      1233   +1 TIdIOHandler.ReadLn
+0043d837 +0073 sendmail.exe IdIOHandler      1428  +10 TIdIOHandler.ReadLnWait
+0044035d +0059 sendmail.exe IdTCPConnection   768   +7 TIdTCPConnection.GetInternalResponse
+0043fea3 +0013 sendmail.exe IdTCPConnection   564   +1 TIdTCPConnection.GetResponse
+004403fd +002d sendmail.exe IdTCPConnection   788   +4 TIdTCPConnection.GetResponse
+0045ab97 +0033 sendmail.exe IdSMTP            375   +4 TIdSMTP.Connect
+004b5f14 +1060 sendmail.exe sendmail          808 +326 initialization
+769c0417 +0017 KERNEL32.DLL                            BaseThreadInitThunk
+
+thread $2608:
+769c0417 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $388:
+769c0417 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $25ec:
+769c0417 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+stack dump:
+0019fc14  08 e5 43 00 de fa ed 0e - 01 00 00 00 07 00 00 00  ..C.............
+0019fc24  28 fc 19 00 08 e5 43 00 - 60 50 4a 02 01 00 00 00  (.....C.`PJ.....
+0019fc34  20 81 43 02 f0 05 44 00 - 54 fc 19 00 44 fc 19 00  ..C...D.T...D...
+0019fc44  6c fc 19 00 c8 4b 40 00 - 54 fc 19 00 00 00 00 00  l....K@.T.......
+0019fc54  a4 fc 19 00 5a 0d 44 00 - 00 00 00 00 f0 05 44 00  ....Z.D.......D.
+0019fc64  f0 05 44 00 dd da 43 00 - b0 fc 19 00 c8 4b 40 00  ..D...C......K@.
+0019fc74  a4 fc 19 00 ff ff ff ff - 20 81 43 02 00 00 00 00  ..........C.....
+0019fc84  00 00 00 00 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
+0019fc94  fe ff ff ff 00 00 00 01 - 20 81 43 02 00 00 00 00  ..........C.....
+0019fca4  e4 fc 19 00 5e d5 43 00 - 01 00 00 00 14 fd 19 00  ....^.C.........
+0019fcb4  c8 4b 40 00 e4 fc 19 00 - 80 fd 19 00 40 ab 4b 02  .K@.........@.K.
+0019fcc4  f0 05 44 00 00 00 00 00 - 3d 23 3a 00 00 00 00 00  ..D.....=#:.....
+0019fcd4  ff ff ff ff 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
+0019fce4  08 fd 19 00 86 d3 43 00 - 34 fd 19 00 60 ab 4b 02  ......C.4...`.K.
+0019fcf4  40 ab 4b 02 00 40 00 00 - 20 81 43 02 00 00 00 00  @.K..@....C.....
+0019fd04  60 ab 4b 02 48 fd 19 00 - 3c d8 43 00 34 fd 19 00  `.K.H...<.C.4...
+0019fd14  58 fd 19 00 c8 4b 40 00 - 48 fd 19 00 f0 05 44 00  X....K@.H.....D.
+0019fd24  00 00 00 00 80 66 44 02 - 00 00 00 00 00 00 00 00  .....fD.........
+0019fd34  00 00 00 00 00 00 00 00 - 00 00 00 00 40 ab 4b 02  ............@.K.
+0019fd44  ff ff ff 7f 84 fd 19 00 - 63 03 44 00 80 fd 19 00  ........c.D.....
+
+disassembling:
+[...]
+0043e4ef        call    -$36f9c ($407558)      ; System.LoadResString
+0043e4f4        mov     ecx, [ebp-4]
+0043e4f7        mov     dl, 1
+0043e4f9        mov     eax, [$41f6b4]
+0043e4fe        call    -$1eb07 ($41f9fc)      ; IdException.EIdException.Create
+0043e503      > call    -$3981c ($404cec)      ; System.@RaiseExcept
+0043e508 1930   xor     eax, eax
+0043e50a        pop     edx
+0043e50b        pop     ecx
+0043e50c        pop     ecx
+0043e50d        mov     fs:[eax], edx
+[...]

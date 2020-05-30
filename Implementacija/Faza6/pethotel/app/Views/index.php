@@ -40,7 +40,7 @@
                         Prijavi me
                     </button>
                     <button class="btn btn-primary mx-auto my-1" type="button"
-                            onclick="window.location='<?php echo site_url("Forgetpassword/forget");?>'">
+                            onclick="window.location='<?php echo site_url("/forgetpassword");?>'">
                         Zaboravljena lozinka
                     </button>
                     <div class="col-md-12 col-sm-6 text-center mt-2">

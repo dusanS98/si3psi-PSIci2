@@ -1,0 +1,16 @@
+Ovaj folder sendmail premestite u glavni wamp ili xamp folder, sta vec koristite
+Kod mene konkretno C:\wamp64\sendmail 
+
+Kad otvorite php.ini wampa treba da podesite :
+
+SMTP = localhost
+smtp_port = 465 
+sendmail_path = "C:\wamp64\sendmail\sendmail.exe -t"
+ili prilagodite, ako je kod vas ta putanja drugacija npr. "D:\wamp\..."
+
+sve ostalo neka bude zakomentarisano i trebalo bi da mail moze da se posalje :)
+
+
+
+
+

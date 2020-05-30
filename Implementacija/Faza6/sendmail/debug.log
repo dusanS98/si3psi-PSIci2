@@ -1,0 +1,190 @@
+20-05-29 15:44:26 ** --- MESSAGE BEGIN ---
+20-05-29 15:44:26 ** To: dstanivukovic98@gmail.com
+20-05-29 15:44:26 ** Subject: =?UTF-8?Q?Email=20Test?=
+20-05-29 15:44:26 ** Date: Fri, 29 May 2020 08:44:25 -0500
+20-05-29 15:44:26 ** From: "Your Name" <mkaitovic@gmail.com>
+20-05-29 15:44:26 ** Return-Path: <mkaitovic@gmail.com>
+20-05-29 15:44:26 ** Reply-To: <mkaitovic@gmail.com>
+20-05-29 15:44:26 ** User-Agent: PHPMailer
+20-05-29 15:44:26 ** X-Sender: mkaitovic@gmail.com
+20-05-29 15:44:26 ** X-Mailer: PHPMailer
+20-05-29 15:44:26 ** X-Priority: 3 (Normal)
+20-05-29 15:44:26 ** Message-ID: <5ed111b9d43077.78585789@gmail.com>
+20-05-29 15:44:26 ** Mime-Version: 1.0
+20-05-29 15:44:26 ** Content-Type: text/plain; charset=UTF-8
+20-05-29 15:44:26 ** Content-Transfer-Encoding: 8bit
+20-05-29 15:44:26 ** 
+20-05-29 15:44:26 ** Testing the email class.
+20-05-29 15:44:26 ** 
+20-05-29 15:44:26 ** --- MESSAGE END ---
+20-05-29 15:44:26 ** Connecting to smtp.gmail.com:465
+20-05-29 15:44:26 ** Connected.
+20-05-29 15:44:36 ** Disconnected.
+20-05-29 15:44:36 ** Disconnected.
+20-05-29 15:44:36 ** Disconnected.
+20-05-29 15:44:36 ** Connection Closed Gracefully.
+20-05-29 15:44:36 ** --- MESSAGE BEGIN ---
+20-05-29 15:44:36 ** To: dstanivukovic98@gmail.com
+20-05-29 15:44:36 ** Subject: =?UTF-8?Q?Email=20Test?=
+20-05-29 15:44:36 ** Date: Fri, 29 May 2020 08:44:36 -0500
+20-05-29 15:44:36 ** From: "Your Name" <mkaitovic@gmail.com>
+20-05-29 15:44:36 ** Return-Path: <mkaitovic@gmail.com>
+20-05-29 15:44:36 ** Reply-To: <mkaitovic@gmail.com>
+20-05-29 15:44:36 ** User-Agent: PHPMailer
+20-05-29 15:44:36 ** X-Sender: mkaitovic@gmail.com
+20-05-29 15:44:36 ** X-Mailer: PHPMailer
+20-05-29 15:44:36 ** X-Priority: 3 (Normal)
+20-05-29 15:44:36 ** Message-ID: <5ed111c4978767.58367581@gmail.com>
+20-05-29 15:44:36 ** Mime-Version: 1.0
+20-05-29 15:44:36 ** Content-Type: text/plain; charset=UTF-8
+20-05-29 15:44:36 ** Content-Transfer-Encoding: 8bit
+20-05-29 15:44:36 ** 
+20-05-29 15:44:36 ** Testing the email class.
+20-05-29 15:44:36 ** 
+20-05-29 15:44:36 ** --- MESSAGE END ---
+20-05-29 15:44:36 ** Connecting to smtp.gmail.com:465
+20-05-29 15:44:36 ** Connected.
+20-05-29 15:44:46 ** Disconnected.
+20-05-29 15:44:46 ** Disconnected.
+20-05-29 15:44:46 ** Disconnected.
+20-05-29 15:44:46 ** Connection Closed Gracefully.
+20-05-29 15:45:29 ** --- MESSAGE BEGIN ---
+20-05-29 15:45:29 ** To: dstanivukovic98@gmail.com
+20-05-29 15:45:29 ** Subject: =?UTF-8?Q?Email=20Test?=
+20-05-29 15:45:29 ** Date: Fri, 29 May 2020 08:45:29 -0500
+20-05-29 15:45:29 ** From: "Your Name" <mkaitovic@gmail.com>
+20-05-29 15:45:29 ** Return-Path: <mkaitovic@gmail.com>
+20-05-29 15:45:29 ** Reply-To: <mkaitovic@gmail.com>
+20-05-29 15:45:29 ** User-Agent: PHPMailer
+20-05-29 15:45:29 ** X-Sender: mkaitovic@gmail.com
+20-05-29 15:45:29 ** X-Mailer: PHPMailer
+20-05-29 15:45:29 ** X-Priority: 3 (Normal)
+20-05-29 15:45:29 ** Message-ID: <5ed111f9b668e2.06166270@gmail.com>
+20-05-29 15:45:29 ** Mime-Version: 1.0
+20-05-29 15:45:29 ** Content-Type: text/plain; charset=UTF-8
+20-05-29 15:45:29 ** Content-Transfer-Encoding: 8bit
+20-05-29 15:45:29 ** 
+20-05-29 15:45:29 ** Testing the email class.
+20-05-29 15:45:29 ** 
+20-05-29 15:45:29 ** --- MESSAGE END ---
+20-05-29 15:45:31 ** Connecting to smtp.gmail.com:465
+20-05-29 15:45:31 ** Connected.
+20-05-29 15:45:31 << 220 smtp.gmail.com ESMTP q15sm10596113wrf.87 - gsmtp<EOL>
+20-05-29 15:45:31 >> EHLO DESKTOP-12CIHHF.localhost<EOL>
+20-05-29 15:45:31 << 250-smtp.gmail.com at your service, [93.86.5.18]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+20-05-29 15:45:31 ** Authenticating as mkaitovic@gmail.com
+20-05-29 15:45:31 >> AUTH LOGIN<EOL>
+20-05-29 15:45:31 << 334 VXNlcm5hbWU6<EOL>
+20-05-29 15:45:31 >> bWthaXRvdmljQGdtYWlsLmNvbQ==<EOL>
+20-05-29 15:45:31 << 334 UGFzc3dvcmQ6<EOL>
+20-05-29 15:45:31 >> TUlUWkthTWkxOTk1QEBA<EOL>
+20-05-29 15:45:31 << 535-5.7.8 Username and Password not accepted. Learn more at<EOL>535 5.7.8  https://support.google.com/mail/?p=BadCredentials q15sm10596113wrf.87 - gsmtp<EOL>
+20-05-29 15:45:31 ** Disconnecting from smtp.gmail.com:465
+20-05-29 15:45:31 ** Disconnected.
+20-05-29 15:45:31 ** Disconnected.
+20-05-29 15:45:31 ** Username and Password not accepted. Learn more at<EOL> https://support.google.com/mail/?p=BadCredentials q15sm10596113wrf.87 - gsmtp<EOL>
+20-05-29 15:45:50 ** --- MESSAGE BEGIN ---
+20-05-29 15:45:50 ** To: dstanivukovic98@gmail.com
+20-05-29 15:45:50 ** Subject: =?UTF-8?Q?Email=20Test?=
+20-05-29 15:45:50 ** Date: Fri, 29 May 2020 08:45:50 -0500
+20-05-29 15:45:50 ** From: "Your Name" <mkaitovic@gmail.com>
+20-05-29 15:45:50 ** Return-Path: <mkaitovic@gmail.com>
+20-05-29 15:45:50 ** Reply-To: <mkaitovic@gmail.com>
+20-05-29 15:45:50 ** User-Agent: CodeIgniter
+20-05-29 15:45:50 ** X-Sender: mkaitovic@gmail.com
+20-05-29 15:45:50 ** X-Mailer: CodeIgniter
+20-05-29 15:45:50 ** X-Priority: 3 (Normal)
+20-05-29 15:45:50 ** Message-ID: <5ed1120e1b9fd4.49865448@gmail.com>
+20-05-29 15:45:50 ** Mime-Version: 1.0
+20-05-29 15:45:50 ** Content-Type: text/plain; charset=UTF-8
+20-05-29 15:45:50 ** Content-Transfer-Encoding: 8bit
+20-05-29 15:45:50 ** 
+20-05-29 15:45:50 ** Testing the email class.
+20-05-29 15:45:50 ** 
+20-05-29 15:45:50 ** --- MESSAGE END ---
+20-05-29 15:45:51 ** Connecting to smtp.gmail.com:465
+20-05-29 15:45:51 ** Connected.
+20-05-29 15:45:51 << 220 smtp.gmail.com ESMTP q128sm10441534wma.38 - gsmtp<EOL>
+20-05-29 15:45:51 >> EHLO DESKTOP-12CIHHF.localhost<EOL>
+20-05-29 15:45:51 << 250-smtp.gmail.com at your service, [93.86.5.18]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+20-05-29 15:45:51 ** Authenticating as mkaitovic@gmail.com
+20-05-29 15:45:51 >> AUTH LOGIN<EOL>
+20-05-29 15:45:51 << 334 VXNlcm5hbWU6<EOL>
+20-05-29 15:45:51 >> bWthaXRvdmljQGdtYWlsLmNvbQ==<EOL>
+20-05-29 15:45:51 << 334 UGFzc3dvcmQ6<EOL>
+20-05-29 15:45:51 >> TUlUWkthTWkxOTk1QEBA<EOL>
+20-05-29 15:45:51 << 535-5.7.8 Username and Password not accepted. Learn more at<EOL>535 5.7.8  https://support.google.com/mail/?p=BadCredentials q128sm10441534wma.38 - gsmtp<EOL>
+20-05-29 15:45:51 ** Disconnecting from smtp.gmail.com:465
+20-05-29 15:45:51 ** Disconnected.
+20-05-29 15:45:51 ** Disconnected.
+20-05-29 15:45:51 ** Username and Password not accepted. Learn more at<EOL> https://support.google.com/mail/?p=BadCredentials q128sm10441534wma.38 - gsmtp<EOL>
+20-05-29 15:46:28 ** --- MESSAGE BEGIN ---
+20-05-29 15:46:28 ** To: dstanivukovic98@gmail.com
+20-05-29 15:46:28 ** Subject: =?UTF-8?Q?Email=20Test?=
+20-05-29 15:46:28 ** Date: Fri, 29 May 2020 08:46:28 -0500
+20-05-29 15:46:28 ** From: "Your Name" <mkaitovic@gmail.com>
+20-05-29 15:46:28 ** Return-Path: <mkaitovic@gmail.com>
+20-05-29 15:46:28 ** Reply-To: <mkaitovic@gmail.com>
+20-05-29 15:46:28 ** User-Agent: CodeIgniter
+20-05-29 15:46:28 ** X-Sender: mkaitovic@gmail.com
+20-05-29 15:46:28 ** X-Mailer: CodeIgniter
+20-05-29 15:46:28 ** X-Priority: 3 (Normal)
+20-05-29 15:46:28 ** Message-ID: <5ed112346c1ce3.36888195@gmail.com>
+20-05-29 15:46:28 ** Mime-Version: 1.0
+20-05-29 15:46:28 ** Content-Type: text/plain; charset=UTF-8
+20-05-29 15:46:28 ** Content-Transfer-Encoding: 8bit
+20-05-29 15:46:28 ** 
+20-05-29 15:46:28 ** Testing the email class.
+20-05-29 15:46:28 ** 
+20-05-29 15:46:28 ** --- MESSAGE END ---
+20-05-29 15:46:29 ** Connecting to smtp.gmail.com:465
+20-05-29 15:46:29 ** Connected.
+20-05-29 15:46:29 << 220 smtp.gmail.com ESMTP 125sm1644082wmc.23 - gsmtp<EOL>
+20-05-29 15:46:29 >> EHLO DESKTOP-12CIHHF.localhost<EOL>
+20-05-29 15:46:29 << 250-smtp.gmail.com at your service, [93.86.5.18]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+20-05-29 15:46:29 ** Authenticating as mkaitovic@gmail.com
+20-05-29 15:46:29 >> AUTH LOGIN<EOL>
+20-05-29 15:46:30 << 334 VXNlcm5hbWU6<EOL>
+20-05-29 15:46:30 >> bWthaXRvdmljQGdtYWlsLmNvbQ==<EOL>
+20-05-29 15:46:30 << 334 UGFzc3dvcmQ6<EOL>
+20-05-29 15:46:30 >> TUlUWkthTWkxOTk1QEBA<EOL>
+20-05-29 15:46:30 << 535-5.7.8 Username and Password not accepted. Learn more at<EOL>535 5.7.8  https://support.google.com/mail/?p=BadCredentials 125sm1644082wmc.23 - gsmtp<EOL>
+20-05-29 15:46:30 ** Disconnecting from smtp.gmail.com:465
+20-05-29 15:46:30 ** Disconnected.
+20-05-29 15:46:30 ** Disconnected.
+20-05-29 15:46:30 ** Username and Password not accepted. Learn more at<EOL> https://support.google.com/mail/?p=BadCredentials 125sm1644082wmc.23 - gsmtp<EOL>
+20-05-29 15:47:40 ** --- MESSAGE BEGIN ---
+20-05-29 15:47:40 ** To: dstanivukovic98@gmail.com
+20-05-29 15:47:40 ** Subject: =?UTF-8?Q?Email=20Test?=
+20-05-29 15:47:40 ** Date: Fri, 29 May 2020 08:47:40 -0500
+20-05-29 15:47:40 ** From: "Your Name" <mkaitovic@gmail.com>
+20-05-29 15:47:40 ** Return-Path: <mkaitovic@gmail.com>
+20-05-29 15:47:40 ** Reply-To: <mkaitovic@gmail.com>
+20-05-29 15:47:40 ** User-Agent: CodeIgniter
+20-05-29 15:47:40 ** X-Sender: mkaitovic@gmail.com
+20-05-29 15:47:40 ** X-Mailer: CodeIgniter
+20-05-29 15:47:40 ** X-Priority: 3 (Normal)
+20-05-29 15:47:40 ** Message-ID: <5ed1127cd2a4e7.63588120@gmail.com>
+20-05-29 15:47:40 ** Mime-Version: 1.0
+20-05-29 15:47:40 ** Content-Type: text/plain; charset=UTF-8
+20-05-29 15:47:40 ** Content-Transfer-Encoding: 8bit
+20-05-29 15:47:40 ** 
+20-05-29 15:47:40 ** Testing the email class.
+20-05-29 15:47:40 ** 
+20-05-29 15:47:40 ** --- MESSAGE END ---
+20-05-29 15:47:41 ** Connecting to smtp.gmail.com:465
+20-05-29 15:47:42 ** Connected.
+20-05-29 15:47:42 << 220 smtp.gmail.com ESMTP w7sm6740446edq.94 - gsmtp<EOL>
+20-05-29 15:47:42 >> EHLO DESKTOP-12CIHHF.localhost<EOL>
+20-05-29 15:47:42 << 250-smtp.gmail.com at your service, [93.86.5.18]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+20-05-29 15:47:42 ** Authenticating as mkaitovic@gmail.com
+20-05-29 15:47:42 >> AUTH LOGIN<EOL>
+20-05-29 15:47:42 << 334 VXNlcm5hbWU6<EOL>
+20-05-29 15:47:42 >> bWthaXRvdmljQGdtYWlsLmNvbQ==<EOL>
+20-05-29 15:47:42 << 334 UGFzc3dvcmQ6<EOL>
+20-05-29 15:47:42 >> TUlUWkthTWkxOTk1QEBA<EOL>
+20-05-29 15:47:42 << 535-5.7.8 Username and Password not accepted. Learn more at<EOL>535 5.7.8  https://support.google.com/mail/?p=BadCredentials w7sm6740446edq.94 - gsmtp<EOL>
+20-05-29 15:47:42 ** Disconnecting from smtp.gmail.com:465
+20-05-29 15:47:42 ** Disconnected.
+20-05-29 15:47:42 ** Disconnected.
+20-05-29 15:47:42 ** Username and Password not accepted. Learn more at<EOL> https://support.google.com/mail/?p=BadCredentials w7sm6740446edq.94 - gsmtp<EOL>
