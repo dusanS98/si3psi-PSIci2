@@ -52,7 +52,7 @@ if ($data["name"] != "admin") {
                 <a class="nav-link" href="' . site_url('Pet/showPets') . '">Ljubimci</a>
             </li>
             <li class="nav-item' . ($data["name"] == "rooms" ? " active" : "") . '">
-                <a class="nav-link" href="' . site_url('Home/index') . '">Smeštaj</a>
+                <a class="nav-link" href="' . site_url('Room/showRooms') . '">Smeštaj</a>
             </li>';
     if (session()->has("username"))
         echo '<li class="nav-item' . ($data["name"] == "cart" ? " active" : "") . '">
@@ -113,7 +113,7 @@ if ($data["name"] != "admin") {
                             <a class="nav-link' . (($data["active"] == "input" && $data["type"] == "pets") ? " active" : "")
         . '" href="' . site_url("Pet/unosLjubimca") . '">Unos ljubimaca</a>
                             <a class="nav-link' . (($data["active"] == "input" && $data["type"] == "rooms") ? " active" : "")
-        . '" href="#">Unos smeštaja</a>
+        . '" href="' . site_url("Room/unosSmestaja") . '">Unos smeštaja</a>
                         </nav>
                     </div>
                 </nav>
@@ -145,7 +145,7 @@ if ($data["name"] != "admin") {
                     <a class="nav-link" href="' . site_url("Pet/showPets") . '">
                         Pregled ljubimaca
                     </a>
-                    <a class="nav-link" href="' . site_url("") . '">
+                    <a class="nav-link" href="' . site_url("Room/showRooms") . '">
                         Pregled smeštaja
                     </a>
                 </div>
