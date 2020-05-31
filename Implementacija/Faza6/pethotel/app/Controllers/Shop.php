@@ -532,7 +532,8 @@ class Shop extends BaseController
                 return redirect()->to(site_url("Admin/insertArticle"))->with(
                     "messages", $this->validator->listErrors());
             else if ($userType == "moderator")
-                return redirect()->to(site_url(""));
+                return redirect()->to(site_url("Moderator/insertArticle"))->with(
+                    "messages", $this->validator->listErrors());
         }
 
         $name = $this->request->getVar("name");
@@ -561,7 +562,8 @@ class Shop extends BaseController
             return redirect()->to(site_url("Admin/insertArticle"))->with(
                 "messages", "Uspešno ste uneli proizvod");
         else if ($userType == "moderator")
-            return redirect()->to(site_url(""));
+            return redirect()->to(site_url("Moderator/insertArticle"))->with(
+                "messages", "Uspešno ste uneli proizvod");
     }
 
     /**
@@ -579,7 +581,7 @@ class Shop extends BaseController
         if (session()->get("userType") == "admin")
             return redirect()->to(site_url("Admin/manageArticles"));
         else
-            return redirect()->to(site_url(""));
+            return redirect()->to(site_url("Moderator/manageArticles"));
     }
 
     /**
@@ -631,11 +633,9 @@ class Shop extends BaseController
             "category" => ["required" => "Morate odabrati kategoriju"],
             "description" => ["max_length" => "Opis može sadržati najviše 240 karaktera"]
         ])) {
-            if ($userType == "admin")
+            if ($userType == "admin" || $userType == "moderator")
                 return redirect()->to(site_url("Shop/changeArticle/" . $articleId))->with(
                     "messages", $this->validator->listErrors());
-            else if ($userType == "moderator")
-                return redirect()->to(site_url(""));
         }
 
         $name = $this->request->getVar("name");
@@ -656,11 +656,9 @@ class Shop extends BaseController
 
         $shopModel->update($articleId, $article);
 
-        if ($userType == "admin")
+        if ($userType == "admin" || $userType == "moderator")
             return redirect()->to(site_url("Shop/changeArticle/" . $articleId))->with(
                 "messages", "Uspešno ste izmenili podatke o proizvodu");
-        else if ($userType == "moderator")
-            return redirect()->to(site_url(""));
     }
 
     /**

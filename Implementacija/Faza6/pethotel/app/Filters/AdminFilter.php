@@ -8,7 +8,7 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 
 /**
- * Klasa za redirekciju korisnika
+ * AdminFilter - Klasa za redirekciju korisnika
  *
  * @package App\Filters
  *

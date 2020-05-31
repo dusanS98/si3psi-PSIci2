@@ -28,7 +28,7 @@ class Autorizacija extends BaseController
             if ($user["type"] == "admin") {
                 return redirect()->to(site_url("Admin/index"));
             } else if ($user["type"] == "moderator") {
-                echo view("autorizacija/moderator");
+                return redirect()->to(site_url("Moderator/index"));
             } else {
                 return redirect()->to(site_url("User/index"));
             }

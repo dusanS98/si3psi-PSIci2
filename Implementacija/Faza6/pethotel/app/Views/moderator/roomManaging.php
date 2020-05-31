@@ -4,9 +4,9 @@
 <div id="layoutSidenav_content">
     <main class="mb-4">
         <div class="container-fluid">
-            <h1 class="mt-4">Administracija</h1>
+            <h1 class="mt-4">Moderacija</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item">Administracija</li>
+                <li class="breadcrumb-item">Moderacija</li>
                 <li class="breadcrumb-item active">Upravljanje smeštajem</li>
             </ol>
             <div class="card mb-4">

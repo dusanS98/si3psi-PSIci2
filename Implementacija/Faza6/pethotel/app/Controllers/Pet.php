@@ -277,7 +277,7 @@ class Pet extends BaseController
         if (session()->get("userType") == "admin")
             return redirect()->to(site_url("Admin/managePets"));
         else
-            return redirect()->to(site_url(""));
+            return redirect()->to(site_url("Moderator/managePets"));
     }
 
     /**
@@ -327,11 +327,9 @@ class Pet extends BaseController
             "date" => ["required" => "Morate odabrati datum"],
             "description" => ["max_length" => "Opis može sadržati najviše 240 karaktera"]
         ])) {
-            if ($userType == "admin")
+            if ($userType == "admin" || $userType == "moderator")
                 return redirect()->to(site_url("Pet/changePet/" . $petId))->with(
                     "messages", $this->validator->listErrors());
-            else if ($userType == "moderator")
-                return redirect()->to(site_url(""));
         }
 
         $name = $this->request->getVar("name");
@@ -349,11 +347,9 @@ class Pet extends BaseController
 
         $petModel->update($petId, $pet);
 
-        if ($userType == "admin")
+        if ($userType == "admin" || $userType == "moderator")
             return redirect()->to(site_url("Pet/changePet/" . $petId))->with(
                 "messages", "Uspešno ste izmenili podatke o ljubimcu");
-        else if ($userType == "moderator")
-            return redirect()->to(site_url(""));
     }
 
 }

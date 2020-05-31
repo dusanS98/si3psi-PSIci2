@@ -13,6 +13,7 @@ class Filters extends BaseConfig
         'honeypot' => \CodeIgniter\Filters\Honeypot::class,
         'user' => \App\Filters\UserFilter::class,
         'admin' => \App\Filters\AdminFilter::class,
+        'moderator' => \App\Filters\ModeratorFilter::class,
         'guest' => \App\Filters\GuestFilter::class
     ];
 
@@ -39,6 +40,7 @@ class Filters extends BaseConfig
     public $filters = [
         'user' => ['before' => ['User/*', 'User']],
         'admin' => ['before' => ['Admin/*', 'Admin']],
+        'moderator' => ['before' => ['Moderator/*', 'Moderator']],
         'guest' => ['before' => ['Home/*', 'Home', '/']]
     ];
 }

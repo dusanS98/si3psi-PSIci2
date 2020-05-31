@@ -8,7 +8,7 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 
 /**
- * Klasa za redirekciju korisnika
+ * GuestFilter - Klasa za redirekciju korisnika
  *
  * @package App\Filters
  *
@@ -29,7 +29,7 @@ class GuestFilter implements \CodeIgniter\Filters\FilterInterface
             if ($userType == "admin")
                 return redirect()->to(site_url("Admin/index"));
             else if ($userType == "moderator")
-                return redirect()->to(site_url(""));
+                return redirect()->to(site_url("Moderator/index"));
             else
                 return redirect()->to(site_url("User/index"));
         }

@@ -8,13 +8,13 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 
 /**
- * UserFilter - Klasa za redirekciju korisnika
+ * ModeratorFilter - Klasa za redirekciju korisnika
  *
  * @package App\Filters
  *
  * @version 1.0
  */
-class UserFilter implements \CodeIgniter\Filters\FilterInterface
+class ModeratorFilter implements \CodeIgniter\Filters\FilterInterface
 {
 
     /**
@@ -25,7 +25,7 @@ class UserFilter implements \CodeIgniter\Filters\FilterInterface
     public function before(RequestInterface $request)
     {
         if (!session()->has("username") ||
-            session()->has("username") && session()->get("userType") != "standard")
+            session()->has("username") && session()->get("userType") != "moderator")
             return redirect()->to(site_url("Home/index"));
     }
 

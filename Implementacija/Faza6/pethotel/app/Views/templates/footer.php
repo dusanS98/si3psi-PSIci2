@@ -1,7 +1,7 @@
 <!--Autor: Dušan Stanivuković 2017/0605-->
 
 <?php
-if ($data["name"] != "admin") {
+if ($data["name"] != "admin" && $data["name"] != "moderator") {
     echo '<footer class="border-top footer text-muted bg-light">
     <div class="container text-center">
         &copy; Hotel za kućne ljubimce, Copyright 2020
@@ -19,7 +19,7 @@ if ($data["name"] != "admin") {
         crossorigin="anonymous"></script>
 <script src="<?php echo base_url(); ?>/js/site.js"></script>
 <?php
-if ($data["name"] == "admin") {
+if ($data["name"] == "admin" || $data["name"] == "moderator") {
     echo '
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>

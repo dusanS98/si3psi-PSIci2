@@ -51,8 +51,7 @@ class Room extends BaseController
         $fishes = session()->get("fishes");
         $littleAnimals = session()->get("littleAnimals");
 
-        if ($dogs == "true" && $cats == "true" && $birds == "true" && $fishes == "true" && $littleAnimals == "true")
-        {
+        if ($dogs == "true" && $cats == "true" && $birds == "true" && $fishes == "true" && $littleAnimals == "true") {
             return $this->showRooms($page);
         }
 
@@ -305,7 +304,7 @@ class Room extends BaseController
         if (session()->get("userType") == "admin")
             return redirect()->to(site_url("Admin/manageRooms"));
         else
-            return redirect()->to(site_url(""));
+            return redirect()->to(site_url("Moderator/manageRooms"));
     }
 
     /**
@@ -350,11 +349,9 @@ class Room extends BaseController
             ],
             "description" => ["max_length" => "Opis može sadržati najviše 240 karaktera"]
         ])) {
-            if ($userType == "admin")
+            if ($userType == "admin" || $userType == "moderator")
                 return redirect()->to(site_url("Room/changeRoom/" . $roomId))->with(
                     "messages", $this->validator->listErrors());
-            else if ($userType == "moderator")
-                return redirect()->to(site_url(""));
         }
 
         $type = $this->request->getVar("type");
@@ -368,10 +365,8 @@ class Room extends BaseController
 
         $roomModel->update($roomId, $room);
 
-        if ($userType == "admin")
+        if ($userType == "admin" || $userType == "moderator")
             return redirect()->to(site_url("Room/changeRoom/" . $roomId))->with(
                 "messages", "Uspešno ste izmenili podatke o smeštaju");
-        else if ($userType == "moderator")
-            return redirect()->to(site_url(""));
     }
 }
