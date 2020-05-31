@@ -256,6 +256,7 @@ class Room extends BaseController
 
 
         $image = $this->request->getVar("imageFile");
+        $image->move(ROOTPATH . "/public/images/rooms");
 
         $data = array(
             'type' => $roomType,
