@@ -251,8 +251,8 @@ class Room extends BaseController
         }
 
         $roomDescr = $this->request->getVar("roomDescr");
-        if (empty($petDescr))
-            $petDescr = "";
+        if (empty($roomDescr))
+            $roomDescr = "";
 
 
         $image = $this->request->getFile("imageFile");
