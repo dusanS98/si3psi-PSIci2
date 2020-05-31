@@ -255,7 +255,7 @@ class Room extends BaseController
             $petDescr = "";
 
 
-        $image = $this->request->getVar("imageFile");
+        $image = $this->request->getFile("imageFile");
         $image->move(ROOTPATH . "/public/images/rooms");
 
         $data = array(
