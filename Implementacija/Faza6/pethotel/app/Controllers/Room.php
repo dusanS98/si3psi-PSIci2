@@ -233,6 +233,25 @@ class Room extends BaseController
 
     public function sacuvajSmestaj()
     {
+        if (!$this->validate([
+            "imageFile" => "uploaded[image]|max_size[image,5120]|ext_in[image,jpg,jpeg,png,jfif,gif]",
+            "roomDescr" => "max_length[240]"
+        ], [
+            "imageFile" => [
+                "uploaded" => "Morate odabrati sliku",
+                "max_size" => "Veličina slike je veća od dozvoljene",
+                "ext_in" => "Pogrešna ekstenzija odabrane slike"
+            ],
+            "category" => ["required" => "Morate odabrati kategoriju"],
+            "description" => ["max_length" => "Opis može sadržati najviše 240 karaktera"]
+        ])) {
+            $userType = session()->get("userType");
+            if ($userType == "admin")
+                return redirect()->to(site_url("Admin/insertArticle"))->with(
+                    "messages", $this->validator->listErrors());
+            else if ($userType == "moderator")
+                return redirect()->to(site_url(""));
+        }
 
         $roomType = $this->request->getVar("roomType");
         if (strcmp($roomType, "Pas") != 0 &&
@@ -245,7 +264,7 @@ class Room extends BaseController
             strcmp($roomType, "Kornjaca") != 0 &&
             strcmp($roomType, "Zeka") != 0 &&
             strcmp($roomType, "Zec") != 0) {
-            $this->unosSmestaja("Uneta rasa je nevalidna. Moguce opcije su Pas, Macka/Macak, "
+            $this->unosSmestaja("Uneti tip smestaja je nevalidan. Moguce opcije su Pas, Macka/Macak, "
                 . "Ptica, Ribica i male zivotinje (Hrcak, Lasica, Kornjaca, Zeka/Zec).");
             return;
         }
