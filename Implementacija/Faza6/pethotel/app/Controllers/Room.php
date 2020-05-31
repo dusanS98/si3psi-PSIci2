@@ -37,13 +37,14 @@ class Room extends BaseController
         echo view("templates/footer");
     }
 
-    public function showRoomsByCategory($page = 1)
+    /**
+     * Pomoćna funkcija za dohvatanje smeštaja iz baze
+     *
+     * @return array
+     */
+    private function findRooms()
     {
         $roomModel = new RoomModel();
-
-
-        $data["title"] = "Pregled smestaja";
-        $data["name"] = "room";
 
         $dogs = session()->get("dogs");
         $cats = session()->get("cats");
@@ -51,44 +52,31 @@ class Room extends BaseController
         $fishes = session()->get("fishes");
         $littleAnimals = session()->get("littleAnimals");
 
-        if ($dogs == "true" && $cats == "true" && $birds == "true" && $fishes == "true" && $littleAnimals == "true") {
-            return $this->showRooms($page);
-        }
-
         $rooms = [];
 
         if ($dogs == "true")
-            $rooms = array_merge($rooms, $roomModel->like("type", "Pas")->findAll());
+            $rooms = array_merge($rooms, $roomModel->like("type", "psi")->findAll());
         if ($cats == "true")
-            $rooms = array_merge($rooms, $roomModel->like("type", "Mac", "after")->findAll());
+            $rooms = array_merge($rooms, $roomModel->like("type", "macke")->findAll());
         if ($birds == "true")
-            $rooms = array_merge($rooms, $roomModel->like("type", "Ptica")->findAll());
+            $rooms = array_merge($rooms, $roomModel->like("type", "ptice")->findAll());
         if ($fishes == "true")
-            $rooms = array_merge($rooms, $roomModel->like("type", "Ribica")->findAll());
+            $rooms = array_merge($rooms, $roomModel->like("type", "ribe")->findAll());
         if ($littleAnimals == "true")
-            $rooms = array_merge($rooms, $roomModel
-                ->notLike("type", "Pas")
-                ->orNotLike("type", "Mac", "after")
-                ->orNotLike("type", "Ptica")
-                ->orNotLike("type", "Ribica")
-                ->findAll());
+            $rooms = array_merge($rooms, $roomModel->like("type", "maleZivotinje")->findAll());
 
-
-        $pagination["page"] = $page;
-        $pagination["numOfPages"] = ceil(sizeof($rooms) / $this->itemsPerPage);
-
-        $offset = ($page - 1) * $this->itemsPerPage;
-        $rooms = array_slice($rooms, $offset, $this->itemsPerPage);
-
-        echo view("templates/header", ["data" => $data]);
-        echo view("shop/rooms", ["rooms" => $rooms, "pagination" => $pagination, "categories" => true]);
-        echo view("templates/footer");
+        return $rooms;
     }
 
-    public function searchCategoriesRooms($page = 1)
+    /**
+     * Funkcija koja vraća određene tipove smeštaja kao odgovor na ajax zahtev
+     *
+     * @param int $page Redni broj stanice sa smeštajem
+     *
+     * @return string
+     */
+    public function searchTypes($page = 1)
     {
-        $roomModel = new RoomModel();
-
         $dogs = $this->request->getVar("dogs");
         $cats = $this->request->getVar("cats");
         $birds = $this->request->getVar("birds");
@@ -101,45 +89,47 @@ class Room extends BaseController
         session()->set("fishes", $fishes);
         session()->set("littleAnimals", $littleAnimals);
 
-        $rooms = [];
-
-        if ($dogs == "true")
-            $rooms = array_merge($rooms, $roomModel->like("type", "Pas")->findAll());
-        if ($cats == "true")
-            $rooms = array_merge($rooms, $roomModel->like("type", "Mac", "after")->findAll());
-        if ($birds == "true")
-            $rooms = array_merge($rooms, $roomModel->like("type", "Ptica")->findAll());
-        if ($fishes == "true")
-            $rooms = array_merge($rooms, $roomModel->like("type", "Ribica")->findAll());
-        if ($littleAnimals == "true")
-            $rooms = array_merge($rooms, $roomModel
-                ->like("type", "Kornjaca")
-                ->orLike("type", "Lasica")
-                ->orLike("type", "Zeka")
-                ->orLike("type", "Zec")
-                ->orLike("type", "Hrcak")
-                ->findAll());
-
+        $rooms = $this->findRooms();
         $baseUrl = base_url();
 
         $offset = ($page - 1) * $this->itemsPerPage;
         $rooms = array_slice($rooms, $offset, $this->itemsPerPage);
+
         if (empty($rooms)) {
             echo "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>";
-            echo "<strong>Nema trazenog ljubimca</strong>";
+            echo "<strong>Nema proizvoda</strong>";
             echo "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";
             echo "<span aria-hidden='true'>&times;</span>";
             echo "</button>";
             echo "</div>";
         }
+
         foreach ($rooms as $room) {
+            $type = "";
+            switch ($room["type"]) {
+                case "psi":
+                    $type = "Psi";
+                    break;
+                case "macke":
+                    $type = "Mačke";
+                    break;
+                case "ptice":
+                    $type = "Ptice";
+                    break;
+                case "ribe":
+                    $type = "Ribe";
+                    break;
+                case "maleZivotinje":
+                    $type = "Male Životinje";
+                    break;
+            }
             $value = "                <div class='col-md-3'>\n";
             $value .= "                    <form method='post' action='$baseUrl/Room/room'>\n";
             $value .= "                        <div class='card text-center mb-4'>\n";
-            $value .= "                            <img src=" . "$baseUrl/images/rooms/" . $room["image"] . " class='card-img-top'>\n";
+            $value .= "                            <input type='image' src=" . "$baseUrl/images/rooms/" . $room["image"] . " class='card-img-top'>\n";
             $value .= "                            <div class='card-body'>\n";
             $value .= "                                 <input name='room' type='hidden' value='" . $room["roomId"] . "'>\n";
-            $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='" . $room["description"] . "'>\n";
+            $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='Tip: " . $type . "'>\n";
             $value .= "                                 <p class='card-text'>\n";
             $value .= "                                    <a href='orders.php'>Ovde</a> možete rezervisati termin.\n";
             $value .= "                                </p>\n";
@@ -158,28 +148,11 @@ class Room extends BaseController
         $prevDisabled = "";
         if ($page == 1) $prevDisabled = "disabled";
         echo "<li class='page-item $prevDisabled'>"
-            . "<a id='prev-page' class='page-link' href='" . site_url('Room/showRoomsByCategory/' . $prevPage)
+            . "<a id='prev-page' class='page-link' href='" . site_url('Room/showRoomsByType/' . $prevPage)
             . "' tabindex='-1' aria-disabled='true'>Prethodna</a>"
             . "</li>";
 
-        $rooms = [];
-        if ($dogs == "true")
-            $rooms = array_merge($rooms, $roomModel->like("type", "Pas")->findAll());
-        if ($cats == "true")
-            $rooms = array_merge($rooms, $roomModel->like("type", "Macka", "after")->findAll());
-        if ($birds == "true")
-            $rooms = array_merge($rooms, $roomModel->like("type", "Ptica")->findAll());
-        if ($fishes == "true")
-            $rooms = array_merge($rooms, $roomModel->like("type", "Ribica")->findAll());
-        if ($littleAnimals == "true")
-            $rooms = array_merge($rooms, $roomModel
-                ->like("type", "Kornjaca")
-                ->orLike("type", "Lasica")
-                ->orLike("type", "Zeka")
-                ->orLike("type", "Zec")
-                ->orLike("type", "Hrcak")
-                ->findAll());
-
+        $rooms = $this->findRooms();
         $numOfPages = ceil(sizeof($rooms) / $this->itemsPerPage);
 
         for ($i = $prevPage; $i < $prevPage + 3; $i++) {
@@ -187,13 +160,13 @@ class Room extends BaseController
                 if ($i == $page) {
                     echo "<li class='page-item active'>"
                         . "<a class='page-link' href='"
-                        . site_url('Room/showRoomsByCategory/' . $i)
+                        . site_url('Room/showRoomsByType/' . $i)
                         . "'>$i <span class=\"sr-only\">(current)</span></a>"
                         . "</li>";
                 } else {
                     echo "<li class='page-item'>"
                         . "<a class='page-link' href='"
-                        . site_url('Room/showRoomsByCategory/' . $i) . "'>$i</a>"
+                        . site_url('Room/showRoomsByType/' . $i) . "'>$i</a>"
                         . "</li>";
                 }
             }
@@ -202,9 +175,44 @@ class Room extends BaseController
         $nextDisabled = "";
         if ($page >= $numOfPages) $nextDisabled = "disabled";
         echo "<li class='page-item $nextDisabled'>"
-            . "<a class='page-link' href='" . site_url('Room/showRoomsByCategory/' . $nextPage)
+            . "<a class='page-link' href='" . site_url('Room/showRoomsByType/' . $nextPage)
             . "'>Sledeća</a>"
             . "</li>";
+    }
+
+    /**
+     * Funkcija za prikaz odabranih tipova smeštaja
+     *
+     * @param int $page Redni broj stranice sa smeštajem
+     *
+     * @return string
+     */
+    public function showRoomsByType($page = 1)
+    {
+        $data["title"] = "Pregled smeštaja";
+        $data["name"] = "room";
+
+        $dogs = session()->get("dogs");
+        $cats = session()->get("cats");
+        $birds = session()->get("birds");
+        $fishes = session()->get("fishes");
+        $littleAnimals = session()->get("littleAnimals");
+
+        if ($dogs == "true" && $cats == "true" && $birds == "true" && $fishes == "true" && $littleAnimals == "true") {
+            return $this->showRooms($page);
+        }
+
+        $rooms = $this->findRooms();
+
+        $pagination["page"] = $page;
+        $pagination["numOfPages"] = ceil(sizeof($rooms) / $this->itemsPerPage);
+
+        $offset = ($page - 1) * $this->itemsPerPage;
+        $rooms = array_slice($rooms, $offset, $this->itemsPerPage);
+
+        echo view("templates/header", ["data" => $data]);
+        echo view("shop/rooms", ["rooms" => $rooms, "pagination" => $pagination, "categories" => true]);
+        echo view("templates/footer");
     }
 
     public function room($roomId = null)
@@ -223,69 +231,47 @@ class Room extends BaseController
     public function unosSmestaja($poruka = "")
     {
         $data["title"] = "Unos smestaja";
-        $data["name"] = "unosSmestaja";
+        $data["name"] = "room";
         $data["poruka"] = $poruka;
         echo view("templates/header", ["data" => $data]);
-        echo view("shop/unosSmestaja");
+        echo view("rooms/unosSmestaja");
         echo view("templates/footer");
     }
 
     public function sacuvajSmestaj()
     {
         if (!$this->validate([
-            "imageFile" => "uploaded[image]|max_size[image,5120]|ext_in[image,jpg,jpeg,png,jfif,gif]",
-            "roomDescr" => "max_length[240]"
+            "image" => "uploaded[image]|max_size[image,5120]|ext_in[image,jpg,jpeg,png,jfif,gif]",
+            "description" => "max_length[240]"
         ], [
-            "imageFile" => [
+            "image" => [
                 "uploaded" => "Morate odabrati sliku",
                 "max_size" => "Veličina slike je veća od dozvoljene",
                 "ext_in" => "Pogrešna ekstenzija odabrane slike"
             ],
-            "category" => ["required" => "Morate odabrati kategoriju"],
             "description" => ["max_length" => "Opis može sadržati najviše 240 karaktera"]
         ])) {
             $userType = session()->get("userType");
-            if ($userType == "admin")
-                return redirect()->to(site_url("Admin/insertArticle"))->with(
+            if ($userType == "admin" || $userType == "moderator")
+                return redirect()->to(site_url("Room/unosSmestaja"))->with(
                     "messages", $this->validator->listErrors());
-            else if ($userType == "moderator")
-                return redirect()->to(site_url(""));
         }
 
-        $roomType = $this->request->getVar("roomType");
-        if (strcmp($roomType, "Pas") != 0 &&
-            strcmp($roomType, "Macka") != 0 &&
-            strcmp($roomType, "Macak") != 0 &&
-            strcmp($roomType, "Ptica") != 0 &&
-            strcmp($roomType, "Ribica") != 0 &&
-            strcmp($roomType, "Hrcak") != 0 &&
-            strcmp($roomType, "Lasica") != 0 &&
-            strcmp($roomType, "Kornjaca") != 0 &&
-            strcmp($roomType, "Zeka") != 0 &&
-            strcmp($roomType, "Zec") != 0) {
-            $this->unosSmestaja("Uneti tip smestaja je nevalidan. Moguce opcije su Pas, Macka/Macak, "
-                . "Ptica, Ribica i male zivotinje (Hrcak, Lasica, Kornjaca, Zeka/Zec).");
-            return;
-        }
+        $type = $this->request->getVar("type");
+        $image = $this->request->getFile("image");
+        $description = $this->request->getVar("description");
 
-        $roomDescr = $this->request->getVar("roomDescr");
-        if (empty($roomDescr))
-            $roomDescr = "";
-
-
-        $image = $this->request->getFile("imageFile");
         $image->move(ROOTPATH . "/public/images/rooms");
 
-        $data = array(
-            'type' => $roomType,
-            'image' => $image,
-            'description' => $roomDescr
-        );
-
         $roomModel = new RoomModel();
-        $roomModel->insert($data);
+        $roomModel->save([
+            "type" => $type,
+            "image" => $image->getName(),
+            "description" => $description
+        ]);
 
-        $this->unosSmestaja("Smestaj uspesno sacuvan");
+        return redirect()->to(site_url("Room/unosSmestaja"))->with(
+            "messages", "Uspešno ste uneli smeštaj");
     }
 
 

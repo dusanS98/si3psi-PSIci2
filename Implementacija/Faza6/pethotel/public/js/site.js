@@ -1,44 +1,86 @@
 //Autor: Dušan Stanivuković 2017/0605
 
 $(document).ready(function () {
-    $(".custom-control-input").click(function () {
-        var baseUrl = $("#base").val();
-        var page = $("#page").val();
+    $("#customCheckDogs, #customCheckCats, #customCheckBirds, #customCheckFishes, #customCheckLittleAnimals")
+        .click(function () {
+            var baseUrl = $("#base").val();
+            var page = $("#page").val();
 
-        var dogs = $("#customCheckDogs").prop("checked");
-        var cats = $("#customCheckCats").prop("checked");
-        var birds = $("#customCheckBirds").prop("checked");
-        var fishes = $("#customCheckFishes").prop("checked");
-        var littleAnimals = $("#customCheckLittleAnimals").prop("checked");
+            var dogs = $("#customCheckDogs").prop("checked");
+            var cats = $("#customCheckCats").prop("checked");
+            var birds = $("#customCheckBirds").prop("checked");
+            var fishes = $("#customCheckFishes").prop("checked");
+            var littleAnimals = $("#customCheckLittleAnimals").prop("checked");
 
-        $.ajax(
-            {
-                type: "post",
-                url: baseUrl + "/Shop/searchCategories/" + page,
-                data: {
-                    dogs: dogs,
-                    cats: cats,
-                    birds: birds,
-                    fishes: fishes,
-                    littleAnimals: littleAnimals
-                },
-                success: function (response) {
-                    var res = response.split("#delimiter#");
+            $.ajax(
+                {
+                    type: "post",
+                    url: baseUrl + "/Shop/searchCategories/" + page,
+                    data: {
+                        dogs: dogs,
+                        cats: cats,
+                        birds: birds,
+                        fishes: fishes,
+                        littleAnimals: littleAnimals
+                    },
+                    success: function (response) {
+                        var res = response.split("#delimiter#");
 
-                    if (res.length == 2) {
-                        if (res[0] == "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>"
-                            + "<strong>Nema proizvoda</strong><button type='button' class='close' data-dismiss='alert' aria-label='Close'>"
-                            + "<span aria-hidden='true'>&times;</span></button></div>"
-                            && page > 1) {
-                            window.location.href = baseUrl + "/Shop/showArticlesByCategory/" + (page - 1);
+                        if (res.length == 2) {
+                            if (res[0] == "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>"
+                                + "<strong>Nema proizvoda</strong><button type='button' class='close' data-dismiss='alert' aria-label='Close'>"
+                                + "<span aria-hidden='true'>&times;</span></button></div>"
+                                && page > 1) {
+                                window.location.href = baseUrl + "/Shop/showArticlesByCategory/" + (page - 1);
+                            }
+                            $("#articles").html(res[0]);
+                            $("#pagination").html(res[1]);
                         }
-                        $("#articles").html(res[0]);
-                        $("#pagination").html(res[1]);
                     }
                 }
-            }
-        );
-    });
+            );
+        });
+
+    $("#roomCheckDogs, #roomCheckCats, #roomCheckBirds, #roomCheckFishes, #roomCheckLittleAnimals")
+        .click(function () {
+            var baseUrl = $("#base").val();
+            var page = $("#page").val();
+
+            var dogs = $("#roomCheckDogs").prop("checked");
+            var cats = $("#roomCheckCats").prop("checked");
+            var birds = $("#roomCheckBirds").prop("checked");
+            var fishes = $("#roomCheckFishes").prop("checked");
+            var littleAnimals = $("#roomCheckLittleAnimals").prop("checked");
+
+            $.ajax(
+                {
+                    type: "post",
+                    url: baseUrl + "/Room/searchTypes/" + page,
+                    data: {
+                        dogs: dogs,
+                        cats: cats,
+                        birds: birds,
+                        fishes: fishes,
+                        littleAnimals: littleAnimals
+                    },
+                    success: function (response) {
+                        var res = response.split("#delimiter#");
+
+                        if (res.length == 2) {
+                            if (res[0] == "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>"
+                                + "<strong>Nema proizvoda</strong><button type='button' class='close' data-dismiss='alert' aria-label='Close'>"
+                                + "<span aria-hidden='true'>&times;</span></button></div>"
+                                && page > 1) {
+                                window.location.href = baseUrl + "/Room/showRoomsByType/" + (page - 1);
+                            }
+                            $("#rooms").html(res[0]);
+                            $("#pagination").html(res[1]);
+                        }
+                    }
+                }
+            );
+        });
+
     $("#petCheckDogs").click(customPetCheck);
     $("#petCheckCats").click(customPetCheck);
     $("#petCheckFishes").click(customPetCheck);

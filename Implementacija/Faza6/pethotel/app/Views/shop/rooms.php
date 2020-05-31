@@ -54,13 +54,31 @@
 
                 if (isset($rooms)) {
                     foreach ($rooms as $room) {
+                        $type = "";
+                        switch ($room["type"]) {
+                            case "psi":
+                                $type = "Psi";
+                                break;
+                            case "macke":
+                                $type = "Mačke";
+                                break;
+                            case "ptice":
+                                $type = "Ptice";
+                                break;
+                            case "ribe":
+                                $type = "Ribe";
+                                break;
+                            case "maleZivotinje":
+                                $type = "Male Životinje";
+                                break;
+                        }
                         $value = "                <div class='col-md-3'>\n";
                         $value .= "                    <form method='post' action='$baseUrl/Room/room'>\n";
                         $value .= "                        <div class='card text-center mb-4'>\n";
                         $value .= "                            <input type='image' src=" . "$baseUrl/images/rooms/" . $room["image"] . " class='card-img-top'>\n";
                         $value .= "                            <div class='card-body'>\n";
                         $value .= "                                 <input name='room' type='hidden' value='" . $room["roomId"] . "'>\n";
-                        $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='" . $room["description"] . "'>\n";
+                        $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='Tip: " . $type . "'>\n";
                         $value .= "                                 <p class='card-text'>\n";
                         $value .= "                                         <a href=\"orders.php\">Ovde</a> možete rezervisati termin.\n";
                         $value .= "                                </p>\n";
@@ -87,7 +105,7 @@
                     $prevPage = $pagination["page"] - 1;
                     $nextPage = $pagination["page"] + 1;
                     $controllerMethod = 'showRooms';
-                    if (isset($categories)) $controllerMethod = 'showRoomsByCategory';
+                    if (isset($categories)) $controllerMethod = 'showRoomsByType';
                     ?>
                     <li class="page-item <?php if ($pagination['page'] == 1) echo 'disabled' ?>">
                         <a id="prev-page" class="page-link"

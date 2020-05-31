@@ -2,20 +2,25 @@
 
 <?php
 $image = base_url() . "/images/rooms/" . $room["image"];
-$type = $room["type"];
 $description = $room["description"];
-$category = "";
 
-if (substr($type, 0, 3) === "Pas") {
-    $category = "Pse";
-} else if (substr($type, 0, 3) === "Mac") {
-    $category = "Macke";
-} else if (substr($type, 0, 5) === "Ptica") {
-    $category = "Ptice";
-} else if (substr($type, 0, 6) === "Ribica") {
-    $category = "Ribice";
-} else {
-    $category = "Male zivotinje";
+$type = "";
+switch ($room["type"]) {
+    case "psi":
+        $type = "Psi";
+        break;
+    case "macke":
+        $type = "Mačke";
+        break;
+    case "ptice":
+        $type = "Ptice";
+        break;
+    case "ribe":
+        $type = "Ribe";
+        break;
+    case "maleZivotinje":
+        $type = "Male Životinje";
+        break;
 }
 ?>
 <div class="container">
@@ -29,7 +34,7 @@ if (substr($type, 0, 3) === "Pas") {
                     <h5 class="card-title"><?php echo "Smestaj"; ?></h5>
                     <div class="mt-4">
                         <p class="card-text">
-                            Smestaj pogodan za: <span class="font-weight-bold"><?php echo ucfirst($category); ?></span>
+                            Smestaj pogodan za: <span class="font-weight-bold"><?php echo $type; ?></span>
                         </p>
                         <p class="card-text">
                             Opis smestaja: <span class="font-weight-bold"><?php echo $description; ?></span>
