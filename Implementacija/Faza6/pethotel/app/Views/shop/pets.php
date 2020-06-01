@@ -2,6 +2,11 @@
 
 
 <div class='container-fluid'>
+	<?php if(session()->get('vec')) : ?>
+        <div class="alert alert-success" role="alert">
+            <?= session()->get('vec') ?>
+        </div>
+    <?php endif; ?>
     <div class='row mt-4'>
         <div class='col-md-2'>
             <div class="card" style="height: 98%;">
