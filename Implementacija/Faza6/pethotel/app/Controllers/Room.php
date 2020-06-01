@@ -230,6 +230,13 @@ class Room extends BaseController
         echo view("templates/footer");
     }
 
+    /**
+     * Funkcija za kreiranje i čuvanje rezervacije u bazi
+     *
+     * @return \CodeIgniter\HTTP\RedirectResponse
+     *
+     * @throws \ReflectionException
+     */
     public function createReservation()
     {
         $dateFrom = $this->request->getVar("dateFrom");
