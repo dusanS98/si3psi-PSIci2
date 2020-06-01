@@ -2,8 +2,18 @@
 <?php
     date_default_timezone_set('Europe/Belgrade');
     use CodeIgniter\I18n\Time;
+    
 ?>
 <div class="container">
+    <?php if(isset($data['mess'])): ?>
+                <div class='row'>
+                    <div class="col-12">
+                        <div class="alert alert-danger" role="alert">
+                            <?= $mess; ?>
+                        </div>
+                    </div>
+                </div>
+                <?php endif; ?>
         <div class="row">
             <div class="col-md-8 mx-auto my-5 bg-light rounded">
                 <form class="" method="post">
@@ -12,7 +22,7 @@
                             <label for="date">Datum:</label>
                         </div>
                         <div class="col-md-4 mb-3 mr-auto">
-                            <input type="date" name='date' value="<?php echo date("Y-m-d"); ?>" min="<?php echo date("Y-m-d"); ?>" class="form-control" id="date" required />
+                            <input type="date" name='date' value="<?php echo date("Y-m-d"); ?>" min="<?php echo date("Y-m-d"); ?>" class="form-control" id="date" required />      
                         </div>
                     </div>
                     <div class="form-row mt-4">
@@ -21,14 +31,14 @@
                         </div>
                         <div class="col-md-4 mb-3 mr-auto">
                             <select name='time' class="form-control" id="time" required />
-                                <option value="10:11">10:00-11:00</option>
-                                <option value="11:12">11:00-12:00</option>
-                                <option value="12:13">12:00-13:00</option>
-                                <option value="13:14">13:00-14:00</option>
-                                <option value="14:15">14:00-15:00</option>
-                                <option value="15:16">15:00-16:00</option>
-                                <option value="16:17">16:00-17:00</option>
-                                <option value="17:18">17:00-18:00</option>
+                                <option value="10">10:00-11:00</option>
+                                <option value="11">11:00-12:00</option>
+                                <option value="12">12:00-13:00</option>
+                                <option value="13">13:00-14:00</option>
+                                <option value="14">14:00-15:00</option>
+                                <option value="15">15:00-16:00</option>
+                                <option value="16">16:00-17:00</option>
+                                <option value="17">17:00-18:00</option>
                             </select>
                         </div>
                     </div>

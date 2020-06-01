@@ -15,7 +15,6 @@ class Reservation extends BaseController{
     public function petreservation($petId){
        
         //korisnik nije ulogovan i ne moze rezervisati
-        
         if(!session()->get('username')){
             $session = session();
             $session->setFlashdata('uspesno', 'Prijavite se da biste mogli da rezervišete ljubimce' );
@@ -23,27 +22,32 @@ class Reservation extends BaseController{
         }
         if($this->request->getMethod()=='post'){
             $user = session()->get("username");
+            $petresmodel= new PetResModel();
+            $poruka="";
+            $alreadybooked=$petresmodel->where('username', $user)->where('petId',$petId)->first();
+            //korisnik je vec rezervisao ovog ljubimca
+            if($alreadybooked!=null){
+                $session = session();
+                $session->setFlashdata('vec', 'Vec ste rezervisali ovog ljubimca!' );
+                return redirect()->to(site_url('Pet/showpets'));
+            }
+            $data["mess"]="";
+            $now = new Time('now', 'Europe/Belgrade');
             $date= $this->request->getVar('date');
-            
             $hours = $this->request->getVar('time');
             $hours = substr($hours,0,2);
-            
             $time = Time::parse($date . $hours.':00:00', 'Europe/Belgrade');
-
-            
-            $petresmodel= new PetResModel();
-            
+ 
             $when=$petresmodel->where('dateTime',$time)->first();
             $pet=$petresmodel->where('petID',$petId)->where('dateTime',$time)->first();
-            
-            
+                       
             //postoji vec neko u tom terminu, ne moze neko drugi da dodje
             if($when!= null){
-                echo $when['username']. " Ovaj termin je rezervisan ";    
+                 $data['mess']= " Ovaj termin je rezervisan ";
             }
             //da li je ljubimac vec zauzet u tom terminu
             else if($pet!=null){
-                echo $pet['name']. "je vec zauzet u ovom terminu";
+                $data['mess']= $pet['name']. "je vec zauzet u ovom terminu";
             }
             else{
                 $new= [
@@ -62,28 +66,16 @@ class Reservation extends BaseController{
                 $session->setFlashdata('uspesno', 'Uspešna rezervacija!' );
                 return redirect()->to(site_url("User/index"));
             }
-
-            
-          //  foreach ($datearray as $dat) {
-                // echo $dat;
-
-
-//            $userModel = new UserModel();
-//            $userr = $userModel->where('username',$user)->getInsertId();
-//            $petModel = new PetModel();
-//            $pet = $petModel->where('petId',$petId)->getInsertId();
             
         }
         
         $data["title"] = "Rezervacija ljubimca";
         $data["name"] = "petreservation";
         echo view("templates/header", ["data" => $data]);
-        echo view("reservations/petreservation");
+        echo view("reservations/petreservation", $data);
         echo view("templates/footer");
     }
 }
    
-
-
 
 ?>
