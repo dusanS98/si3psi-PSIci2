@@ -247,7 +247,7 @@ class Room extends BaseController
 
         if ($dateFrom > $dateTo) {
             return redirect()->to(site_url("Room/makeReservation"))
-                ->with("messages", "Datum kraja rezervacije ne može biti veći od datuma početka");
+                ->with("messages", "Datum kraja rezervacije ne može biti manji od datuma početka");
         } else if ($dateFrom < date("Y-m-d")) {
             return redirect()->to(site_url("Room/makeReservation"))
                 ->with("messages", "Datum početka rezervacije ne može biti manji od tekućeg datuma");
