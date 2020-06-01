@@ -75,6 +75,35 @@ class Reservation extends BaseController{
         echo view("reservations/petreservation", $data);
         echo view("templates/footer");
     }
+    
+    public function showReservations(){
+        $data["title"] = "Rezervacije ljubimaca";
+        $data["name"] = "petReservations";
+
+        $username = session()->get("username");
+
+        $petresmodel = new PetResModel();
+        $petres = $petresmodel->where("username", $username)->findAll();
+
+        echo view("templates/header", ["data" => $data]);
+        echo view("reservations/show", ["petres" => $petres]);
+        echo view("templates/footer");
+    }
+    
+      public function res($petId = null)
+    {
+        if ($petId == null)
+            $petId = $this->request->getVar("pet");
+     
+        $petModel = new PetModel();
+        $pet = $petModel->find($petId);
+        $data["title"] = "Ljubimac " . $pet["name"];
+        $data["name"] = "rezervacija";
+        echo view("templates/header", ["data" => $data]);
+        echo view("shop/pet", ["pet" => $pet]);
+        echo view("templates/footer");
+    }
+    
 }
    
 
