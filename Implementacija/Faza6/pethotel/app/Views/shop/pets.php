@@ -65,7 +65,7 @@
                     $value .= "                                 <input name='pet' type='hidden' value='" . $pet["petId"] . "'>\n";
                     $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='" . $pet["breed"] . " " . $pet["name"] . "'>\n";
                     $value .= "                                 <p class='card-text'>\n";
-                    $value .= "                                    <a href=\"orders.php\">Ovde</a> možete rezervisati termin.\n";
+                    $value .= "                                    <a href='" .site_url('Reservation/petreservation/').$pet["petId"]. "'>Ovde</a> možete rezervisati termin.\n";
                     $value .= "                                </p>\n";
                     $value .= "                            </div>\n";
                     $value .= "                        </div>\n";
