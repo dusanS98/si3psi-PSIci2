@@ -43,7 +43,7 @@ if (substr($petBreed, 0, 3) === "Pas") {
                             Opis ljubimca: <span class="font-weight-bold"><?php echo $description; ?></span>
                         </p>
                         <p class='card-text'>
-                            <a href=\"orders.php\">Ovde</a> možete rezervisati termin.
+                            <a href="<?= base_url('Reservation/petreservation/'.$pet['petId'])?>">Ovde</a> možete rezervisati termin.
                         </p>
                     </div>
                 </div>

@@ -2,6 +2,12 @@
 
 
 <div class="container-fluid">
+	 <?php if(session()->get('uspesno')) : ?>
+        <div class="alert alert-success" role="alert">
+            <?= session()->get('uspesno') ?>
+        </div>
+     <?php endif; ?>
+	   
     <div class="row">
         <div class="col-md-6 mx-auto my-5">
             <div class="media mt-5">
