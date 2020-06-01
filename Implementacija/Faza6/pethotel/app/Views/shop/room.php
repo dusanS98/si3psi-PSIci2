@@ -39,9 +39,17 @@ switch ($room["type"]) {
                         <p class="card-text">
                             Opis smestaja: <span class="font-weight-bold"><?php echo $description; ?></span>
                         </p>
-                        <p class='card-text'>
-                            <a href=\"orders.php\">Ovde</a> možete rezervisati termin.
-                        </p>
+                        <?php
+                        if (session()->has("username")) {
+                            echo '<form method="post" action="' . site_url("Room/makeReservation") . '">
+                            <p class="card-text">
+                                <input type="hidden" name="roomId" value="' . $room["roomId"] . '">
+                                <input class="btn btn-primary" type="submit" value="Rezerviši">
+                            </p>
+                        </form>';
+                            echo "\n";
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -49,34 +57,3 @@ switch ($room["type"]) {
     </div>
 </div>
 
-
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Količina</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body text-center">
-                <div class="row">
-                    <button class="btn btn-info ml-auto" onclick="minus()">&minus;</button>
-                    <div class="col-md-3">
-                        <input class="form-control" name="modalInput" id="modalAmount" type="number" value="1"
-                               onchange="updateAmount()">
-                    </div>
-                    <button class="btn btn-info mr-auto" onclick="plus()">&plus;</button>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <form method="post" action="<?php echo site_url('Room/order'); ?>">
-                    <input type="hidden" name="amount" id="hiddenAmount" value="1">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
-                    <button type="submit" class="btn btn-primary">Potvrdi</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>

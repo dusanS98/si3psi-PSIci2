@@ -57,6 +57,9 @@ if ($data["name"] != "admin" && $data["name"] != "moderator") {
     if (session()->has("username"))
         echo '<li class="nav-item' . ($data["name"] == "cart" ? " active" : "") . '">
                 <a class="nav-link" href="' . site_url('Shop/cart') . '">Korpa</a>
+            </li>
+            <li class="nav-item' . ($data["name"] == "roomReservations" ? " active" : "") . '">
+                <a class="nav-link" href="' . site_url('Room/showReservations') . '">Rezervacije smeštaja</a>
             </li>';
     echo '</ul>';
     if (session()->has("username")) {

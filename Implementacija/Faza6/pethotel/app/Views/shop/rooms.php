@@ -79,9 +79,6 @@
                         $value .= "                            <div class='card-body'>\n";
                         $value .= "                                 <input name='room' type='hidden' value='" . $room["roomId"] . "'>\n";
                         $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='Tip: " . $type . "'>\n";
-                        $value .= "                                 <p class='card-text'>\n";
-                        $value .= "                                         <a href=\"orders.php\">Ovde</a> možete rezervisati termin.\n";
-                        $value .= "                                </p>\n";
                         $value .= "                            </div>\n";
                         $value .= "                        </div>\n";
                         $value .= "                    </form>\n";

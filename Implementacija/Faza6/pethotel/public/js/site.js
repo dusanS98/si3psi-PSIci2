@@ -68,7 +68,7 @@ $(document).ready(function () {
 
                         if (res.length == 2) {
                             if (res[0] == "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>"
-                                + "<strong>Nema proizvoda</strong><button type='button' class='close' data-dismiss='alert' aria-label='Close'>"
+                                + "<strong>Nema smeštaja</strong><button type='button' class='close' data-dismiss='alert' aria-label='Close'>"
                                 + "<span aria-hidden='true'>&times;</span></button></div>"
                                 && page > 1) {
                                 window.location.href = baseUrl + "/Room/showRoomsByType/" + (page - 1);

@@ -5,6 +5,7 @@
 
 namespace App\Controllers;
 
+use App\Models\ReservationRoomModel;
 use App\Models\RoomModel;
 
 /**
@@ -97,7 +98,7 @@ class Room extends BaseController
 
         if (empty($rooms)) {
             echo "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>";
-            echo "<strong>Nema proizvoda</strong>";
+            echo "<strong>Nema smeštaja</strong>";
             echo "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";
             echo "<span aria-hidden='true'>&times;</span>";
             echo "</button>";
@@ -130,9 +131,6 @@ class Room extends BaseController
             $value .= "                            <div class='card-body'>\n";
             $value .= "                                 <input name='room' type='hidden' value='" . $room["roomId"] . "'>\n";
             $value .= "                                 <input class='card-title btn btn-link button-link' type='submit' value='Tip: " . $type . "'>\n";
-            $value .= "                                 <p class='card-text'>\n";
-            $value .= "                                    <a href='orders.php'>Ovde</a> možete rezervisati termin.\n";
-            $value .= "                                </p>\n";
             $value .= "                            </div>\n";
             $value .= "                        </div>\n";
             $value .= "                    </form>\n";
@@ -215,13 +213,86 @@ class Room extends BaseController
         echo view("templates/footer");
     }
 
+    /**
+     * Funkcija za prikaz forme za rezervaciju smeštaja
+     *
+     * @return string
+     */
+    public function makeReservation()
+    {
+        $data["title"] = "Rezervisanje smeštaja";
+        $data["name"] = "room";
+
+        $roomId = $this->request->getVar("roomId");
+        $roomModel = new RoomModel();
+
+        $room = $roomModel->find($roomId);
+
+        echo view("templates/header", ["data" => $data]);
+        echo view("rooms/makeReservation", ["room" => $room]);
+        echo view("templates/footer");
+    }
+
+    public function createReservation()
+    {
+        $dateFrom = $this->request->getVar("dateFrom");
+        $dateTo = $this->request->getVar("dateTo");
+        $roomId = $this->request->getVar("roomId");
+
+        $reservationRoomModel = new ReservationRoomModel();
+        $reservations = $reservationRoomModel->where("roomId", $roomId)->findAll();
+
+        $taken = false;
+        foreach ($reservations as $reservation) {
+            if ($reservation["dateFrom"] <= $dateFrom && $reservation["dateTo"] >= $dateTo) {
+                $taken = true;
+                break;
+            } else if ($reservation["dateFrom"] >= $dateFrom && $dateTo >= $reservation["dateTo"]) {
+                $taken = true;
+                break;
+            } else if ($reservation["dateFrom"] >= $dateFrom && $dateTo >= $reservation["dateFrom"]) {
+                $taken = true;
+                break;
+            } else if ($reservation["dateFrom"] <= $dateFrom && $dateTo >= $reservation["dateTo"]) {
+                $taken = true;
+                break;
+            }
+        }
+
+        if ($taken) {
+            echo "Zauzet";
+        } else {
+            echo "Slobodan";
+        }
+    }
+
+    /**
+     * Funkcija za prikaz rezervisanog smeštaja
+     *
+     * @return string
+     */
+    public function showReservations()
+    {
+        $data["title"] = "Rezervacije smeštaja";
+        $data["name"] = "roomReservations";
+
+        $username = session()->get("username");
+
+        $reservationRoomModel = new ReservationRoomModel();
+        $reservations = $reservationRoomModel->where("username", $username)->findAll();
+
+        echo view("templates/header", ["data" => $data]);
+        echo view("rooms/reservations", ["reservations" => $reservations]);
+        echo view("templates/footer");
+    }
+
     public function room($roomId = null)
     {
         if ($roomId == null)
             $roomId = $this->request->getVar("room");
         $roomModel = new RoomModel();
         $room = $roomModel->find($roomId);
-        $data["title"] = "Smestaj" . $room["type"];
+        $data["title"] = "Smestaj " . $room["type"];
         $data["name"] = "room";
         echo view("templates/header", ["data" => $data]);
         echo view("shop/room", ["room" => $room]);
