@@ -21,8 +21,15 @@
                         <label for="validationDefaultType">Tip:</label>
                     </div>
                     <div class="col-md-4 mb-3 mr-auto">
-                        <input type="text" value="<?php echo $room['type']; ?>" class="form-control" name="type"
-                               id="validationDefaultType" required/>
+                        <select class="custom-select" name="type" id="validationDefaultType" required>
+                            <option value="psi" <?php if ($room["type"] == "psi") echo "selected"; ?>>Psi</option>
+                            <option value="macke"<?php if ($room["type"] == "macke") echo "selected"; ?>>Macke</option>
+                            <option value="ptice"<?php if ($room["type"] == "ptice") echo "selected"; ?>>Ptice</option>
+                            <option value="ribe"<?php if ($room["type"] == "ribe") echo "selected"; ?>>Ribe</option>
+                            <option value="maleZivotinje"<?php if ($room["type"] == "maleZivotinje") echo "selected"; ?>>
+                                Male životinje
+                            </option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-row mt-4">

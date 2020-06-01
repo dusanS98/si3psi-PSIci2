@@ -18,4 +18,12 @@ class ReservationRoomModel extends \CodeIgniter\Model
     protected $returnType = 'array';
 
     protected $allowedFields = ['username', 'roomId', 'dateFrom', 'dateTo'];
+
+    /**
+     * @param string $primaryKey
+     */
+    public function setPrimaryKey(string $primaryKey): void
+    {
+        $this->primaryKey = $primaryKey;
+    }
 }

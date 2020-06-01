@@ -29,7 +29,7 @@ class Room extends BaseController
 
         $roomModel = new RoomModel();
         $rooms = $roomModel->findAll($this->itemsPerPage, ($page - 1) * $this->itemsPerPage);
-        $data["title"] = "Pregled smestaja";
+        $data["title"] = "Pregled smeštaja";
         $data["name"] = "room";
         $pagination["page"] = $page;
         $pagination["numOfPages"] = ceil($roomModel->countAll() / $this->itemsPerPage);
@@ -224,12 +224,9 @@ class Room extends BaseController
         $data["name"] = "room";
 
         $roomId = $this->request->getVar("roomId");
-        $roomModel = new RoomModel();
-
-        $room = $roomModel->find($roomId);
 
         echo view("templates/header", ["data" => $data]);
-        echo view("rooms/makeReservation", ["room" => $room]);
+        echo view("rooms/makeReservation", ["roomId" => $roomId]);
         echo view("templates/footer");
     }
 
@@ -239,30 +236,48 @@ class Room extends BaseController
         $dateTo = $this->request->getVar("dateTo");
         $roomId = $this->request->getVar("roomId");
 
+        session()->set("roomId", $roomId);
+
+        if ($dateFrom > $dateTo) {
+            return redirect()->to(site_url("Room/makeReservation"))
+                ->with("messages", "Datum kraja rezervacije ne može biti veći od datuma početka");
+        } else if ($dateFrom < date("Y-m-d")) {
+            return redirect()->to(site_url("Room/makeReservation"))
+                ->with("messages", "Datum početka rezervacije ne može biti manji od tekućeg datuma");
+        }
+
         $reservationRoomModel = new ReservationRoomModel();
         $reservations = $reservationRoomModel->where("roomId", $roomId)->findAll();
 
         $taken = false;
         foreach ($reservations as $reservation) {
-            if ($reservation["dateFrom"] <= $dateFrom && $reservation["dateTo"] >= $dateTo) {
-                $taken = true;
-                break;
-            } else if ($reservation["dateFrom"] >= $dateFrom && $dateTo >= $reservation["dateTo"]) {
-                $taken = true;
-                break;
-            } else if ($reservation["dateFrom"] >= $dateFrom && $dateTo >= $reservation["dateFrom"]) {
-                $taken = true;
-                break;
-            } else if ($reservation["dateFrom"] <= $dateFrom && $dateTo >= $reservation["dateTo"]) {
+            if ($reservation["username"] == session()->get("username")) {
+                return redirect()->to(site_url("Room/makeReservation"))
+                    ->with("messages", "Već imate rezervaciju za odabrani smeštaj");
+            }
+
+            if (($dateFrom <= $reservation["dateTo"]) && ($dateTo >= $reservation["dateFrom"])) {
                 $taken = true;
                 break;
             }
         }
 
         if ($taken) {
-            echo "Zauzet";
+            return redirect()->to(site_url("Room/makeReservation"))
+                ->with("messages", "Odabrani termin je zauzet");
         } else {
-            echo "Slobodan";
+            $reservationRoomModel->setPrimaryKey("");
+            $reservationRoomModel->save([
+                "roomId" => $roomId,
+                "username" => session()->get("username"),
+                "dateFrom" => $dateFrom,
+                "dateTo" => $dateTo
+            ]);
+            $reservationRoomModel->setPrimaryKey("roomId");
+
+            session()->remove("roomId");
+
+            return redirect()->to(site_url("Room/showReservations"));
         }
     }
 
@@ -292,7 +307,7 @@ class Room extends BaseController
             $roomId = $this->request->getVar("room");
         $roomModel = new RoomModel();
         $room = $roomModel->find($roomId);
-        $data["title"] = "Smestaj " . $room["type"];
+        $data["title"] = "Smeštaj " . $room["type"];
         $data["name"] = "room";
         echo view("templates/header", ["data" => $data]);
         echo view("shop/room", ["room" => $room]);
@@ -378,7 +393,7 @@ class Room extends BaseController
         $roomModel = new RoomModel();
         $room = $roomModel->find($roomId);
         $data["title"] = "Izmena smeštaja";
-        $data["name"] = "rooms";
+        $data["name"] = "room";
         echo view("templates/header", ["data" => $data]);
         echo view("rooms/changeRoom", ["room" => $room]);
         echo view("templates/footer");

@@ -6,6 +6,18 @@
         <div class="col-md-12">
             <?php
             if (isset($reservations)) {
+                if (empty($reservations)) {
+                    echo "<div class='col-md-10 mx-auto mt-4'>";
+                    echo "<div class='alert alert-info alert-dismissible text-center mx-auto my-4'>";
+                    echo "<strong>Nemate rezervacija</strong>";
+                    echo "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";
+                    echo "<span aria-hidden='true'>&times;</span>";
+                    echo "</button>";
+                    echo "</div>";
+                    echo "</div>\n";
+                    echo "\n";
+                }
+
                 $i = 0;
                 foreach ($reservations as $reservation) {
                     if ($i % 3 == 0)
@@ -13,7 +25,7 @@
 
                     echo '<div class="card mx-auto my-3" style="width: 18rem;">
                                   <form method="post" action="' . site_url("Room/room") . '">
-                                      <div class="card-body">
+                                      <div class="card-body text-center">
                                         <h5 class="card-title">Rezervacija</h5>
                                         <p class="card-text">'
                         . 'Datum od: ' . $reservation["dateFrom"]
