@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 01, 2020 at 01:56 PM
+-- Generation Time: Jun 01, 2020 at 02:14 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.12
 
@@ -153,10 +153,6 @@ INSERT INTO `pet` (`name`, `breed`, `dateOfBirth`, `petId`, `image`, `descriptio
 ('Tutko', 'Zeka', '2020-05-04', 16, 'z2.jpg', 'Opis zeke'),
 ('Masa', 'Ribica', '2020-05-05', 17, 'r1.jpg', 'Opis ribice'),
 ('Meda', 'Ptica', '2020-05-07', 18, 'meda.jpg', 'Bla bla'),
-('Deos', 'Pas', '2020-05-05', 20, 'puppy.jpeg', 'puppy.jpeg'),
-('Latifa', 'Macka', '2020-05-14', 22, 'catM.jfif', 'catM.jfif'),
-('Suncica', 'Ptica', '2020-05-07', 27, 'p3.jpg', 'p3.jpg'),
-('Mimi', 'Pas', '2020-04-29', 28, 'puppy.jpeg', 'puppy.jpeg'),
 ('Astor1', 'Pas', '2020-05-12', 29, 'dog-Copy.jpg', 'Opis nekog psa                                                                                                ');
 
 -- --------------------------------------------------------
@@ -173,6 +169,14 @@ CREATE TABLE IF NOT EXISTS `reservationpet` (
   PRIMARY KEY (`username`,`petId`),
   KEY `R_12` (`petId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `reservationpet`
+--
+
+INSERT INTO `reservationpet` (`username`, `petId`, `dateTime`) VALUES
+('user123', 2, '2020-06-01 12:00:00'),
+('user123', 6, '2020-06-12 08:00:00');
 
 -- --------------------------------------------------------
 
@@ -198,7 +202,8 @@ INSERT INTO `reservationroom` (`username`, `dateFrom`, `dateTo`, `roomId`) VALUE
 ('admin', '2020-06-23', '2020-06-25', 11),
 ('dusan', '2020-06-09', '2020-06-09', 10),
 ('dusan', '2020-07-14', '2020-07-17', 18),
-('moderator123', '2020-06-17', '2020-06-20', 10);
+('moderator123', '2020-06-17', '2020-06-20', 10),
+('user123', '2020-06-03', '2020-06-05', 9);
 
 -- --------------------------------------------------------
 
