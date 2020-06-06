@@ -1,0 +1,111 @@
+Running 'Uspesno pregledanje proizvoda po kategoriji'
+00:32:43
+1.
+open on /User/index OK
+00:32:44
+2.
+setWindowSize on 1536x835 OK
+00:32:44
+3.
+click on linkText=Prodavnica OK
+00:32:44
+4.
+click on css=.custom-control:nth-child(2) > .custom-control-label OK
+00:32:45
+5.
+click on css=.custom-control:nth-child(3) > .custom-control-label OK
+00:32:46
+6.
+click on css=.custom-control:nth-child(4) > .custom-control-label OK
+00:32:47
+7.
+click on css=.custom-control:nth-child(5) > .custom-control-label OK
+00:32:47
+8.
+click on css=.custom-control:nth-child(6) > .custom-control-label OK
+00:32:47
+9.
+click on css=.custom-control:nth-child(2) > .custom-control-label OK
+00:32:47
+10.
+click on css=.custom-control:nth-child(2) > .custom-control-label OK
+00:32:48
+11.
+click on css=.custom-control:nth-child(3) > .custom-control-label OK
+00:32:48
+12.
+click on css=.custom-control:nth-child(3) > .custom-control-label OK
+00:32:48
+13.
+click on css=.custom-control:nth-child(4) > .custom-control-label OK
+00:32:48
+14.
+click on css=.custom-control:nth-child(4) > .custom-control-label OK
+00:32:49
+15.
+click on css=.custom-control:nth-child(5) > .custom-control-label OK
+00:32:49
+16.
+click on css=.custom-control:nth-child(5) > .custom-control-label OK
+00:32:49
+17.
+click on css=.custom-control:nth-child(6) > .custom-control-label OK
+00:32:49
+18.
+click on css=.custom-control:nth-child(6) > .custom-control-label OK
+00:32:50
+'Uspesno pregledanje proizvoda po kategoriji' completed successfully
+00:32:50
+Running 'Uspesno pretrazivanje proizvoda po nazivu'
+00:35:10
+1.
+open on /User/index OK
+00:35:11
+2.
+setWindowSize on 1536x835 OK
+00:35:11
+3.
+click on linkText=Prodavnica OK
+00:35:11
+4.
+click on id=searchName OK
+00:35:12
+5.
+type on id=searchName with value hrana OK
+00:35:13
+6.
+click on id=searchButton OK
+00:35:13
+7.
+click on id=searchName OK
+00:35:13
+8.
+type on id=searchName with value pse OK
+00:35:13
+9.
+click on id=searchButton OK
+00:35:14
+'Uspesno pretrazivanje proizvoda po nazivu' completed successfully
+00:35:14
+Running 'Neuspesno pretrazivanje proizvoda po nazivu'
+00:36:39
+1.
+open on /User/index OK
+00:36:40
+2.
+setWindowSize on 1536x835 OK
+00:36:40
+3.
+click on linkText=Prodavnica OK
+00:36:40
+4.
+click on id=searchName OK
+00:36:41
+5.
+type on id=searchName with value drazen draskovic OK
+00:36:42
+6.
+click on id=searchButton OK
+00:36:42
+'Neuspesno pretrazivanje proizvoda po nazivu' completed successfully
+00:36:42

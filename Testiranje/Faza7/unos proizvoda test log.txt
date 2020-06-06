@@ -1,0 +1,268 @@
+Running 'Unos proizvoda administrator - neuspesan unos'
+13:59:31
+1.
+open on / OK
+13:59:32
+2.
+setWindowSize on 1536x835 OK
+13:59:32
+3.
+click on id=username OK
+13:59:32
+4.
+type on id=username with value jovan OK
+13:59:33
+5.
+type on id=password with value jovan123 OK
+13:59:33
+6.
+click on css=.btn:nth-child(1) OK
+13:59:34
+7.
+click on linkText=Unos sadržaja OK
+13:59:34
+8.
+click on linkText=Unos proizvoda OK
+13:59:35
+9.
+click on id=validationDefaultName OK
+13:59:36
+10.
+type on id=validationDefaultName with value Proizvod za pse OK
+13:59:36
+11.
+click on id=validationDefaultPrice OK
+13:59:36
+12.
+type on id=validationDefaultPrice with value 500 OK
+13:59:37
+13.
+click on id=validationDefaultQuantity OK
+13:59:37
+14.
+type on id=validationDefaultQuantity with value 5 OK
+13:59:37
+15.
+click on id=validationDefaultCategory OK
+13:59:37
+16.
+click on id=validationDefaultCategory OK
+13:59:37
+17.
+click on id=validationDefaultDescription OK
+13:59:37
+18.
+type on id=validationDefaultDescription with value Opis proizvoda za pse OK
+13:59:38
+19.
+click on css=.btn-primary OK
+13:59:38
+'Unos proizvoda administrator - neuspesan unos' completed successfully
+13:59:38
+Running 'Unos proizvoda administrator - uspesan unos'
+13:59:55
+1.
+open on / OK
+13:59:55
+2.
+setWindowSize on 1536x835 OK
+13:59:56
+3.
+click on id=username OK
+13:59:56
+4.
+type on id=username with value jovan OK
+13:59:57
+5.
+click on id=password OK
+13:59:57
+6.
+type on id=password with value jovan123 OK
+13:59:57
+7.
+click on css=.btn:nth-child(1) OK
+13:59:57
+8.
+click on linkText=Unos sadržaja OK
+13:59:57
+9.
+click on linkText=Unos proizvoda OK
+13:59:59
+10.
+click on id=validationDefaultName OK
+13:59:59
+11.
+type on id=validationDefaultName with value Proizvod za pse OK
+14:00:00
+12.
+click on id=validationDefaultPrice OK
+14:00:00
+13.
+type on id=validationDefaultPrice with value 500 OK
+14:00:00
+14.
+click on id=validationDefaultQuantity OK
+14:00:00
+15.
+type on id=validationDefaultQuantity with value 5 OK
+14:00:00
+16.
+click on id=imageFile OK
+14:00:00
+17.
+type on id=imageFile with value C:\fakepath\250px-Statue_of_Liberty_7.jpg OK
+14:00:01
+18.
+click on id=validationDefaultCategory OK
+14:00:01
+19.
+click on id=validationDefaultCategory OK
+14:00:01
+20.
+click on id=validationDefaultDescription OK
+14:00:01
+21.
+click on id=validationDefaultDescription OK
+14:00:02
+22.
+type on id=validationDefaultDescription with value Opis proizvoda za pse OK
+14:00:02
+23.
+click on css=.btn-primary OK
+14:00:02
+'Unos proizvoda administrator - uspesan unos' completed successfully
+14:00:04
+Running 'Unos proizvoda moderator - neuspesan unos'
+14:01:12
+1.
+open on / OK
+14:01:13
+2.
+setWindowSize on 1536x835 OK
+14:01:13
+3.
+click on id=username OK
+14:01:13
+4.
+type on id=username with value moderator123 OK
+14:01:14
+5.
+click on id=password OK
+14:01:14
+6.
+type on id=password with value sifra123 OK
+14:01:14
+7.
+click on css=.btn:nth-child(1) OK
+14:01:14
+8.
+click on linkText=Unos sadržaja OK
+14:01:15
+9.
+click on linkText=Unos proizvoda OK
+14:01:16
+10.
+click on id=validationDefaultName OK
+14:01:16
+11.
+type on id=validationDefaultName with value Proizvod za pse OK
+14:01:17
+12.
+click on id=validationDefaultPrice OK
+14:01:17
+13.
+type on id=validationDefaultPrice with value 500 OK
+14:01:17
+14.
+click on id=validationDefaultQuantity OK
+14:01:17
+15.
+type on id=validationDefaultQuantity with value 5 OK
+14:01:18
+16.
+click on id=validationDefaultCategory OK
+14:01:18
+17.
+click on id=validationDefaultCategory OK
+14:01:18
+18.
+click on id=validationDefaultDescription OK
+14:01:18
+19.
+type on id=validationDefaultDescription with value Opis proizvoda za pse OK
+14:01:18
+20.
+click on css=.btn-primary OK
+14:01:19
+'Unos proizvoda moderator - neuspesan unos' completed successfully
+14:01:19
+Running 'Unos proizvoda moderator - uspesan unos'
+14:01:29
+1.
+open on / OK
+14:01:30
+2.
+setWindowSize on 1536x835 OK
+14:01:30
+3.
+click on id=username OK
+14:01:30
+4.
+type on id=username with value moderator123 OK
+14:01:31
+5.
+click on id=password OK
+14:01:31
+6.
+type on id=password with value sifra123 OK
+14:01:32
+7.
+click on css=.btn:nth-child(1) OK
+14:01:32
+8.
+click on linkText=Unos sadržaja OK
+14:01:32
+9.
+click on linkText=Unos proizvoda OK
+14:01:33
+10.
+click on id=validationDefaultName OK
+14:01:33
+11.
+type on id=validationDefaultName with value Proizvod za pse OK
+14:01:34
+12.
+click on id=validationDefaultPrice OK
+14:01:34
+13.
+type on id=validationDefaultPrice with value 500 OK
+14:01:34
+14.
+click on id=validationDefaultQuantity OK
+14:01:35
+15.
+type on id=validationDefaultQuantity with value 5 OK
+14:01:35
+16.
+click on id=imageFile OK
+14:01:35
+17.
+type on id=imageFile with value C:\fakepath\250px-Statue_of_Liberty_7.jpg OK
+14:01:35
+18.
+click on id=validationDefaultCategory OK
+14:01:35
+19.
+click on id=validationDefaultCategory OK
+14:01:36
+20.
+click on id=validationDefaultDescription OK
+14:01:36
+21.
+type on id=validationDefaultDescription with value Opis proizvoda za pse OK
+14:01:36
+22.
+click on css=.btn-primary OK
+14:01:37
+'Unos proizvoda moderator - uspesan unos' completed successfully
+14:01:38

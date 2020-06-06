@@ -1,0 +1,205 @@
+Running 'Administracija sistema - brisanje korisnika'
+14:09:02
+1.
+open on / OK
+14:09:03
+2.
+setWindowSize on 1536x835 OK
+14:09:03
+3.
+click on id=username OK
+14:09:03
+4.
+type on id=username with value jovan OK
+14:09:04
+5.
+click on id=password OK
+14:09:05
+6.
+type on id=password with value jovan123 OK
+14:09:05
+7.
+click on css=.btn:nth-child(1) OK
+14:09:05
+8.
+click on css=.even:nth-child(4) path OK
+14:09:05
+'Administracija sistema - brisanje korisnika' completed successfully
+14:09:07
+Running 'Administracija sistema - brisanje i izmena proizvoda'
+14:19:40
+1.
+open on / OK
+14:19:40
+2.
+setWindowSize on 1536x835 OK
+14:19:40
+3.
+click on id=username OK
+14:19:41
+4.
+type on id=username with value jovan OK
+14:19:42
+5.
+click on id=password OK
+14:19:42
+6.
+type on id=password with value jovan123 OK
+14:19:42
+7.
+click on css=.btn:nth-child(1) OK
+14:19:42
+8.
+click on linkText=Brisanje i izmena sadržaja OK
+14:19:42
+9.
+click on linkText=Proizvodi OK
+14:19:44
+10.
+click on name=change OK
+14:19:44
+11.
+click on id=validationDefaultName OK
+14:19:45
+12.
+type on id=validationDefaultName with value Hrana za pacove OK
+14:19:45
+13.
+click on css=.form-row:nth-child(2) OK
+14:19:45
+14.
+type on id=validationDefaultPrice with value 500 OK
+14:19:46
+15.
+click on css=.btn OK
+14:19:46
+16.
+click on linkText=Početna OK
+14:19:46
+17.
+click on linkText=Brisanje i izmena sadržaja OK
+14:19:47
+18.
+click on linkText=Proizvodi OK
+14:19:48
+19.
+click on css=.odd:nth-child(7) .svg-inline--fa OK
+14:19:48
+'Administracija sistema - brisanje i izmena proizvoda' completed successfully
+14:19:49
+Running 'Administracija sistema - brisanje i izmena ljubimaca'
+14:20:17
+1.
+open on / OK
+14:20:17
+2.
+setWindowSize on 1536x835 OK
+14:20:17
+3.
+click on id=username OK
+14:20:18
+4.
+type on id=username with value jovan OK
+14:20:19
+5.
+type on id=password with value jovan123 OK
+14:20:19
+6.
+click on css=.btn:nth-child(1) OK
+14:20:19
+7.
+click on linkText=Brisanje i izmena sadržaja OK
+14:20:19
+8.
+click on linkText=Ljubimci OK
+14:20:21
+9.
+click on name=change OK
+14:20:21
+10.
+click on css=.form-row:nth-child(1) OK
+14:20:22
+11.
+type on id=validationDefaultName with value Kuca OK
+14:20:22
+12.
+click on css=.btn OK
+14:20:23
+13.
+click on linkText=Početna OK
+14:20:23
+14.
+click on linkText=Brisanje i izmena sadržaja OK
+14:20:24
+15.
+click on linkText=Ljubimci OK
+14:20:24
+16.
+click on css=.odd:nth-child(9) .svg-inline--fa OK
+14:20:25
+'Administracija sistema - brisanje i izmena ljubimaca' completed successfully
+14:20:26
+Running 'Administracija sistema - brisanje i izmena smestaja'
+14:20:37
+1.
+open on / OK
+14:20:37
+2.
+setWindowSize on 1536x835 OK
+14:20:37
+3.
+click on id=username OK
+14:20:38
+4.
+type on id=username with value jovan OK
+14:20:38
+5.
+type on id=password with value jovan123 OK
+14:20:39
+6.
+click on css=.btn:nth-child(1) OK
+14:20:39
+7.
+click on linkText=Brisanje i izmena sadržaja OK
+14:20:39
+8.
+click on linkText=Smeštaj OK
+14:20:40
+9.
+click on name=change OK
+14:20:41
+10.
+click on id=validationDefaultType OK
+14:20:41
+11.
+select on id=validationDefaultType with value label=Ribe OK
+14:20:42
+12.
+click on id=validationDefaultType OK
+14:20:42
+13.
+click on id=validationDefaultDescription OK
+14:20:42
+14.
+type on id=validationDefaultDescription with value Smestaj za ribe OK
+14:20:42
+15.
+click on css=.btn OK
+14:20:42
+16.
+click on linkText=Početna OK
+14:20:43
+17.
+click on linkText=Brisanje i izmena sadržaja OK
+14:20:43
+18.
+click on linkText=Smeštaj OK
+14:20:44
+19.
+click on linkText=Next OK
+14:20:45
+20.
+click on css=.fa-trash-alt > path OK
+14:20:45
+'Administracija sistema - brisanje i izmena smestaja' completed successfully
+14:20:46

@@ -1,0 +1,200 @@
+Running 'Kupovina proizvoda - dodavanje proizvoda u korpu'
+13:30:16
+1.
+open on / OK
+13:30:17
+2.
+setWindowSize on 1536x835 OK
+13:30:17
+3.
+click on id=username OK
+13:30:17
+4.
+type on id=username with value mic OK
+13:30:18
+5.
+click on id=password OK
+13:30:19
+6.
+type on id=password with value micmic OK
+13:30:19
+7.
+click on css=.btn:nth-child(1) OK
+13:30:19
+8.
+click on linkText=Prodavnica OK
+13:30:19
+9.
+click on css=.col-md-3:nth-child(1) .card-text > .btn OK
+13:30:20
+10.
+click on css=.btn-primary:nth-child(1) OK
+13:30:21
+11.
+click on css=.btn-info:nth-child(3) OK
+13:30:21
+12.
+click on css=.btn:nth-child(4) OK
+13:30:22
+13.
+click on linkText=Korpa OK
+13:30:22
+'Kupovina proizvoda - dodavanje proizvoda u korpu' completed successfully
+13:30:23
+Running 'Kupovina proizvoda - menjanje kolicine proizvoda'
+13:30:40
+1.
+open on /User/index OK
+13:30:40
+2.
+setWindowSize on 1536x835 OK
+13:30:40
+3.
+click on linkText=Korpa OK
+13:30:40
+4.
+click on css=.btn OK
+13:30:41
+5.
+click on css=.btn:nth-child(8) OK
+13:30:42
+6.
+mouseDown on css=.modal-body .col-md-3 OK
+13:30:43
+7.
+mouseUp on css=.btn-info:nth-child(1) OK
+13:30:43
+8.
+click on css=.modal-body > .row OK
+13:30:43
+9.
+click on css=.btn-info:nth-child(1) OK
+13:30:43
+10.
+click on css=.btn-info:nth-child(1) OK
+13:30:43
+11.
+click on css=.btn:nth-child(5) OK
+13:30:44
+12.
+click on linkText=Korpa OK
+13:30:44
+'Kupovina proizvoda - menjanje kolicine proizvoda' completed successfully
+13:30:44
+Running 'Kupovina proizvoda - potvrda kupovine'
+13:30:52
+1.
+open on /User/index OK
+13:30:52
+2.
+setWindowSize on 1536x835 OK
+13:30:52
+3.
+click on linkText=Korpa OK
+13:30:52
+4.
+click on css=.btn OK
+13:30:53
+5.
+click on css=.btn-success OK
+13:30:54
+6.
+click on id=validationDefaultStreet OK
+13:30:55
+7.
+type on id=validationDefaultStreet with value Sanska 43 OK
+13:30:55
+8.
+click on id=validationDefaultCity OK
+13:30:55
+9.
+type on id=validationDefaultCity with value Beograd OK
+13:30:56
+10.
+click on id=validationDefaultState OK
+13:30:56
+11.
+click on id=validationDefaultState OK
+13:30:56
+12.
+click on id=validationDefaultPostalCode OK
+13:30:56
+13.
+type on id=validationDefaultPostalCode with value 11000 OK
+13:30:56
+14.
+click on css=.btn OK
+13:30:56
+15.
+click on id=closedOrders-tab OK
+13:30:57
+'Kupovina proizvoda - potvrda kupovine' completed successfully
+13:30:58
+Running 'Kupovina proizvoda - dodavanje proizvoda u korpu'
+13:31:22
+1.
+open on / OK
+13:31:23
+2.
+setWindowSize on 1536x835 OK
+13:31:23
+3.
+click on id=username OK
+13:31:23
+4.
+type on id=username with value mic OK
+13:31:24
+5.
+click on id=password OK
+13:31:24
+6.
+type on id=password with value micmic OK
+13:31:24
+7.
+click on css=.btn:nth-child(1) OK
+13:31:24
+8.
+click on linkText=Prodavnica OK
+13:31:25
+9.
+click on css=.col-md-3:nth-child(1) .card-text > .btn OK
+13:31:25
+10.
+click on css=.btn-primary:nth-child(1) OK
+13:31:26
+11.
+click on css=.btn-info:nth-child(3) OK
+13:31:27
+12.
+click on css=.btn:nth-child(4) OK
+13:31:27
+13.
+click on linkText=Korpa OK
+13:31:27
+'Kupovina proizvoda - dodavanje proizvoda u korpu' completed successfully
+13:31:28
+Running 'Kupovina proizvoda - izbacivanje proizvoda iz korpe'
+13:31:33
+1.
+open on /User/index OK
+13:31:34
+2.
+setWindowSize on 1536x835 OK
+13:31:34
+3.
+click on linkText=Prodavnica OK
+13:31:34
+4.
+click on linkText=Korpa OK
+13:31:35
+5.
+click on css=.btn OK
+13:31:35
+6.
+click on css=path OK
+13:31:36
+7.
+click on name=orderId OK
+13:31:37
+'Kupovina proizvoda - izbacivanje proizvoda iz korpe' completed successfully
+13:31:37

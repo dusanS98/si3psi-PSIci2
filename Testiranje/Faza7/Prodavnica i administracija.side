@@ -1,0 +1,3412 @@
+{
+  "id": "7ecf9d2c-6836-4e24-a733-961a9bc192ac",
+  "version": "2.0",
+  "name": "Pethotel",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "8902a9a2-aa43-4d64-8d8e-79eddd970e71",
+    "name": "Pregled prodavnice - uspesno pretrazivanje proizvoda po nazivu",
+    "commands": [{
+      "id": "d904d7b5-ab4d-4d40-b4b2-e1864de674f5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0a3195b-cc9d-4814-a0f7-c3645f4f32cf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9428b791-17b9-44fa-91b6-3150b4447df0",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "faac8b2a-1e0d-4434-ba61-83b1131e5ec4",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mic"
+    }, {
+      "id": "f4a966d3-96d6-4dc4-b115-222bba82b413",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23a9eb9c-1a50-4ab2-bdcd-f76947479427",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "micmic"
+    }, {
+      "id": "e3411c91-ae99-4e0e-9de2-110b7a51dc8b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f04196eb-2eaa-462d-b80d-75419acc1b2c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Prodavnica",
+      "targets": [
+        ["linkText=Prodavnica", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Prodavnica')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Shop/showArticles']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Prodavnica')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a54443c6-2ec8-4501-8781-8fa3500b5f97",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchName",
+      "targets": [
+        ["id=searchName", "id"],
+        ["css=#searchName", "css:finder"],
+        ["xpath=//input[@id='searchName']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fe275e9-285e-40b9-988d-a3c2d19fe2b1",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchName",
+      "targets": [
+        ["id=searchName", "id"],
+        ["css=#searchName", "css:finder"],
+        ["xpath=//input[@id='searchName']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "hrana"
+    }, {
+      "id": "45c821f0-4a89-497c-8b8e-20c4f218aef2",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchButton",
+      "targets": [
+        ["id=searchButton", "id"],
+        ["css=#searchButton", "css:finder"],
+        ["xpath=//button[@id='searchButton']", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pretraži')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb4284f9-288f-437e-ae1b-edebe9dc28ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-10",
+      "targets": [
+        ["css=.col-md-10", "css:finder"],
+        ["xpath=//body/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e067879-c796-4446-a278-87c0d3ba8728",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchName",
+      "targets": [
+        ["id=searchName", "id"],
+        ["css=#searchName", "css:finder"],
+        ["xpath=//input[@id='searchName']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "pse"
+    }, {
+      "id": "6293fd97-96dd-4180-8209-5b26c87ec460",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchButton",
+      "targets": [
+        ["id=searchButton", "id"],
+        ["css=#searchButton", "css:finder"],
+        ["xpath=//button[@id='searchButton']", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pretraži')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9f255f93-3fe1-4a34-aa4e-099f968eed64",
+    "name": "Pregled prodavnice - uspesno pretrazivanje proizvoda po kategoriji",
+    "commands": [{
+      "id": "a62ff8ba-64e4-46d7-8d04-57f106d8c5bc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fcd216e-63b1-4d28-a7de-e90c901fa9cc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bcca418e-5263-41f7-9627-9d44805ef5fc",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e99d0a12-9979-4bf4-a14a-6d096572b043",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mic"
+    }, {
+      "id": "90e9dce4-a30c-4bb8-89ad-a40ede618df8",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "434299b8-0e84-44bf-a53c-b3a9415569d2",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "micmic"
+    }, {
+      "id": "3c83586d-2ab0-474a-82ad-2b86211a4e09",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "abebea88-7b16-4d35-a5fe-bba56548ca1b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Prodavnica",
+      "targets": [
+        ["linkText=Prodavnica", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Prodavnica')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Shop/showArticles']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Prodavnica')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "577f5d1c-daf0-43d7-8a1f-3c3593c20c69",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(2) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(2) > .custom-control-label", "css:finder"],
+        ["xpath=//label", "xpath:position"],
+        ["xpath=//label[contains(.,'Psi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4feee106-c523-4b82-86e1-c566aaae1c4c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(3) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(3) > .custom-control-label", "css:finder"],
+        ["xpath=//div[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Mačke')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3141c454-07be-45f2-ae78-74bb06cdedbd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(4) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(4) > .custom-control-label", "css:finder"],
+        ["xpath=//div[3]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Ptice')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6041d3cc-20ac-499e-8480-6292ef103465",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(5) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(5) > .custom-control-label", "css:finder"],
+        ["xpath=//div[4]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Ribice')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "79fc85de-c1db-4f08-b61a-9f398c4fcf99",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(6) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(6) > .custom-control-label", "css:finder"],
+        ["xpath=//div[5]/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc4b130d-bcf3-44b3-be34-305446c08545",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(2) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(2) > .custom-control-label", "css:finder"],
+        ["xpath=//label", "xpath:position"],
+        ["xpath=//label[contains(.,'Psi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba655c02-08d9-49e0-9c9b-dbeed791fc8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(2) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(2) > .custom-control-label", "css:finder"],
+        ["xpath=//label", "xpath:position"],
+        ["xpath=//label[contains(.,'Psi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b7819a8-8a7b-41e9-bba3-22458d5d5217",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(3) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(3) > .custom-control-label", "css:finder"],
+        ["xpath=//div[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Mačke')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eaafa2c3-1822-4e74-83f2-642c65df110a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(3) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(3) > .custom-control-label", "css:finder"],
+        ["xpath=//div[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Mačke')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "21e0e6e7-4a8c-46e1-83e4-4af1b71db30d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(4) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(4) > .custom-control-label", "css:finder"],
+        ["xpath=//div[3]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Ptice')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07e1aabd-e983-416e-a12b-b637c8ca2503",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(4) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(4) > .custom-control-label", "css:finder"],
+        ["xpath=//div[3]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Ptice')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee1d63d3-305f-4b6f-befd-26a81ced1426",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(5) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(5) > .custom-control-label", "css:finder"],
+        ["xpath=//div[4]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Ribice')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf4bc3b5-e3b9-4688-9787-fc339f139f83",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(5) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(5) > .custom-control-label", "css:finder"],
+        ["xpath=//div[4]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Ribice')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "11dbfa47-871a-450a-99d4-fac92af40f19",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(6) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(6) > .custom-control-label", "css:finder"],
+        ["xpath=//div[5]/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c155a70-a2e0-428c-8cd5-0016c62f2cb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control:nth-child(6) > .custom-control-label",
+      "targets": [
+        ["css=.custom-control:nth-child(6) > .custom-control-label", "css:finder"],
+        ["xpath=//div[5]/label", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "26e02282-d278-452b-b022-b551117dae80",
+    "name": "Pregled prodavnice - neuspesno pretrazivanje proizvoda po nazivu",
+    "commands": [{
+      "id": "cf083345-e9d7-4c91-ad04-d406d98dd6c5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e754331-47aa-4897-a926-7bf472177bd1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1412e621-4c51-445e-8867-2bcce28f58cd",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be3ac227-7a85-4f27-acb8-a5a74e46254e",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mic"
+    }, {
+      "id": "6cd99c41-083a-4c52-919b-d0a9446fdff9",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c7af28d-9564-41fe-aa38-9f7719818c09",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "micmic"
+    }, {
+      "id": "6c988099-e6bf-4697-ab9f-ff62e13910c7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "843c31fc-cbc7-4b34-8ec3-0e6d5716a9c2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Prodavnica",
+      "targets": [
+        ["linkText=Prodavnica", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Prodavnica')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Shop/showArticles']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Prodavnica')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d21099fd-54b1-421b-9879-4c571e49397e",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchName",
+      "targets": [
+        ["id=searchName", "id"],
+        ["css=#searchName", "css:finder"],
+        ["xpath=//input[@id='searchName']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4650faa2-dbac-4083-817f-8f5aa85a6372",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchName",
+      "targets": [
+        ["id=searchName", "id"],
+        ["css=#searchName", "css:finder"],
+        ["xpath=//input[@id='searchName']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "drazen draskovic"
+    }, {
+      "id": "fc4934b3-78d0-48f7-83bb-8040c689871b",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchButton",
+      "targets": [
+        ["id=searchButton", "id"],
+        ["css=#searchButton", "css:finder"],
+        ["xpath=//button[@id='searchButton']", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pretraži')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ff0f3eb2-b037-491c-950e-49324a3f1143",
+    "name": "Kupovina proizvoda - dodavanje proizvoda u korpu",
+    "commands": [{
+      "id": "769e93fd-433b-4c64-afb1-94aa22daa14f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ccc6cd88-5275-4d53-812b-47e8bcceb720",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b36786d8-0e32-4d2e-9bb7-47a849285b52",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "991b42a0-c76b-4925-bee9-ce296ae1264e",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mic"
+    }, {
+      "id": "a2eaffa7-7ffc-4aa8-95ba-b2fc18205e00",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "428e35c5-61b6-4b49-a88c-55a5105b3a73",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "micmic"
+    }, {
+      "id": "483a5d41-700d-4344-9fcc-60e0c4c00f48",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4905d7ef-e3ea-4f31-843e-ca508c2e1224",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Prodavnica",
+      "targets": [
+        ["linkText=Prodavnica", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Prodavnica')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Shop/showArticles']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Prodavnica')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef0cbf20-41bc-4b64-8bed-bdb6eb973a46",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-3:nth-child(1) .card-text > .btn",
+      "targets": [
+        ["css=.col-md-3:nth-child(1) .card-text > .btn", "css:finder"],
+        ["xpath=//input[@value='Naruči']", "xpath:attributes"],
+        ["xpath=//div[@id='articles']/div/form/div/div/p/input", "xpath:idRelative"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7cd16890-8c06-4dab-9bd1-d2b38bff1431",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//p[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj u korpu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82e4a135-91f4-4e15-aa1f-017c084a03bf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-info:nth-child(3)",
+      "targets": [
+        ["css=.btn-info:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='plus()']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModalCenter']/div/div/div[2]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3aab2bb4-1d3e-404a-8fa4-f9993763a22f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4)",
+      "targets": [
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModalCenter']/div/div/div[3]/form/button[2]", "xpath:idRelative"],
+        ["xpath=//form/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Potvrdi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f6c8040-3023-4ba0-a50b-1f629f9cf612",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Korpa",
+      "targets": [
+        ["linkText=Korpa", "linkText"],
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Korpa')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Shop/cart']", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Korpa')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0171f655-46a1-422f-8b36-baa9ab739424",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card > .card-body > .btn",
+      "targets": [
+        ["css=.card > .card-body > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='openOrder']/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Detalji')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "68cd75d8-c04b-4a7e-bece-75fb0aa0519a",
+    "name": "Kupovina proizvoda - izbacivanje proizvoda iz korpe",
+    "commands": [{
+      "id": "9b05aeb4-3aad-40a2-b8dd-55322f22d2f7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df8b2505-354b-4cb5-aed8-425dd37bb594",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3bb8072-2bfb-4e9d-8a5f-74ddd423a900",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a3c5fdf-b15a-4292-a898-313bd1a69a17",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mic"
+    }, {
+      "id": "6f8603da-9b26-4d4f-a46b-47b886f42b21",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d38eab4-e617-418b-80d5-3b249c6bf7df",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "micmic"
+    }, {
+      "id": "b457d8e5-c588-4b7d-a6cf-ce87fff25707",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "97617741-2fc3-402b-9cc1-1480e032ad3b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Prodavnica",
+      "targets": [
+        ["linkText=Prodavnica", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Prodavnica')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Shop/showArticles']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Prodavnica')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9674522-78a6-4840-bd60-eb37929f372a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-3:nth-child(1) .card-text > .btn",
+      "targets": [
+        ["css=.col-md-3:nth-child(1) .card-text > .btn", "css:finder"],
+        ["xpath=//input[@value='Naruči']", "xpath:attributes"],
+        ["xpath=//div[@id='articles']/div/form/div/div/p/input", "xpath:idRelative"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f81678c8-9840-40dd-8b86-d8fa5b124a27",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//p[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj u korpu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "743b9ba4-e1b2-4866-8eb7-c32788e4fd61",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-info:nth-child(3)",
+      "targets": [
+        ["css=.btn-info:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='plus()']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModalCenter']/div/div/div[2]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3df1b0e0-b71d-4e16-a840-28d4832364bf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4)",
+      "targets": [
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModalCenter']/div/div/div[3]/form/button[2]", "xpath:idRelative"],
+        ["xpath=//form/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Potvrdi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "806d467f-e3d1-4203-83d4-854e2b7221fe",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Korpa",
+      "targets": [
+        ["linkText=Korpa", "linkText"],
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Korpa')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Shop/cart']", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Korpa')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3bd1cd6-eefb-4546-aeca-5be8826d1d55",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card > .card-body > .btn",
+      "targets": [
+        ["css=.card > .card-body > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='openOrder']/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Detalji')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "35e8e033-7858-4f40-87bf-4a31f2c656b6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.svg-inline--fa",
+      "targets": [
+        ["css=.svg-inline--fa", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5911ca67-f961-4fd0-a653-1b54756ff9ff",
+      "comment": "",
+      "command": "click",
+      "target": "name=orderId",
+      "targets": [
+        ["name=orderId", "name"],
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//button[@name='orderId']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Otkaži kupivinu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "bb397181-1fe1-4659-82a0-7452578a4587",
+    "name": "Kupovina proizvoda - izmena kolicine proizvoda",
+    "commands": [{
+      "id": "14307c5c-fe01-45b2-a7c5-84522b33445d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbb2dc16-bb8a-490c-8180-195a8c029f88",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "134f15e8-b499-4513-8dc6-69fde574743d",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e286327f-d1b2-4f99-a565-8c95bd6573b1",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mic"
+    }, {
+      "id": "54ac967b-6130-4269-8480-7e0f01753642",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c0cd152-5ee9-425a-a5b6-468e5914f6c2",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "micmic"
+    }, {
+      "id": "b238a974-d958-4b0a-be62-f620eeca9cac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1d7dfc6-83a2-414e-a229-2ef58e3785a4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Prodavnica",
+      "targets": [
+        ["linkText=Prodavnica", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Prodavnica')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Shop/showArticles']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Prodavnica')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1726ab9-5f28-4eec-9ccd-bee526d8431f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-3:nth-child(1) .card-text > .btn",
+      "targets": [
+        ["css=.col-md-3:nth-child(1) .card-text > .btn", "css:finder"],
+        ["xpath=//input[@value='Naruči']", "xpath:attributes"],
+        ["xpath=//div[@id='articles']/div/form/div/div/p/input", "xpath:idRelative"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba611e52-81a4-44e5-ab0f-2f3cdb90d754",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//p[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj u korpu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "050b863e-9a97-4437-8f8a-e6b8f239d0ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-info:nth-child(3)",
+      "targets": [
+        ["css=.btn-info:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='plus()']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModalCenter']/div/div/div[2]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b1b8762-b958-42a3-9a60-83bb79d9964a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4)",
+      "targets": [
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModalCenter']/div/div/div[3]/form/button[2]", "xpath:idRelative"],
+        ["xpath=//form/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Potvrdi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a90edd9-beb2-468d-996e-791684f084cf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Korpa",
+      "targets": [
+        ["linkText=Korpa", "linkText"],
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Korpa')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Shop/cart']", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Korpa')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23329e9f-7474-448f-b337-63baab024b72",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card > .card-body > .btn",
+      "targets": [
+        ["css=.card > .card-body > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='openOrder']/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Detalji')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1509822e-7f1e-45b1-ba3e-904ef7430775",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(8)",
+      "targets": [
+        ["css=.btn:nth-child(8)", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='articles']/div/div/div/p/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Promeni količinu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f709dab1-d58e-4391-8cf5-40b8091c46c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(3)",
+      "targets": [
+        ["css=.btn:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='plus()']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModalCenter']/div/div/div[2]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ebc3481-0068-4238-8d55-50a750fbebc7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(3)",
+      "targets": [
+        ["css=.btn:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='plus()']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModalCenter']/div/div/div[2]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa89d442-a9b0-4aca-b0d6-18b14aaaa3f9",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "css=.btn:nth-child(3)",
+      "targets": [
+        ["css=.btn:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='plus()']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModalCenter']/div/div/div[2]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5706182b-513b-405b-ba57-d8c4e3c77420",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(5)",
+      "targets": [
+        ["css=.btn:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModalCenter']/div/div/div[3]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a25bf55b-ef8a-493e-bb0c-dc12607b8787",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Korpa",
+      "targets": [
+        ["linkText=Korpa", "linkText"],
+        ["css=.active > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Korpa')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Shop/cart']", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Korpa')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "02ee177f-eb6b-4f48-994e-c498627edeab",
+    "name": "Kupovina proizvoda - potvrda kupovine",
+    "commands": [{
+      "id": "d3cefdcc-1b91-486b-9d29-6da3822bc7ad",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3e24b8b-8575-466e-b38a-5f71b9f8b369",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c106e06c-9099-4cd2-9f6a-fd60f7a14c63",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34a2c676-d3c8-44c1-a856-b01c844392d6",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mic"
+    }, {
+      "id": "83ca9d44-1256-4015-9735-2cfa488879ae",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f844b4e-41ad-45e0-bd8c-2b890150f1a7",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "micmic"
+    }, {
+      "id": "7eb8a7ab-3b9d-4f82-a231-5a6a97888b37",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90b7202c-4206-496f-9aa0-c91343427d30",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Prodavnica",
+      "targets": [
+        ["linkText=Prodavnica", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Prodavnica')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Shop/showArticles']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Prodavnica')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4678e35-d7f5-4061-a460-927284e50927",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-3:nth-child(1) .card-text > .btn",
+      "targets": [
+        ["css=.col-md-3:nth-child(1) .card-text > .btn", "css:finder"],
+        ["xpath=//input[@value='Naruči']", "xpath:attributes"],
+        ["xpath=//div[@id='articles']/div/form/div/div/p/input", "xpath:idRelative"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "052a27c9-317a-4004-9a39-5a87aac7dfd4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//p[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj u korpu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22ed4d3a-9eae-494b-9efc-fbe024439042",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4)",
+      "targets": [
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModalCenter']/div/div/div[3]/form/button[2]", "xpath:idRelative"],
+        ["xpath=//form/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Potvrdi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8a43b98-1be4-4a6f-901c-c36a01c83d19",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Korpa",
+      "targets": [
+        ["linkText=Korpa", "linkText"],
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Korpa')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Shop/cart']", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Korpa')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c78de4c-853a-4f41-85dd-0d9fcf2c0441",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card > .card-body > .btn",
+      "targets": [
+        ["css=.card > .card-body > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='openOrder']/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Detalji')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8724f567-4785-4e42-ad73-4ade15deb96e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=(//button[@name='orderId'])[2]", "xpath:attributes"],
+        ["xpath=//form[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Potvrdi kupivinu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "790267be-36c4-4b92-b218-9dbbb85d378a",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultStreet",
+      "targets": [
+        ["id=validationDefaultStreet", "id"],
+        ["name=street", "name"],
+        ["css=#validationDefaultStreet", "css:finder"],
+        ["xpath=//input[@id='validationDefaultStreet']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "073b7bca-0e75-4407-96b7-52a859e9c75a",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultStreet",
+      "targets": [
+        ["id=validationDefaultStreet", "id"],
+        ["name=street", "name"],
+        ["css=#validationDefaultStreet", "css:finder"],
+        ["xpath=//input[@id='validationDefaultStreet']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Sanska 43"
+    }, {
+      "id": "6f794382-dc4f-4dba-ac4c-a949545da175",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultCity",
+      "targets": [
+        ["id=validationDefaultCity", "id"],
+        ["name=city", "name"],
+        ["css=#validationDefaultCity", "css:finder"],
+        ["xpath=//input[@id='validationDefaultCity']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4a9b07a-8e06-4ac2-b6af-66d852edca27",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultCity",
+      "targets": [
+        ["id=validationDefaultCity", "id"],
+        ["name=city", "name"],
+        ["css=#validationDefaultCity", "css:finder"],
+        ["xpath=//input[@id='validationDefaultCity']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Beograd"
+    }, {
+      "id": "55698a23-7859-4d47-9e37-726c0a8e7443",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultState",
+      "targets": [
+        ["id=validationDefaultState", "id"],
+        ["name=state", "name"],
+        ["css=#validationDefaultState", "css:finder"],
+        ["xpath=//select[@id='validationDefaultState']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22fc88f4-73b4-4e86-877e-d5cfbdf6bdcf",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultState",
+      "targets": [
+        ["id=validationDefaultState", "id"],
+        ["name=state", "name"],
+        ["css=#validationDefaultState", "css:finder"],
+        ["xpath=//select[@id='validationDefaultState']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3456c0ee-60ab-4ecf-ba55-0c002f561d33",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultPostalCode",
+      "targets": [
+        ["id=validationDefaultPostalCode", "id"],
+        ["name=postalCode", "name"],
+        ["css=#validationDefaultPostalCode", "css:finder"],
+        ["xpath=//input[@id='validationDefaultPostalCode']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c304416-89e7-4b3a-8bb9-db98de2e46d3",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultPostalCode",
+      "targets": [
+        ["id=validationDefaultPostalCode", "id"],
+        ["name=postalCode", "name"],
+        ["css=#validationDefaultPostalCode", "css:finder"],
+        ["xpath=//input[@id='validationDefaultPostalCode']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "11000"
+    }, {
+      "id": "b84fad09-5d52-4bb8-9c24-e782cd480b47",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Potvrdi narudžbinu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e8d3278-536d-45eb-98f5-2c4e44432201",
+      "comment": "",
+      "command": "click",
+      "target": "id=closedOrders-tab",
+      "targets": [
+        ["id=closedOrders-tab", "id"],
+        ["linkText=Gotove narudžbine", "linkText"],
+        ["css=#closedOrders-tab", "css:finder"],
+        ["xpath=//a[contains(text(),'Gotove narudžbine')]", "xpath:link"],
+        ["xpath=//a[@id='closedOrders-tab']", "xpath:attributes"],
+        ["xpath=//ul[@id='myTab']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#closedOrders')]", "xpath:href"],
+        ["xpath=//body/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Gotove narudžbine')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "84c71ed1-524f-4a25-863b-3b1962484d10",
+    "name": "Unos proizvoda administrator - uspesan unos",
+    "commands": [{
+      "id": "05c8c211-30ab-4710-a820-db3b9c0024f4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f05df1a6-4994-4e9c-a985-10e11c1dda40",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7be1391-2246-4cab-a547-64f06abc3417",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67420087-7e54-4d69-84e5-80872293d24e",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jovan"
+    }, {
+      "id": "3d72a05d-f8a9-47c6-a484-2a4d71990f6b",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "985dc230-cff4-4dbe-a7cd-c0d36482ecc5",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "jovan123"
+    }, {
+      "id": "7dbff0fb-eaa9-4500-8db0-b2e4aa0ad98d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4baa796-cfab-4e04-9854-c8fbf3103d0e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Unos sadržaja",
+      "targets": [
+        ["linkText=Unos sadržaja", "linkText"],
+        ["css=#sidenavAccordionPages > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Unos sadržaja')]", "xpath:link"],
+        ["xpath=//nav[@id='sidenavAccordionPages']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Unos sadržaja')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2056a2ab-faf0-4cc5-a63b-505673a4465f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Unos proizvoda",
+      "targets": [
+        ["linkText=Unos proizvoda", "linkText"],
+        ["css=#pagesCollapseAuth .nav-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Unos proizvoda')]", "xpath:link"],
+        ["xpath=//div[@id='pagesCollapseAuth']/nav/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/insertArticle']", "xpath:href"],
+        ["xpath=//nav/div/nav/div/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Unos proizvoda')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fee88cff-d0fb-4d6b-839f-f72bf752f0e4",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultName",
+      "targets": [
+        ["id=validationDefaultName", "id"],
+        ["name=name", "name"],
+        ["css=#validationDefaultName", "css:finder"],
+        ["xpath=//input[@id='validationDefaultName']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18e1ed6d-f2e3-482a-9e4f-a21efb315f82",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultName",
+      "targets": [
+        ["id=validationDefaultName", "id"],
+        ["name=name", "name"],
+        ["css=#validationDefaultName", "css:finder"],
+        ["xpath=//input[@id='validationDefaultName']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Proizvod za pse"
+    }, {
+      "id": "7dea009d-acf6-43c7-a99e-52b5628fa814",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultPrice",
+      "targets": [
+        ["id=validationDefaultPrice", "id"],
+        ["name=price", "name"],
+        ["css=#validationDefaultPrice", "css:finder"],
+        ["xpath=//input[@id='validationDefaultPrice']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13812d90-db9c-4839-baf5-510e13858641",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultPrice",
+      "targets": [
+        ["id=validationDefaultPrice", "id"],
+        ["name=price", "name"],
+        ["css=#validationDefaultPrice", "css:finder"],
+        ["xpath=//input[@id='validationDefaultPrice']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "500"
+    }, {
+      "id": "52227a8b-320f-4a27-ba9c-49fb1de95af3",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultQuantity",
+      "targets": [
+        ["id=validationDefaultQuantity", "id"],
+        ["name=amount", "name"],
+        ["css=#validationDefaultQuantity", "css:finder"],
+        ["xpath=//input[@id='validationDefaultQuantity']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02741665-b2e0-44bd-add0-e501a2c225ee",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultQuantity",
+      "targets": [
+        ["id=validationDefaultQuantity", "id"],
+        ["name=amount", "name"],
+        ["css=#validationDefaultQuantity", "css:finder"],
+        ["xpath=//input[@id='validationDefaultQuantity']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "48c4f222-6e17-4bf5-8b26-a2c31dd5b62b",
+      "comment": "",
+      "command": "click",
+      "target": "id=imageFile",
+      "targets": [
+        ["id=imageFile", "id"],
+        ["name=image", "name"],
+        ["css=#imageFile", "css:finder"],
+        ["xpath=//input[@id='imageFile']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0af82b47-e995-42dd-a370-0d81b02bb6b4",
+      "comment": "",
+      "command": "type",
+      "target": "id=imageFile",
+      "targets": [
+        ["id=imageFile", "id"],
+        ["name=image", "name"],
+        ["css=#imageFile", "css:finder"],
+        ["xpath=//input[@id='imageFile']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\250px-Statue_of_Liberty_7.jpg"
+    }, {
+      "id": "f8de4f1e-d08e-4976-a37f-94537351977b",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultCategory",
+      "targets": [
+        ["id=validationDefaultCategory", "id"],
+        ["name=category", "name"],
+        ["css=#validationDefaultCategory", "css:finder"],
+        ["xpath=//select[@id='validationDefaultCategory']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[5]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a8a5460-3641-47ac-afff-dbc0edb72606",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultCategory",
+      "targets": [
+        ["id=validationDefaultCategory", "id"],
+        ["name=category", "name"],
+        ["css=#validationDefaultCategory", "css:finder"],
+        ["xpath=//select[@id='validationDefaultCategory']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[5]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "092f40d0-d4ec-4c68-9172-0ac3184787fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultDescription",
+      "targets": [
+        ["id=validationDefaultDescription", "id"],
+        ["name=description", "name"],
+        ["css=#validationDefaultDescription", "css:finder"],
+        ["xpath=//textarea[@id='validationDefaultDescription']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[6]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f5d6c3f-50ab-4fff-9c60-dd86d61d8429",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultDescription",
+      "targets": [
+        ["id=validationDefaultDescription", "id"],
+        ["name=description", "name"],
+        ["css=#validationDefaultDescription", "css:finder"],
+        ["xpath=//textarea[@id='validationDefaultDescription']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[6]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2623be90-0b8a-46f6-b608-7d1efe816e4b",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultDescription",
+      "targets": [
+        ["id=validationDefaultDescription", "id"],
+        ["name=description", "name"],
+        ["css=#validationDefaultDescription", "css:finder"],
+        ["xpath=//textarea[@id='validationDefaultDescription']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[6]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "         Opis proizvoda za pse                           "
+    }, {
+      "id": "00ea95a9-ab62-4202-a09e-7f9d1224e313",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Unesi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e3090c92-7886-4e24-89f6-d0d27e7d768b",
+    "name": "Unos proizvoda administrator - neuspesan unos",
+    "commands": [{
+      "id": "af0cbeea-1451-4fad-a0d5-a7df9d88d0f9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d32c4a12-5772-4bb6-bab5-b52313170f62",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a249ebeb-8e2a-4f12-8c66-4d8108f90fd1",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ecc2b48-f358-45c2-9f37-5e8ca659f020",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jovan"
+    }, {
+      "id": "d45cdcf3-a7a5-449b-a593-72733066e950",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "jovan123"
+    }, {
+      "id": "d9590ed5-d11f-4203-9dd9-793076b9025f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "33edc1a2-ff19-4c91-9691-9ffc2a809e9b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Unos sadržaja",
+      "targets": [
+        ["linkText=Unos sadržaja", "linkText"],
+        ["css=#sidenavAccordionPages > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Unos sadržaja')]", "xpath:link"],
+        ["xpath=//nav[@id='sidenavAccordionPages']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Unos sadržaja')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6b2a52b-4fd0-41eb-b947-8c09c66ade33",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Unos proizvoda",
+      "targets": [
+        ["linkText=Unos proizvoda", "linkText"],
+        ["css=#pagesCollapseAuth .nav-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Unos proizvoda')]", "xpath:link"],
+        ["xpath=//div[@id='pagesCollapseAuth']/nav/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/insertArticle']", "xpath:href"],
+        ["xpath=//nav/div/nav/div/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Unos proizvoda')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4c6660a-b64a-46da-9cd5-42a5812733c4",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultName",
+      "targets": [
+        ["id=validationDefaultName", "id"],
+        ["name=name", "name"],
+        ["css=#validationDefaultName", "css:finder"],
+        ["xpath=//input[@id='validationDefaultName']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1e60b1f-2e0d-460f-a5ff-2edf9a97b37a",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultName",
+      "targets": [
+        ["id=validationDefaultName", "id"],
+        ["name=name", "name"],
+        ["css=#validationDefaultName", "css:finder"],
+        ["xpath=//input[@id='validationDefaultName']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Proizvod za pse"
+    }, {
+      "id": "ffad655e-2c1c-45c5-a353-c0f2d8eb6bbc",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultPrice",
+      "targets": [
+        ["id=validationDefaultPrice", "id"],
+        ["name=price", "name"],
+        ["css=#validationDefaultPrice", "css:finder"],
+        ["xpath=//input[@id='validationDefaultPrice']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28db1b35-f1d1-4285-9787-291ea695efaa",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultPrice",
+      "targets": [
+        ["id=validationDefaultPrice", "id"],
+        ["name=price", "name"],
+        ["css=#validationDefaultPrice", "css:finder"],
+        ["xpath=//input[@id='validationDefaultPrice']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "500"
+    }, {
+      "id": "03d674d5-fe02-4e79-a861-7278b15023cc",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultQuantity",
+      "targets": [
+        ["id=validationDefaultQuantity", "id"],
+        ["name=amount", "name"],
+        ["css=#validationDefaultQuantity", "css:finder"],
+        ["xpath=//input[@id='validationDefaultQuantity']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc095ef8-98e0-48cd-b306-4374915e08bd",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultQuantity",
+      "targets": [
+        ["id=validationDefaultQuantity", "id"],
+        ["name=amount", "name"],
+        ["css=#validationDefaultQuantity", "css:finder"],
+        ["xpath=//input[@id='validationDefaultQuantity']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "54f4f757-760a-47f3-9ad5-326cf8725b0a",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultCategory",
+      "targets": [
+        ["id=validationDefaultCategory", "id"],
+        ["name=category", "name"],
+        ["css=#validationDefaultCategory", "css:finder"],
+        ["xpath=//select[@id='validationDefaultCategory']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[5]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cced191-99e7-42eb-b27f-0cf3de36164f",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultCategory",
+      "targets": [
+        ["id=validationDefaultCategory", "id"],
+        ["name=category", "name"],
+        ["css=#validationDefaultCategory", "css:finder"],
+        ["xpath=//select[@id='validationDefaultCategory']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[5]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdb8a456-be7f-4fb3-8db7-11ee3dee1f20",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultDescription",
+      "targets": [
+        ["id=validationDefaultDescription", "id"],
+        ["name=description", "name"],
+        ["css=#validationDefaultDescription", "css:finder"],
+        ["xpath=//textarea[@id='validationDefaultDescription']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[6]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a158b224-3dad-47ae-b717-5c22ab4f7126",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultDescription",
+      "targets": [
+        ["id=validationDefaultDescription", "id"],
+        ["name=description", "name"],
+        ["css=#validationDefaultDescription", "css:finder"],
+        ["xpath=//textarea[@id='validationDefaultDescription']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[6]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "    Opis proizvoda za pse                                "
+    }, {
+      "id": "a19a97c1-36ee-4934-a644-db5a804e5826",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Unesi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "74d702fa-e89d-46cc-830d-faf5b74ebf5d",
+    "name": "Unos proizvoda moderator - uspesan unos",
+    "commands": [{
+      "id": "6a3dcd9d-7fa6-48a3-bf4b-1e3be59b6242",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c80b0d1b-8957-4dc6-821b-548bbac98b38",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea35275a-d0bc-4444-8e8a-42194fe9bc4e",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5289a557-eeac-4c58-96a9-55da889de50f",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "moderator123"
+    }, {
+      "id": "f6d01abd-54f0-4b08-880e-def2e0924a81",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c2ed574-dc4b-43b8-bda1-90020bf8204d",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "sifra123"
+    }, {
+      "id": "5e6b1207-512a-4336-be52-58be7dc179fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0125363b-2b6e-46c1-b0cd-733b8313c472",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Unos sadržaja",
+      "targets": [
+        ["linkText=Unos sadržaja", "linkText"],
+        ["css=#sidenavAccordionPages > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Unos sadržaja')]", "xpath:link"],
+        ["xpath=//nav[@id='sidenavAccordionPages']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Unos sadržaja')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ca26f69-38b2-443e-a520-845ffa721e13",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Unos proizvoda",
+      "targets": [
+        ["linkText=Unos proizvoda", "linkText"],
+        ["css=#pagesCollapseAuth .nav-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Unos proizvoda')]", "xpath:link"],
+        ["xpath=//div[@id='pagesCollapseAuth']/nav/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Moderator/insertArticle']", "xpath:href"],
+        ["xpath=//nav/div/nav/div/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Unos proizvoda')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02b5a63b-9cdd-41aa-94a9-fb74985010fb",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultName",
+      "targets": [
+        ["id=validationDefaultName", "id"],
+        ["name=name", "name"],
+        ["css=#validationDefaultName", "css:finder"],
+        ["xpath=//input[@id='validationDefaultName']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "720102f2-b1a7-4b78-ba3a-cea3e2cde8d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultName",
+      "targets": [
+        ["id=validationDefaultName", "id"],
+        ["name=name", "name"],
+        ["css=#validationDefaultName", "css:finder"],
+        ["xpath=//input[@id='validationDefaultName']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Proizvod za pse"
+    }, {
+      "id": "7a2e44e1-9383-4eca-b7f2-bca6420c2af1",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultPrice",
+      "targets": [
+        ["id=validationDefaultPrice", "id"],
+        ["name=price", "name"],
+        ["css=#validationDefaultPrice", "css:finder"],
+        ["xpath=//input[@id='validationDefaultPrice']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9115e041-28a1-4e11-8cd1-815e534c02ab",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultPrice",
+      "targets": [
+        ["id=validationDefaultPrice", "id"],
+        ["name=price", "name"],
+        ["css=#validationDefaultPrice", "css:finder"],
+        ["xpath=//input[@id='validationDefaultPrice']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "500"
+    }, {
+      "id": "4f17cf9d-80b5-4d75-ac35-9e3cc5bcf52a",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultQuantity",
+      "targets": [
+        ["id=validationDefaultQuantity", "id"],
+        ["name=amount", "name"],
+        ["css=#validationDefaultQuantity", "css:finder"],
+        ["xpath=//input[@id='validationDefaultQuantity']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c64de29-e5e8-4a72-859e-8013444ba4af",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultQuantity",
+      "targets": [
+        ["id=validationDefaultQuantity", "id"],
+        ["name=amount", "name"],
+        ["css=#validationDefaultQuantity", "css:finder"],
+        ["xpath=//input[@id='validationDefaultQuantity']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "bb89e074-fabf-4147-ae03-e2aeb4fc7f79",
+      "comment": "",
+      "command": "click",
+      "target": "id=imageFile",
+      "targets": [
+        ["id=imageFile", "id"],
+        ["name=image", "name"],
+        ["css=#imageFile", "css:finder"],
+        ["xpath=//input[@id='imageFile']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "759a735f-3f7e-4835-931a-483c0f77aabb",
+      "comment": "",
+      "command": "type",
+      "target": "id=imageFile",
+      "targets": [
+        ["id=imageFile", "id"],
+        ["name=image", "name"],
+        ["css=#imageFile", "css:finder"],
+        ["xpath=//input[@id='imageFile']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\250px-Statue_of_Liberty_7.jpg"
+    }, {
+      "id": "0fb44c64-443e-4fe1-8d14-42f442cdbf6f",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultCategory",
+      "targets": [
+        ["id=validationDefaultCategory", "id"],
+        ["name=category", "name"],
+        ["css=#validationDefaultCategory", "css:finder"],
+        ["xpath=//select[@id='validationDefaultCategory']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[5]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d8582c2-3b6a-4ec2-8f57-7470282e818b",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultCategory",
+      "targets": [
+        ["id=validationDefaultCategory", "id"],
+        ["name=category", "name"],
+        ["css=#validationDefaultCategory", "css:finder"],
+        ["xpath=//select[@id='validationDefaultCategory']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[5]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e62c7ff-1eb4-4698-8425-ff6f751ca5bc",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultDescription",
+      "targets": [
+        ["id=validationDefaultDescription", "id"],
+        ["name=description", "name"],
+        ["css=#validationDefaultDescription", "css:finder"],
+        ["xpath=//textarea[@id='validationDefaultDescription']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[6]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d819990c-a4cc-4351-a798-d332c01751ba",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultDescription",
+      "targets": [
+        ["id=validationDefaultDescription", "id"],
+        ["name=description", "name"],
+        ["css=#validationDefaultDescription", "css:finder"],
+        ["xpath=//textarea[@id='validationDefaultDescription']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[6]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "    Opis proizvoda za pse                                "
+    }, {
+      "id": "78bea220-5604-4da7-afc8-5a60657445e0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Unesi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "12e519d3-3853-48d1-b338-f540a33c3c47",
+    "name": "Unos proizvoda moderator - neuspesan unos",
+    "commands": [{
+      "id": "9237c323-3e7b-455e-8442-aed1d66698b9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea6aa9aa-3605-458b-86a3-20177e7db079",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "336e163a-a712-4580-8b6b-56a301c4071d",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be98c937-a73a-45a7-bf5b-d5ce0ec61baf",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "moderator123"
+    }, {
+      "id": "e3874fdf-59c9-4446-bc61-41c31de76a1c",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f44793c4-71a8-4ac5-9fef-aa3deb382e69",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "sifra123"
+    }, {
+      "id": "3ef2cd57-dab7-42f8-ba4c-2993b8eb3b83",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5371181-5295-4864-b865-ade9eb2d368c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Unos sadržaja",
+      "targets": [
+        ["linkText=Unos sadržaja", "linkText"],
+        ["css=#sidenavAccordionPages > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Unos sadržaja')]", "xpath:link"],
+        ["xpath=//nav[@id='sidenavAccordionPages']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Unos sadržaja')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "251659fe-8d70-4046-b322-7b7600da8fd5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Unos proizvoda",
+      "targets": [
+        ["linkText=Unos proizvoda", "linkText"],
+        ["css=#pagesCollapseAuth .nav-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Unos proizvoda')]", "xpath:link"],
+        ["xpath=//div[@id='pagesCollapseAuth']/nav/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Moderator/insertArticle']", "xpath:href"],
+        ["xpath=//nav/div/nav/div/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Unos proizvoda')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "138b32f6-1de5-4871-a104-d6eb80876aef",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultName",
+      "targets": [
+        ["id=validationDefaultName", "id"],
+        ["name=name", "name"],
+        ["css=#validationDefaultName", "css:finder"],
+        ["xpath=//input[@id='validationDefaultName']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25fcbbef-a81f-433c-8c06-f46a73688100",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultName",
+      "targets": [
+        ["id=validationDefaultName", "id"],
+        ["name=name", "name"],
+        ["css=#validationDefaultName", "css:finder"],
+        ["xpath=//input[@id='validationDefaultName']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Proizvod za pse"
+    }, {
+      "id": "60b500b7-7bb4-40d7-8ba4-740eb9c8d18e",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultPrice",
+      "targets": [
+        ["id=validationDefaultPrice", "id"],
+        ["name=price", "name"],
+        ["css=#validationDefaultPrice", "css:finder"],
+        ["xpath=//input[@id='validationDefaultPrice']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e658173-2c6b-43cf-b029-85382d2ec22a",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultPrice",
+      "targets": [
+        ["id=validationDefaultPrice", "id"],
+        ["name=price", "name"],
+        ["css=#validationDefaultPrice", "css:finder"],
+        ["xpath=//input[@id='validationDefaultPrice']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "500"
+    }, {
+      "id": "fd680d15-de0f-4722-91dc-b9beb8cdd0da",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultQuantity",
+      "targets": [
+        ["id=validationDefaultQuantity", "id"],
+        ["name=amount", "name"],
+        ["css=#validationDefaultQuantity", "css:finder"],
+        ["xpath=//input[@id='validationDefaultQuantity']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1babf9a-f2e8-4048-bd25-154f6a705d99",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultQuantity",
+      "targets": [
+        ["id=validationDefaultQuantity", "id"],
+        ["name=amount", "name"],
+        ["css=#validationDefaultQuantity", "css:finder"],
+        ["xpath=//input[@id='validationDefaultQuantity']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "cd04bf92-c868-41f0-905f-77f2d3919ddb",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultCategory",
+      "targets": [
+        ["id=validationDefaultCategory", "id"],
+        ["name=category", "name"],
+        ["css=#validationDefaultCategory", "css:finder"],
+        ["xpath=//select[@id='validationDefaultCategory']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[5]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6cd516d-5a67-459c-b293-37f54056de03",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultCategory",
+      "targets": [
+        ["id=validationDefaultCategory", "id"],
+        ["name=category", "name"],
+        ["css=#validationDefaultCategory", "css:finder"],
+        ["xpath=//select[@id='validationDefaultCategory']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[5]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cecff655-686d-466a-a4c3-4554a3f76c62",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultDescription",
+      "targets": [
+        ["id=validationDefaultDescription", "id"],
+        ["name=description", "name"],
+        ["css=#validationDefaultDescription", "css:finder"],
+        ["xpath=//textarea[@id='validationDefaultDescription']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[6]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f1060f2-438b-4ce5-b317-319cd6f0a017",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultDescription",
+      "targets": [
+        ["id=validationDefaultDescription", "id"],
+        ["name=description", "name"],
+        ["css=#validationDefaultDescription", "css:finder"],
+        ["xpath=//textarea[@id='validationDefaultDescription']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[6]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "     Opis proizvoda za pse                               "
+    }, {
+      "id": "7d85945e-e441-4979-a5f6-f917ca59b6bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='layoutSidenav_content']/main/div[2]/div/div/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Unesi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "259869ac-2063-4d97-b81a-747c2335ee38",
+    "name": "Administracija sistema - brisanje korisnika",
+    "commands": [{
+      "id": "013f115c-e718-43c5-a6fe-72bf37482b34",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "054390d8-72af-4958-b48a-cd5a0f3a4ddc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09e82cee-f3f9-4e3a-b58b-f39716bb77e9",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8a0ef1e-7207-4f56-863e-313d52fa7194",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jovan"
+    }, {
+      "id": "5c13000c-6d53-4caf-b570-ed8b4f283727",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70c1fd82-a8b5-4d78-a5c9-39dae654cc10",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "jovan123"
+    }, {
+      "id": "850ac6ce-6c47-46cf-89eb-c5f4a59d9817",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "58c9d1fc-62f1-457d-923a-3418079936e0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.even:nth-child(4) path",
+      "targets": [
+        ["css=.even:nth-child(4) path", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4afdfc5e-ef9e-408f-9d4b-61d5bf9bea7c",
+    "name": "Administracija sistema - brisanje i izmena proizvoda",
+    "commands": [{
+      "id": "3c6983a0-68ae-44f3-a285-594889e9066d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97afb807-48e7-4303-b6ce-15a6bf5ab5e0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2d882ee-4cb7-4ff5-b69d-adb3b7c90b65",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48753a10-aa22-48c7-8069-dd180235f59b",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jovan"
+    }, {
+      "id": "931bdb71-6664-4cfc-8ec8-044829362104",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17cb46ce-c6c8-43fb-a014-f69daacab285",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "jovan123"
+    }, {
+      "id": "61a48ad4-4f2b-46a2-9489-0dd9a7e8ba9f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "412a5890-ecde-4046-a063-41c68e6318d7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Brisanje i izmena sadržaja",
+      "targets": [
+        ["linkText=Brisanje i izmena sadržaja", "linkText"],
+        ["css=#sidenavAccordionPages2 > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Brisanje i izmena sadržaja')]", "xpath:link"],
+        ["xpath=//nav[@id='sidenavAccordionPages2']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//nav[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Brisanje i izmena sadržaja')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7477d45-7434-4257-a791-1740092c8046",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Proizvodi",
+      "targets": [
+        ["linkText=Proizvodi", "linkText"],
+        ["css=#pagesCollapseAuth2 .nav-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Proizvodi')]", "xpath:link"],
+        ["xpath=//div[@id='pagesCollapseAuth2']/nav/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/manageArticles']", "xpath:href"],
+        ["xpath=//nav[2]/div/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Proizvodi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8e50f48-11d2-4fd8-aca5-096c93404688",
+      "comment": "",
+      "command": "click",
+      "target": "name=change",
+      "targets": [
+        ["name=change", "name"],
+        ["css=.odd:nth-child(1) .btn-warning", "css:finder"],
+        ["xpath=//button[@name='change']", "xpath:attributes"],
+        ["xpath=//table[@id='dataTable']/tbody/tr/td[5]/form[2]/button", "xpath:idRelative"],
+        ["xpath=//form[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Izmeni')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8db6fe3b-78c3-4293-a441-91d12f10cefe",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultName",
+      "targets": [
+        ["id=validationDefaultName", "id"],
+        ["name=name", "name"],
+        ["css=#validationDefaultName", "css:finder"],
+        ["xpath=//input[@id='validationDefaultName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32b11c4b-6fdb-460f-abd2-b767e630a838",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultName",
+      "targets": [
+        ["id=validationDefaultName", "id"],
+        ["name=name", "name"],
+        ["css=#validationDefaultName", "css:finder"],
+        ["xpath=//input[@id='validationDefaultName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Hrana za pacove"
+    }, {
+      "id": "8806d4fc-96a1-47bc-a541-472711d3b033",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-row:nth-child(2)",
+      "targets": [
+        ["css=.form-row:nth-child(2)", "css:finder"],
+        ["xpath=//form/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "673fb439-b545-475f-913f-1757d44a26b7",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultPrice",
+      "targets": [
+        ["id=validationDefaultPrice", "id"],
+        ["name=price", "name"],
+        ["css=#validationDefaultPrice", "css:finder"],
+        ["xpath=//input[@id='validationDefaultPrice']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "500"
+    }, {
+      "id": "d546f944-e744-4e08-b7df-1f2b53a11fdd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "67352aed-95e6-4b4d-9dc5-c06ae220676b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Početna",
+      "targets": [
+        ["linkText=Početna", "linkText"],
+        ["css=.mr-auto > .nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Početna')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://localhost:8080/Home/index'])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Početna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b57d1f74-7eed-47ef-a790-3bb59ed5299f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Brisanje i izmena sadržaja",
+      "targets": [
+        ["linkText=Brisanje i izmena sadržaja", "linkText"],
+        ["css=#sidenavAccordionPages2 > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Brisanje i izmena sadržaja')]", "xpath:link"],
+        ["xpath=//nav[@id='sidenavAccordionPages2']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//nav[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Brisanje i izmena sadržaja')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ef9366d-2e93-4253-b2b9-011dc738653a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Proizvodi",
+      "targets": [
+        ["linkText=Proizvodi", "linkText"],
+        ["css=#pagesCollapseAuth2 .nav-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Proizvodi')]", "xpath:link"],
+        ["xpath=//div[@id='pagesCollapseAuth2']/nav/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/manageArticles']", "xpath:href"],
+        ["xpath=//nav[2]/div/nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Proizvodi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "52511117-6596-4538-b701-b06cd33e579b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.odd:nth-child(7) .svg-inline--fa",
+      "targets": [
+        ["css=.odd:nth-child(7) .svg-inline--fa", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e3e52f23-37a9-4224-b99c-add215720f2e",
+    "name": "Administracija sistema - brisanje i izmena ljubimaca",
+    "commands": [{
+      "id": "37a1ccdf-5590-4500-831b-32a67204dfe9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c14d233c-6086-4603-a3b3-32ff9b596075",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ecad18a3-145b-43c0-b5e6-5d42da2ea1c4",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ae02efc-fb86-4773-83b5-44a9fd8f7957",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jovan"
+    }, {
+      "id": "a8b30a70-762a-4c45-83de-4a4bd3e166b0",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "jovan123"
+    }, {
+      "id": "3ac20a29-e26e-4585-8034-37eb3326c8dc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0537f58-49e7-478f-98a8-5840976d4ef8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Brisanje i izmena sadržaja",
+      "targets": [
+        ["linkText=Brisanje i izmena sadržaja", "linkText"],
+        ["css=#sidenavAccordionPages2 > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Brisanje i izmena sadržaja')]", "xpath:link"],
+        ["xpath=//nav[@id='sidenavAccordionPages2']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//nav[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Brisanje i izmena sadržaja')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e79cd4bf-eb33-4ec7-b34d-734aa8b0b820",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ljubimci",
+      "targets": [
+        ["linkText=Ljubimci", "linkText"],
+        ["css=#pagesCollapseAuth2 .nav-link:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Ljubimci')]", "xpath:link"],
+        ["xpath=//div[@id='pagesCollapseAuth2']/nav/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/managePets']", "xpath:href"],
+        ["xpath=//nav[2]/div/nav/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ljubimci')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed28a2de-a251-4f0a-8582-28b31713a4d5",
+      "comment": "",
+      "command": "click",
+      "target": "name=change",
+      "targets": [
+        ["name=change", "name"],
+        ["css=.odd:nth-child(1) .btn-warning", "css:finder"],
+        ["xpath=//button[@name='change']", "xpath:attributes"],
+        ["xpath=//table[@id='dataTable']/tbody/tr/td[5]/form[2]/button", "xpath:idRelative"],
+        ["xpath=//form[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Izmeni')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b4b0c86-3745-43ce-b3eb-6b1ecc46c361",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-row:nth-child(1)",
+      "targets": [
+        ["css=.form-row:nth-child(1)", "css:finder"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee9d90ff-878a-4c83-817b-450426ca2ad2",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultName",
+      "targets": [
+        ["id=validationDefaultName", "id"],
+        ["name=name", "name"],
+        ["css=#validationDefaultName", "css:finder"],
+        ["xpath=//input[@id='validationDefaultName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Kuca"
+    }, {
+      "id": "b38db30c-f361-4893-8d49-e3f3246c47d2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42381ead-0da0-44dd-8a4c-dacaf33f99fe",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Početna",
+      "targets": [
+        ["linkText=Početna", "linkText"],
+        ["css=.mr-auto > .nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Početna')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://localhost:8080/Home/index'])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Početna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9eec7492-0c13-4d71-ab5a-5b31bccbe83b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Brisanje i izmena sadržaja",
+      "targets": [
+        ["linkText=Brisanje i izmena sadržaja", "linkText"],
+        ["css=#sidenavAccordionPages2 > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Brisanje i izmena sadržaja')]", "xpath:link"],
+        ["xpath=//nav[@id='sidenavAccordionPages2']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//nav[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Brisanje i izmena sadržaja')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba00e736-ef23-41a6-a543-c26589bb7a4c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ljubimci",
+      "targets": [
+        ["linkText=Ljubimci", "linkText"],
+        ["css=#pagesCollapseAuth2 .nav-link:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Ljubimci')]", "xpath:link"],
+        ["xpath=//div[@id='pagesCollapseAuth2']/nav/a[2]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/managePets']", "xpath:href"],
+        ["xpath=//nav[2]/div/nav/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ljubimci')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50a69239-1c2c-42e8-b20c-ab1c8d5e8348",
+      "comment": "",
+      "command": "click",
+      "target": "css=.odd:nth-child(9) .svg-inline--fa",
+      "targets": [
+        ["css=.odd:nth-child(9) .svg-inline--fa", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "bf932f54-620a-4c26-8782-3b0da20e850b",
+    "name": "Administracija sistema - brisanje i izmena smestaja",
+    "commands": [{
+      "id": "32bef21b-4b92-413c-b046-e8daaa82ef4c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd87519b-b430-4492-8a67-cd93866fa544",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "507d55f8-a84d-4444-84b7-99d5b5fcf23b",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e55ae8a2-79e0-4628-860e-fee5aa2ab729",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jovan"
+    }, {
+      "id": "42e734c6-c329-4c83-947a-e9dd10e9aa05",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "jovan123"
+    }, {
+      "id": "5dd6a136-4326-4ba0-9c32-c5b10014e53b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb769b73-31cd-48a7-b057-029c4db422cd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Brisanje i izmena sadržaja",
+      "targets": [
+        ["linkText=Brisanje i izmena sadržaja", "linkText"],
+        ["css=#sidenavAccordionPages2 > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Brisanje i izmena sadržaja')]", "xpath:link"],
+        ["xpath=//nav[@id='sidenavAccordionPages2']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//nav[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Brisanje i izmena sadržaja')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee130677-7a52-4382-9f05-663725a08eba",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Smeštaj",
+      "targets": [
+        ["linkText=Smeštaj", "linkText"],
+        ["css=#pagesCollapseAuth2 .nav-link:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Smeštaj')]", "xpath:link"],
+        ["xpath=//div[@id='pagesCollapseAuth2']/nav/a[3]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/manageRooms']", "xpath:href"],
+        ["xpath=//nav[2]/div/nav/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Smeštaj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ce52cc3-8124-4a96-87ab-8cb2d8f954f0",
+      "comment": "",
+      "command": "click",
+      "target": "name=change",
+      "targets": [
+        ["name=change", "name"],
+        ["css=.odd:nth-child(1) .btn-warning", "css:finder"],
+        ["xpath=//button[@name='change']", "xpath:attributes"],
+        ["xpath=//table[@id='dataTable']/tbody/tr/td[4]/form[2]/button", "xpath:idRelative"],
+        ["xpath=//form[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Izmeni')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1840b4e2-82cd-4e21-9b37-00e37f4a5b66",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultType",
+      "targets": [
+        ["id=validationDefaultType", "id"],
+        ["name=type", "name"],
+        ["css=#validationDefaultType", "css:finder"],
+        ["xpath=//select[@id='validationDefaultType']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfde2fcb-3ef4-420e-af22-8814d72f2d12",
+      "comment": "",
+      "command": "select",
+      "target": "id=validationDefaultType",
+      "targets": [],
+      "value": "label=Ribe"
+    }, {
+      "id": "3a686cf7-7cd8-41de-a187-c71bf4230f08",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultType",
+      "targets": [
+        ["id=validationDefaultType", "id"],
+        ["name=type", "name"],
+        ["css=#validationDefaultType", "css:finder"],
+        ["xpath=//select[@id='validationDefaultType']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "984791cf-65fd-44a6-8809-bff9790c8ec4",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultDescription",
+      "targets": [
+        ["id=validationDefaultDescription", "id"],
+        ["name=description", "name"],
+        ["css=#validationDefaultDescription", "css:finder"],
+        ["xpath=//textarea[@id='validationDefaultDescription']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e884a6d-7f02-43ce-a4ae-df1dbd0c8816",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultDescription",
+      "targets": [
+        ["id=validationDefaultDescription", "id"],
+        ["name=description", "name"],
+        ["css=#validationDefaultDescription", "css:finder"],
+        ["xpath=//textarea[@id='validationDefaultDescription']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Smestaj za ribe                                "
+    }, {
+      "id": "3e8fd39b-0477-4093-ab21-3914cb280271",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7eef2af4-339b-4ffa-9e50-e1a2191fca6b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Početna",
+      "targets": [
+        ["linkText=Početna", "linkText"],
+        ["css=.mr-auto > .nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Početna')]", "xpath:link"],
+        ["xpath=//div[@id='navbarTogglerDemo03']/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://localhost:8080/Home/index'])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Početna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "47ec6e9a-9452-4a0f-af99-d04480f35b67",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Brisanje i izmena sadržaja",
+      "targets": [
+        ["linkText=Brisanje i izmena sadržaja", "linkText"],
+        ["css=#sidenavAccordionPages2 > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Brisanje i izmena sadržaja')]", "xpath:link"],
+        ["xpath=//nav[@id='sidenavAccordionPages2']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//nav[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Brisanje i izmena sadržaja')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "209045ad-fd62-4c50-be1f-dcf9f3b4782b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Smeštaj",
+      "targets": [
+        ["linkText=Smeštaj", "linkText"],
+        ["css=#pagesCollapseAuth2 .nav-link:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Smeštaj')]", "xpath:link"],
+        ["xpath=//div[@id='pagesCollapseAuth2']/nav/a[3]", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/manageRooms']", "xpath:href"],
+        ["xpath=//nav[2]/div/nav/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Smeštaj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aabe9aac-7f61-4d2a-811f-27dd610e739a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Next",
+      "targets": [
+        ["linkText=Next", "linkText"],
+        ["css=#dataTable_next > .page-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Next')]", "xpath:link"],
+        ["xpath=//li[@id='dataTable_next']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[7]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Next')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "91d30148-f65b-45a1-9273-0bbfdb18c8db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-trash-alt > path",
+      "targets": [
+        ["css=.fa-trash-alt > path", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0e0b95fc-befd-4a98-ac19-0b85caef2ee2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8902a9a2-aa43-4d64-8d8e-79eddd970e71"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
