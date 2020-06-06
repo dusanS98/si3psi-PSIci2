@@ -1,0 +1,4161 @@
+{
+  "id": "9e9e9f19-5e43-413a-9baa-f528c8a3fb5a",
+  "version": "2.0",
+  "name": "TestRegistracija",
+  "url": "http://localhost:8080/",
+  "tests": [{
+    "id": "2162dce1-dc01-4cb8-a343-cc2eb475b847",
+    "name": "TP1",
+    "commands": [{
+      "id": "01b943b5-8353-4058-9207-8a529eefac6a",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4931a8bb-ea89-4a82-a53b-05de9b57c075",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59282648-fb6d-41d3-bded-9e9d0d14294c",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55ad0234-f5ce-4ebe-b22b-4ed0a5311073",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "b3c266ab-8acb-4065-961c-59e68320b6d1",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "d1e06869-b90e-4112-aba8-f595692649c1",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera3000"
+    }, {
+      "id": "3ff77dec-8ef7-41bd-ad68-abd461babda7",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "317ff8f8-5caf-42e6-9242-cec6b5a78f88",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "f5465416-fd5b-48a0-bab9-60a03f9d95e7",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric1@mail.com"
+    }, {
+      "id": "a95cc69f-3b81-465a-a45d-f46c6c3f8e9f",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "07b46b23-6a41-4e64-a9d5-bc73ed3561d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80e7c943-ca18-4652-b92a-072f1f62caa0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.alert",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "43b7ea97-be1d-401f-998b-72cfd6b03f31",
+    "name": "TP2",
+    "commands": [{
+      "id": "f7e008d4-6e66-43e7-88a5-2337ef15bd9b",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "785c466c-d5f4-4400-999a-d9e1c5f9cc5a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e2fcf9e-a33d-4d98-96ac-d7a902983089",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa7fb834-3c97-474a-9208-c9b7e499e81b",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "pera"
+    }, {
+      "id": "832cce71-247d-4276-bf00-c48890d526a0",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "d3ad8175-e527-4730-bd38-c8afad76b808",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "a9b249de-da5c-4657-b488-72070f06c8d4",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "4232ba77-0111-4263-b774-b5cd09b559be",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "a48bdb64-c691-4a60-a0f6-b257eddfd949",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "31a45a60-c825-4d99-9f49-894b9d89f9ac",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "7d907ea4-2aab-4d4d-9ac8-3fd95dc493e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e00f558-7f48-437b-819f-8fd9b770d60f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f89d4046-026c-4ead-b536-f232eb0f4fd8",
+    "name": "TP3",
+    "commands": [{
+      "id": "638a5af0-2d4a-47a0-9766-7d55ffff4b6e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2841274-4e94-408e-b627-7b822aad8498",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "74ab0b5e-0097-4110-bdec-d19584a0e21c",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1eca4265-6d51-4014-84b5-3edacd986c2b",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera23"
+    }, {
+      "id": "919482ba-d8bd-4292-9290-761e51fdddda",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "39524a70-214e-4614-b7b4-b550b710989e",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "83ede313-4328-4a6b-9e23-5ed9071df4d8",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "716d7062-0b90-4a84-9bdb-bc499c8a6ee9",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "a0b1a93f-cd8a-4db4-af67-9c7579278196",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "837ed310-5653-48db-ba48-1c6af95f826f",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "dc493eba-ad4a-493e-b767-e917b84dcb83",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b71d6083-01c8-4800-a0c6-6c6d28124c60",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c47cd67e-0ef1-4485-874b-8567b2724555",
+    "name": "TP4",
+    "commands": [{
+      "id": "6520c407-c879-4b01-9443-f92981eb783f",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fbd610b-7100-40bd-acdc-dd4188610543",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1651e75c-e3ac-4bc2-8483-53e123b4894f",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33de230b-3663-482b-93d2-239bd3ceb92a",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "P"
+    }, {
+      "id": "fa410aa6-b3e3-4305-b143-f98a72693044",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "2ae5ccbb-8682-4bda-b215-25ee791431dd",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "9dde7917-941d-4c6d-8788-10726971de24",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "121777ec-2df9-483e-8590-b1dcb0d4c489",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "435c24c9-fc8a-4b48-8a21-6bf45adf0bfb",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "7034d305-7b97-403a-8499-eb6711946530",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "253e4236-3aca-414f-8f6c-7d3cc17311e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c81a219b-a34e-4c0a-bfac-365111f437d7",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a449ea04-7ea8-4e09-b5d2-c355415a4f89",
+    "name": "TP5",
+    "commands": [{
+      "id": "79e690cc-9034-4af0-aa69-ff61d28e6f5d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ecb3c06-10a6-49ba-ba02-f50a62a70379",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "10418f89-d4b5-414c-89f5-db4c59d24f35",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d3ef48a-a62c-4b97-a995-9d5932ddec05",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Peradsoaijosdajdsajoidshjoidsahjdsajoidsajdsaijdsapdsjapsadjoiadsjfodijfdoijspfoaj"
+    }, {
+      "id": "2e512742-9704-4d58-bb65-a7b5337f8370",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "5879643d-11f5-4f3a-861a-68785fc24367",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "9e2793cf-97d8-43a8-b852-2f0a86513a8f",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "d6b31d23-a160-4ac5-a23c-3a84cd9e67f8",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "44797cf0-0639-415b-b9a9-4d3c2cf72814",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "bab82477-b8b9-4db8-9f3d-e09b575eddfa",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "4ca23fcd-8d1a-4a0d-a10e-97623e95cff8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e47da3c-0481-4263-bf39-18bdaab1b5e5",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "052b8451-451e-40fe-a9d2-8adf79ac7564",
+    "name": "TP6",
+    "commands": [{
+      "id": "59af05be-93ef-4851-9882-2d5ac1461d6b",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa6ac3d4-bf68-446d-8332-3312aa87f7b7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b21e07e-4132-4964-ac9a-a272b3eba8fc",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff145a17-b8e6-4b5e-82fd-8ddbaad36913",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5c5a931-4ea6-43bf-a194-cced5cc3a37c",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "96f01858-a9c2-4a31-a0eb-7c323f9a7edf",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "0ef0b5db-7e9d-45d2-b563-803852a468f2",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "4f1ced00-fd4f-4465-9ecc-6f7aa10985e2",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "6e63b5cd-02eb-4bd4-b072-d36e8aa7a57a",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "42f27b9c-ebfe-4b63-b02c-5d1166c4fe07",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "bdd2e9cc-dfe2-435f-85a4-552316b008f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5900c621-0d2e-4134-b47b-a9d54889b121",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Već imate profil?",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "05310660-c342-46f5-b542-e76470bccd5b",
+    "name": "TP7",
+    "commands": [{
+      "id": "4705f9ab-05c8-4cd6-a576-772d9c991e0e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8c0ff2a-f166-4cdf-a106-03e77ceb684e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "859ad655-b964-4b7b-aef1-b743cc857a72",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07b2c5ac-7aae-49b4-a973-8a5eef1f0e1a",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "c03cb7b1-ff46-425b-b994-b803aa3d720c",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "peric"
+    }, {
+      "id": "6237d24e-e2d9-428b-abd9-fb68870cb84a",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera200"
+    }, {
+      "id": "002a20c5-4a97-43c9-a36b-afecbcb09ad7",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "3eb80dc0-6791-4e46-9a55-c7b74fa5d675",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "e1b6f9af-bfe7-4856-a327-80e198bbe5aa",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric2@mail.com"
+    }, {
+      "id": "fc71a7a1-0670-4e1c-becd-d56662bea43e",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "c5091f50-2175-4f06-945d-487132f5d462",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c1576c9-9c6c-4827-922f-e361db982368",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ae33992b-9246-47c2-a527-8338eab6922a",
+    "name": "TP8",
+    "commands": [{
+      "id": "3367c784-2bf2-4a38-bc4f-1a78d60ae1ae",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5956270f-21a0-4a4a-8b56-6bc4543e2fc5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "91c59899-a77f-4019-8094-847d209bb993",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "715920b2-0d54-40a2-9912-b8967e3a7a17",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "15bd58b3-a7c3-4063-afcc-e68657f25dc5",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric12"
+    }, {
+      "id": "d2ecc9e7-379f-47bd-af55-4fe6ecdcb167",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera3000"
+    }, {
+      "id": "7afb47d9-a3b7-4cc4-946d-80c9f48c5dc8",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "6bd19def-6537-4169-acd9-6f0f4f1de47e",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "3afa7676-afe3-4548-a99f-d8bcdbee67b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "3b6a3c57-dd1e-44d3-bc4b-c28415a5bdac",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "a2c71b70-e936-4e09-8d34-1116dd23e25f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64af225c-3009-4157-8f70-0ed5c72e07d6",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a9c387f6-cb67-47ed-8d8b-444ad390a61c",
+    "name": "TP9",
+    "commands": [{
+      "id": "235c713e-6640-4353-923d-3f58ce29c516",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fc38cd9-a9d6-43d3-883a-f02b1e3c241f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d98f86d5-7dae-44f4-ba97-4dd4a44b8f59",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b8ad8d9-a11e-4716-b3b5-99d8dfa540f7",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "ee81c068-760d-4b99-965e-afca0a316f5d",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "P"
+    }, {
+      "id": "19e9ff77-75ba-4b80-b26a-3e36401c1de6",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera3000"
+    }, {
+      "id": "21335c7b-dce0-40f5-9be1-83c61cd0cb75",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "76fb772b-37b1-48de-bdd3-97d7092ad989",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "c91d7e0d-400f-418e-85cb-1cc0e284960a",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "8ca641bd-6805-47af-87d2-057cacb31533",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "75470796-1344-4e36-a36b-79b02230a8a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "04aac7db-5442-45e7-9f94-2adeabfd6587",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d6a890b4-52c3-4086-9bb3-e7acb3844ced",
+    "name": "TP10",
+    "commands": [{
+      "id": "9e04da5d-548c-4e9f-a72f-3d519be231a0",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e6257e4-a19e-4d92-ace6-9cd25660cd39",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8d072ee-c5fb-41d0-8c3c-e3ee5c17f147",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c038cc64-91ed-4fd9-8cd6-ecb1826f8567",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "55595336-dfc7-4e55-a973-6b4282a7aaa8",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Pericdsaoihdosaijdasoijdasoidahoadshodashodsjasdiojdsapjdsapadsjodas"
+    }, {
+      "id": "a10337c4-0c1d-4298-b703-faf005b66674",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera3000"
+    }, {
+      "id": "e1264f08-4073-486b-9b2c-a1861e408f60",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "80325eb3-b920-4b09-b4a7-40c65e9345b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "56ac4eab-bb7b-4e0e-8747-7ae85a631335",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "1cca36a6-4997-4378-884d-3290dbbce0ed",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "283a14cb-da65-4c8e-bfe4-5762cbf97ae8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "013a102f-67da-4418-981d-793a503140d8",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8e0087e2-5e24-4c81-9fbd-4b9ecfa6f944",
+    "name": "TP11",
+    "commands": [{
+      "id": "300bdb88-d9ce-49ff-9769-76f143809907",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27587872-e145-43c0-9f39-b8d80380df8e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8105ab72-c7a3-4a7d-8fa0-45b25f6a333a",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "477e0024-6e86-456d-8a7e-a4f098242018",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "bdf0db1e-fe20-4ac2-9d2c-aa8360f1e13e",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14e044ce-5286-46b4-ac77-fa001475ed3d",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera3000"
+    }, {
+      "id": "99193cb9-1a1f-4e68-8dc9-6a1023c12ecf",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "e555f893-35f4-4be0-8f0c-8ced87d9cd84",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "3ead29f8-23cc-44c9-ac34-fda88d4b87f8",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "8dce96b9-9f27-4776-9c3b-11504dd866a5",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "96f67a5b-d41c-480d-8a9d-66102b3134a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bfe9e12-0397-4a85-af85-644fd0905175",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Već imate profil?",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2ab94fcd-78fe-4299-ba8a-8ac1920838d0",
+    "name": "TP12",
+    "commands": [{
+      "id": "93c7c46f-ed1e-4600-ac4e-7d342718fe9c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19ea7213-b5d6-44fd-9c79-4d03c22d66cd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ac2f37c-c807-45a6-a9af-533fd26c6793",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f257a8e9-fde9-4851-b79f-04439531e2ea",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "1047466b-cf83-4876-96a8-7290310ecf3c",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "f44a18f5-424f-40dc-8c33-0e8268f2c07f",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "dusan"
+    }, {
+      "id": "e041e417-55f7-42c1-a0d5-e2da69e23f13",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "369dc0ea-a586-4653-8c19-8ae32e3462f4",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "13374879-64b6-48bd-b2c5-d538fce36049",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "b4e45676-2d89-4cec-b2c6-182adaedb4d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "5922d3be-619f-405e-bd61-452e23870880",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "57b1be67-6858-42dd-9039-db1972d73535",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "20e748d8-adac-4c9f-9266-059eb322006e",
+    "name": "TP13",
+    "commands": [{
+      "id": "3fea23e6-b776-496d-b4bd-169e26486f25",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1a23d67-f87e-47fa-b790-1981fe0d166a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0118cf2-39fb-4e4a-a7c3-2259bec6a3dc",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9eb6fc0-d5fc-4963-b170-f6333962d0e5",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "b8aa3fa9-d14c-4e4d-87af-065336325235",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "486169c9-c20b-4405-8ca6-f8bcacf95443",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera#23"
+    }, {
+      "id": "4c036b41-5875-4568-8a51-fdfd008ad210",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "835d829e-a42c-4390-8bd9-f766267d199b",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "a94289f0-7a6c-44b6-9b4f-461f2932fd3d",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric3@mail.com"
+    }, {
+      "id": "dfcec4c1-c0ad-4725-b496-c4fe96c11044",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "47fe3f46-7e34-48c4-ae5e-d35fad8b0138",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "accef1cb-3649-4cf7-8e00-dd247943594b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c625d2b5-f213-41fa-8e5a-6d4d1a38e40b",
+    "name": "TP14",
+    "commands": [{
+      "id": "c258467b-9c85-4c85-ba22-b2f310c2502a",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3168706-2ba1-475d-a02a-18be21f027b3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "632ea2fd-bd96-4b54-b69f-c5755923b28c",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fe3cb00-90e7-414d-acae-6c06db758f33",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "50cf8720-093b-44df-85cf-29fb6de68bb6",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "7394de6d-9b74-4329-8a7d-f6260c651b8e",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "p"
+    }, {
+      "id": "546bce56-bdbb-481b-9b9c-ce602e0832b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "a3abb15b-1173-41de-840b-2c9f2c18b446",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "10920fb3-18d7-435d-81eb-50be901f80f8",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "30507b41-027b-48b1-b062-10aa7b3ffa7a",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "ff74d435-ff37-4964-bb35-9eb2214950a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "49b15fc6-5db7-4279-a79e-a71a3b301d9a",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a8563ea0-64a3-419d-8c16-2cbf402b0769",
+    "name": "TP16",
+    "commands": [{
+      "id": "06367589-470d-4d94-9991-acecc26706bd",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c19b19e1-1af0-40e6-aa05-1df322241de3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "511fde06-5a1f-48c9-9d4e-a9f289cd84a8",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5a791ac-c10b-45c3-b4f1-02ce7452314b",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "353d4bd1-9e40-459f-b927-f5184c6a1c56",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "c4e5eec8-94a2-47be-b61c-97b53d8cda89",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d40990ec-42e8-44bd-8322-24ec31dd2121",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "80ebe4c1-4783-42db-81ff-2b056402049b",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "99b12d28-d71f-428a-9863-c69f474c6b85",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "98fbdebc-2cf1-4d08-9f39-101a39d93488",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "ef0e9ee5-c33f-4c10-ab14-3b4d572c238f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e25ff721-e264-4d10-850f-e57eec0a222a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Već imate profil?",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8bfb1fa6-211d-4a91-bcb1-7f890fb20e56",
+    "name": "TP15",
+    "commands": [{
+      "id": "f67d40d1-0652-4f5c-9d0d-00e3bac065ac",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "706e5f4a-93c7-425c-a594-3c8390f22643",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca2dd34a-c346-4ed5-a57b-c53ad95b1f79",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f20d0be4-ac22-423a-9c7f-d101d781a733",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "27e7a0ce-63cb-4a86-a290-78593bea6d62",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "bd1ebe0f-5f08-4137-beed-28d0d193a8e8",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "peradpofsijsdjapdsahudsadashdsauhdji"
+    }, {
+      "id": "90aa44ec-74e3-4355-868b-a6c2be093bfa",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "a2261ddb-e748-4a8d-99d1-fc0d18c00b26",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "6074bb3f-8662-4cd3-a283-54dc098895a8",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "be91c3cf-83e0-4022-9c9f-91fd72c639ea",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "d8264506-eaec-4897-82c2-098bb357b6ec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fe905e5-d89f-4313-a860-f1e8358efe76",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d2695c47-e9b3-4d96-998e-3dd83d19212a",
+    "name": "TP18",
+    "commands": [{
+      "id": "a4318304-b627-49e5-afea-da2a30b5f072",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b8bb817-05d9-42b6-8a2f-d8b8ec359286",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e98331af-b30f-45c4-b3bb-0f28a220d7b6",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a94937d9-1762-486d-8903-d752e1126f8d",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "f2ebb9e8-3ca1-4d40-9add-24ab8c09c54c",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "796b5607-1941-43c0-b692-f91d5e8f91dd",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "3825b632-2a8a-4dcc-a908-b5874ebd0943",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera"
+    }, {
+      "id": "ff634070-73f0-434b-a9c7-42bce6bb035d",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera"
+    }, {
+      "id": "ac67496c-fca0-41ce-8e2a-a172eb06f651",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "431ece3e-5d96-4ba4-8305-7512159f8871",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "0e2837f3-aafa-4158-bf33-d85a7a515416",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f06acc1-d70b-4afb-a0c9-abae9ac774ff",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fb2b452e-6f81-4a25-9589-89ab4c6afb40",
+    "name": "TP17",
+    "commands": [{
+      "id": "4bcb2c9c-63b3-44e6-b557-2684dbf06404",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88dcb5d3-52af-47b3-95d9-3ea98b8a7d6c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "18a4ed5a-f103-4293-ac4e-6521b7ffeac2",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96652223-d173-4842-8691-c88ef4385577",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "19284e62-04ed-47e7-a842-1e5d56e3efcd",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "28421ee7-5e19-497d-9b5a-1c5e9d139117",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "c3c4865f-49d9-4cb0-b1b2-f68b97e98fbf",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234oisdajdposjdspajads"
+    }, {
+      "id": "38dff890-d501-49b2-b2bf-7474d139633d",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234oisdajdposjdspajads"
+    }, {
+      "id": "2b431f55-1614-44fb-8aed-2298454d8f6c",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "ef891004-1b35-4a18-b4c6-077b84add877",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "6da9fb6a-a911-407e-9495-a8d65da28ee4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42e4f9f7-20aa-4b65-9d33-3fa12abb59d0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "57b37521-8636-4da1-9593-d5ac64aa59b2",
+    "name": "TP19",
+    "commands": [{
+      "id": "35935f8a-2380-4662-b501-f84cb443f102",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77af69f4-4896-45ef-9261-243a021b3379",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c530143-3fb0-4fc7-9f8b-3bdeba7ce4c9",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d455cd4-c5c9-4341-8476-b89336199269",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "6cab3210-b72a-49eb-bc4e-09391c59eb13",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "dcbd4665-0cec-458b-81aa-d44dbe75e71a",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "8dd18b9a-34f2-4498-bba1-68e6d9eb6a71",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "624855f2-2b59-49e9-8712-44f0638325ab",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "6b0508c5-d3e5-488a-8d38-50fe84917077",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "b8ca1e9f-0bf2-4ce7-9227-e114bb8d2555",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "451cc513-f39e-48eb-b31b-4ae1204ebf90",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "284f2034-c8f4-46ec-8533-04a5d1070aa5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Već imate profil?",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0485f716-2c3c-4b0c-bd45-49dbe03fca1b",
+    "name": "TP20",
+    "commands": [{
+      "id": "ea3ae0c9-dd30-46a1-90fd-8a1bd63d1c16",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0ddfca0-d94a-42e4-b081-62e33b5252cd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1d3450b-f91a-43d2-b1e2-090ef3d353b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e28ad43-fb54-452a-9ca9-06c366591400",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "c7c232d9-55b3-4178-9a84-b7d483678583",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "3c561f48-d5a7-4ed7-95aa-416a3ec4c153",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "aa6bd106-36e2-4829-9d38-4908f41fb380",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "2bc3bf0f-a7b1-42ad-9e92-7ef771277c80",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1235"
+    }, {
+      "id": "36b2d6db-5472-453e-b6dd-f648d6367ef9",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "41be8b56-9afb-4cdb-800b-94ff971b41ae",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "2c961a82-a1b1-46f0-b519-93ccfb8eaf99",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a70cc35-6259-456b-9e70-02b6ea4a81c5",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "83cb89f0-9506-4111-b5b8-2af9c568e5c8",
+    "name": "TP21",
+    "commands": [{
+      "id": "403e8d83-976e-46e3-96e7-277d2fc519ac",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1dcdd15-d94c-43e0-8b7f-4afcebb97377",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b97841ef-0a0e-40e0-bc98-c204b2be555b",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3913c273-48ef-44ad-a875-9195ef1b35f9",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "465280d8-7fa7-4245-9e4a-f4191f8e5874",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "d9413853-c167-449f-8efa-322ee8285d20",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "e96d3fa3-d902-45f0-aff8-8d62af3771ca",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "55374f45-ce24-4241-a6c4-5f4836eb472f",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7eeb3e5-3399-4f9b-9eff-de8f2a061bee",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "2dfa6a5d-5243-42c9-99f1-3301726ef5f6",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "1f534647-3dad-40f6-a5b8-379bb7e6e1d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1e58fc6-f460-4f34-87d7-94ec0bd4f5fa",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Već imate profil?",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e3adee48-aaba-47a2-8b89-d8d13351f182",
+    "name": "TP22",
+    "commands": [{
+      "id": "2b357bf8-9675-4f4c-9650-3051136c4042",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6417e49f-e434-4200-baff-d7dba2a6f48e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "560b2592-4094-4d3e-a219-abb8c05dba60",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89519d60-b2e1-4d08-b0c5-722d2644d243",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "b1118047-249d-438e-a67e-ad9ebebb2dd4",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "e56a0420-1ddf-418b-b306-0afa56e4d634",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "0a6a2671-15e5-47f7-ac25-1ee8cda8aa53",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "830f95ce-e656-4ecf-8d93-ac76ed70e6d8",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "a9ca1a53-fac6-42cd-a896-e41161664943",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.pericmail.com"
+    }, {
+      "id": "7bd7db54-6704-48b4-8e52-329b51bd54b2",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "241abbda-326b-4c23-bf3d-fe562d79ee3f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f6b241c-8a67-4fe0-9b85-e72518c9b6ae",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1d7856f8-259a-4cf4-b040-9ef28b14ef57",
+    "name": "TP24",
+    "commands": [{
+      "id": "42ea1496-165e-4374-bafe-3f39685b79fe",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88918b2f-2f5e-49b8-bf54-601d4eec722b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d4d5ad4-da39-4792-8e72-527e19923150",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e6e0013-1470-4564-a6ce-44759ee32521",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "696a68bb-de1a-4843-95a1-340f6179a584",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "34842ccd-7eae-4fed-8463-bf2377a248ac",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera500"
+    }, {
+      "id": "98d0a088-8ab2-48bf-9b54-925b01455c25",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "b3fa2ef2-ba18-49ca-be84-3d9b18b63565",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "f1b77dbd-708e-42f4-938d-c6c6b7fb69a8",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.commm"
+    }, {
+      "id": "3fe97a1a-bc0d-4d32-ad4b-07d5a32bc730",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "55a0b7ec-055c-4426-9d8a-de9c0ae7cc50",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d6a744e-bb5b-49a8-895a-7d618f9fc24d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9753f887-cfde-46c5-af61-38df98443625",
+    "name": "TP23",
+    "commands": [{
+      "id": "ac2b77b9-6d46-41e6-be66-d09c18a31ab4",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c33437e3-952c-4092-b78e-24d97f6af198",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8bfbef9-3f1d-48f8-9144-80fa497e42e3",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb24f94d-bd3e-48c5-b2d5-9e8378a9d740",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "3f40d8a6-4c67-45e7-8a53-44229606c112",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "58d60b9d-6220-4c37-8dcd-406c3566b032",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera303"
+    }, {
+      "id": "f58ba560-5941-4619-98db-7ccba4d0d98f",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "37310072-656d-4a02-84f6-5ab2a1554a4e",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "ad9efd20-d861-4c90-8a8d-0dd1ee13585d",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.c"
+    }, {
+      "id": "0e35de2a-4223-4bd1-ad16-7519c384fa02",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "3015ee5e-9f65-4bb4-8ebe-2dcde54c9ca8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f823476-8103-420f-83b5-b6160b3ee453",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2ecd9e32-aecb-4d65-81a4-41697cad5c95",
+    "name": "TP25",
+    "commands": [{
+      "id": "10e56bc7-d53e-4107-8ba3-a5da5faa9601",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d20ed04-940e-4c21-b8a9-aeacf7115c7d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac61416a-e5a0-45c0-8698-d3eee694af4a",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aad23835-3399-4fe9-9d03-1b60f2b92b0e",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "200c6933-6c79-4af2-b843-7f2be4ef8137",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "e71f75f6-0fa7-4d7c-b48d-968298663eb3",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "d98bc06d-8f08-4f19-9350-814fbfa06c24",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "15d2497e-37a1-475c-be5d-605fb8bb10ee",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "2a5c6cac-f2fb-442c-b6b5-73b5b3b0b0a5",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "@mail.com"
+    }, {
+      "id": "65737ba0-1539-47c3-9ca8-8236e959a567",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "68123530-81e3-4452-8c99-a64510f931aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7078906-42d0-456c-804a-fcdc62326f91",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e9bf0f33-b36d-4213-a797-ca0c6467117c",
+    "name": "TP26",
+    "commands": [{
+      "id": "550a95e0-342c-4644-9365-c1e87f3b5e6d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "911ddf8b-e551-49e6-a380-c7ec52122fd6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "35a19d82-59fe-4552-8f0d-ec64ebc74867",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23d98afd-cc6e-4c77-ac14-91f2f3476105",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "0b11af90-6cc2-4e5c-980f-bbf2a33575dc",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "ac1239ee-e547-4f5c-a9c7-4b4618e2af3f",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "6e9afc35-6a75-44f2-be5e-6060be38a4b9",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "096be91f-38e1-48e6-91eb-25872b7ca0d0",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "1bf3b6c8-2f7d-4aa6-b32d-8f5de5d17a6c",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e042b702-dca8-4234-b2ee-483aa1589bdc",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0641234567"
+    }, {
+      "id": "230b6792-903e-4887-a9d3-5102e085ca21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dcd1dcbf-b4c7-44a5-aeb1-277ae18444cb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Već imate profil?",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0e262ecf-8663-453d-aac3-2009af215c5b",
+    "name": "TP27",
+    "commands": [{
+      "id": "c0480d48-f8be-455e-9c9b-ca38e0c2c2b9",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d676c0e-ede5-473d-87fa-c06dbff04da8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ed27135-efba-4aec-bc3e-9a5d67550d52",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7563ffc-6041-4830-8aee-d4c7755d8809",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "dce2ebcd-f448-4618-8f7d-ba20931e8f26",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "d6024ae8-358b-453d-9165-3fc5d4bc3641",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "71f92620-0d70-4507-9a5b-5af28398b90e",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "a5c09a3f-07a0-4f0e-99a6-ed3d25648c10",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "ac53b45d-4816-4763-a747-4f8602b1f1d7",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "6eacbd9b-b2e1-45fc-a42a-f08e7be76f12",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "064asd4567"
+    }, {
+      "id": "64aa52bc-2d65-43ab-bc0e-76f3d2fbe0a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cae625b7-5fb4-4414-9345-a0723138d1bf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Već imate profil?",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2af38abc-a300-4232-802c-d2602872c0f4",
+    "name": "TP28",
+    "commands": [{
+      "id": "888966c6-f7ef-4a35-a285-913b5a217871",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5521a27b-eb38-4a2d-aca1-92e81a69f733",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nemate profil? Registrujte se",
+      "targets": [
+        ["linkText=Nemate profil? Registrujte se", "linkText"],
+        ["css=.col-md-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nemate profil? Registrujte se')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nemate profil? Registrujte se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44c2dcef-e84d-43b8-9873-1e370d831412",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31875b58-a2b4-4bfb-a639-a6ef262c2a12",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=firstname", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pera"
+    }, {
+      "id": "f03c4f03-a409-4a25-9eb1-07fc32080247",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Peric"
+    }, {
+      "id": "7c77e39f-bba5-4a6a-8936-5854051df4ff",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera300"
+    }, {
+      "id": "b590eccb-6149-48ea-be99-4e0fe3d03150",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "9cb63cf6-5f22-4ee0-9cd4-531f943d0017",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordconfirm",
+      "targets": [
+        ["id=passwordconfirm", "id"],
+        ["name=passwordconfirm", "name"],
+        ["css=#passwordconfirm", "css:finder"],
+        ["xpath=//input[@id='passwordconfirm']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera1234"
+    }, {
+      "id": "d6017968-0b93-430f-a1da-72dfeb8a97c9",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "pera.peric@mail.com"
+    }, {
+      "id": "f11a4446-9788-411d-b1f0-faa94e703559",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55435041-7a2a-4076-8311-a0d3288191f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registruj me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "49b93855-725a-4551-9a12-7a2cc5e8d310",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Već imate profil?",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9b3c146c-d8e6-4be9-b3f6-9041d2886162",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

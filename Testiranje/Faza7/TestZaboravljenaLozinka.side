@@ -1,0 +1,221 @@
+{
+  "id": "0da1bddc-ddd5-4880-8386-e6c96ce298bd",
+  "version": "2.0",
+  "name": "TestZaboravljenaLozinka",
+  "url": "http://localhost:8080/",
+  "tests": [{
+    "id": "9a4c3170-9a30-4834-bda9-671e9a01b056",
+    "name": "TP2",
+    "commands": [{
+      "id": "5b7ec127-7790-4cd4-b89c-a9ba562a3c14",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5aab38d3-2e83-4da2-9df6-6dddc0bada58",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(2)",
+      "targets": [
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Zaboravljena lozinka')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8dc7a42-241a-4346-90f4-7f0954beb5ca",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultUsername",
+      "targets": [
+        ["id=validationDefaultUsername", "id"],
+        ["name=username", "name"],
+        ["css=#validationDefaultUsername", "css:finder"],
+        ["xpath=//input[@id='validationDefaultUsername']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8ca2d03-e97c-475c-89f8-f7c3e8d8f417",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultUsername",
+      "targets": [
+        ["id=validationDefaultUsername", "id"],
+        ["name=username", "name"],
+        ["css=#validationDefaultUsername", "css:finder"],
+        ["xpath=//input[@id='validationDefaultUsername']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "dusan1234"
+    }, {
+      "id": "c20af17f-edc7-4cae-951e-967496a6211a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pošalji lozinku')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfe22969-8003-4818-a0b4-b38a51b7e8e6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alert",
+      "targets": [],
+      "value": "Ne postoji korisnik sa unetim korisničkim imenom!"
+    }]
+  }, {
+    "id": "f7ccbfca-7dea-4411-b753-653cb77c6a81",
+    "name": "TP1",
+    "commands": [{
+      "id": "2cf20882-0fef-4c85-a62c-a4f0e097814c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f86ea0b-8496-415a-aeae-c51a33b192d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(2)",
+      "targets": [
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Zaboravljena lozinka')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbbf15bd-272d-4e78-9099-4ac22051b417",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultUsername",
+      "targets": [
+        ["id=validationDefaultUsername", "id"],
+        ["name=username", "name"],
+        ["css=#validationDefaultUsername", "css:finder"],
+        ["xpath=//input[@id='validationDefaultUsername']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce721e3f-ca15-4ad4-87a1-a54df1862db9",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultUsername",
+      "targets": [
+        ["id=validationDefaultUsername", "id"],
+        ["name=username", "name"],
+        ["css=#validationDefaultUsername", "css:finder"],
+        ["xpath=//input[@id='validationDefaultUsername']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "dusan"
+    }, {
+      "id": "11d17bb3-af06-4c75-b667-92b80ba2a07e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pošalji lozinku')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f87f3ea5-e4d9-4c5e-90f1-0393313a2267",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alert",
+      "targets": [],
+      "value": "Lozinka je poslata, proverite email!"
+    }]
+  }, {
+    "id": "f118b336-2915-43c9-820c-20f5c8f74bc6",
+    "name": "TP3",
+    "commands": [{
+      "id": "30d1a162-084c-40a1-9abf-cb3c3db73499",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "470bc541-d6dd-4e10-8cf2-8c9999552662",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(2)",
+      "targets": [
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Zaboravljena lozinka')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b292e8e0-c1b6-4983-9df9-edd0d3849db9",
+      "comment": "",
+      "command": "click",
+      "target": "id=validationDefaultUsername",
+      "targets": [
+        ["id=validationDefaultUsername", "id"],
+        ["name=username", "name"],
+        ["css=#validationDefaultUsername", "css:finder"],
+        ["xpath=//input[@id='validationDefaultUsername']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a8777a0-1a49-45c8-8b5f-1700e2f00c79",
+      "comment": "",
+      "command": "type",
+      "target": "id=validationDefaultUsername",
+      "targets": [
+        ["id=validationDefaultUsername", "id"],
+        ["name=username", "name"],
+        ["css=#validationDefaultUsername", "css:finder"],
+        ["xpath=//input[@id='validationDefaultUsername']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb21aec0-90d3-48f6-a4fa-d50ed264d722",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pošalji lozinku')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f74b6010-bd88-491a-bcf5-4574dd566e98",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.btn",
+      "targets": [],
+      "value": "Pošalji lozinku"
+    }]
+  }],
+  "suites": [{
+    "id": "568fec9d-efa0-4c65-b843-cc68070851a6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9a4c3170-9a30-4834-bda9-671e9a01b056"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
