@@ -1,0 +1,177 @@
+Running '1'
+01:28:49
+1.
+open OK
+01:28:49
+2.
+click on id=username OK
+01:28:49
+3.
+type on id=username with value milicaJ OK
+01:28:55
+4.
+click on id=password OK
+01:28:55
+5.
+type on id=password with value milicaj123 OK
+01:28:55
+6.
+click on css=.btn:nth-child(1) OK
+01:28:55
+7.
+click on linkText=Pregled smeštaja OK
+01:28:56
+8.
+click on css=.custom-control:nth-child(6) > .custom-control-label OK
+01:28:58
+9.
+click on css=.custom-control:nth-child(5) > .custom-control-label OK
+01:28:59
+10.
+click on css=.custom-control:nth-child(4) > .custom-control-label OK
+01:28:59
+11.
+click on css=.custom-control:nth-child(3) > .custom-control-label OK
+01:28:59
+12.
+click on css=.custom-control:nth-child(2) > .custom-control-label OK
+01:28:59
+13.
+click on css=.custom-control:nth-child(2) > .custom-control-label OK
+01:29:00
+'1' completed successfully
+01:29:00
+
+Running '2'
+01:29:33
+1.
+open OK
+01:29:34
+2.
+click on linkText=Pregled smeštaja OK
+01:29:34
+3.
+click on css=.col-md-3:nth-child(2) .card-img-top OK
+01:29:36
+4.
+mouseOver on css=.btn OK
+01:29:36
+5.
+click on css=.btn OK
+01:29:37
+6.
+click on id=validationDefaultDateFrom OK
+01:29:37
+7.
+type on id=validationDefaultDateFrom with value 2020-06-11 OK
+01:29:38
+8.
+click on id=validationDefaultDateTo OK
+01:29:38
+9.
+type on id=validationDefaultDateTo with value 2020-06-12 OK
+01:29:38
+10.
+click on css=.btn OK
+01:29:39
+'2' completed successfully
+01:29:39
+
+Running '3'
+01:30:19
+1.
+open OK
+01:30:20
+2.
+click on linkText=Pregled smeštaja OK
+01:30:20
+3.
+click on css=.col-md-3:nth-child(2) .card-img-top OK
+01:30:22
+4.
+click on css=.btn OK
+01:30:22
+5.
+click on id=validationDefaultDateFrom OK
+01:30:23
+6.
+type on id=validationDefaultDateFrom with value 2020-06-18 OK
+01:30:24
+7.
+click on id=validationDefaultDateTo OK
+01:30:24
+8.
+type on id=validationDefaultDateTo with value 2020-06-19 OK
+01:30:24
+9.
+clickAt on css=.btn OK
+01:30:24
+10.
+click on id=validationDefaultDateFrom OK
+01:30:25
+11.
+click on css=.btn OK
+01:30:26
+'3' completed successfully
+01:30:26
+
+Running '4'
+01:30:53
+1.
+open OK
+01:30:54
+2.
+click on linkText=Brisanje i izmena sadržaja OK
+01:30:54
+3.
+click on linkText=Smeštaj OK
+01:30:56
+4.
+Trying to find css=.even:nth-child(4) .btn-warning...
+Running '5'
+01:31:36
+1.
+open OK
+01:31:37
+2.
+click on linkText=Brisanje i izmena sadržaja OK
+01:31:37
+3.
+click on linkText=Smeštaj OK
+01:31:39
+4.
+click on linkText=Brisanje i izmena sadržaja OK
+01:31:39
+5.
+click on linkText=Smeštaj OK
+01:31:40
+6.
+Trying to find css=.odd:nth-child(3) .svg-inline--fa... Failed:
+01:31:40
+Playback aborted
+
+Running '6'
+01:32:24
+1.
+open OK
+01:32:24
+2.
+click on linkText=Unos sadržaja OK
+01:32:25
+3.
+click on linkText=Unos smeštaja OK
+01:32:26
+4.
+type on id=imageFile with value C:\wamp64\www\psi\Implementacija\Faza6\pethotel\public\images\rooms\slika1.jpg OK
+01:32:26
+5.
+click on name=description OK
+01:32:28
+6.
+type on name=description with value za najboljeg psa OK
+01:32:29
+7.
+click on css=.btn OK
+01:32:29
+'6' completed successfully
+01:32:29
