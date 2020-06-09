@@ -1,0 +1,150 @@
+Running 'Moderacija smestaja - unos smestaja'
+18:57:37
+1.
+open on / OK
+18:57:37
+2.
+setWindowSize on 1536x835 OK
+18:57:38
+3.
+click on id=username OK
+18:57:38
+4.
+type on id=username with value moderator123 OK
+18:57:39
+5.
+click on id=password OK
+18:57:39
+6.
+type on id=password with value sifra123 OK
+18:57:39
+7.
+click on css=.btn:nth-child(1) OK
+18:57:39
+8.
+click on linkText=Unos sadržaja OK
+18:57:40
+9.
+click on linkText=Unos smeštaja OK
+18:57:41
+10.
+click on name=type OK
+18:57:41
+11.
+select on name=type with value label=Ribe OK
+18:57:42
+12.
+click on name=type OK
+18:57:42
+13.
+click on id=imageFile OK
+18:57:42
+14.
+type on id=imageFile with value C:\fakepath\250px-Statue_of_Liberty_7.jpg OK
+18:57:42
+15.
+click on name=description OK
+18:57:43
+16.
+type on name=description with value Opis smestaja OK
+18:57:43
+17.
+click on css=.btn OK
+18:57:44
+18.
+click on linkText=Početna OK
+18:57:44
+19.
+click on linkText=Pregled smeštaja OK
+18:57:58
+'Moderacija smestaja - unos smestaja' completed successfully
+18:58:00
+Running 'Moderacija smestaja - izmena smestaja'
+19:05:44
+1.
+open on / OK
+19:05:44
+2.
+setWindowSize on 1536x835 OK
+19:05:44
+3.
+click on id=username OK
+19:05:44
+4.
+type on id=username with value moderator123 OK
+19:05:46
+5.
+type on id=password with value sifra123 OK
+19:05:46
+6.
+click on css=.btn:nth-child(1) OK
+19:05:46
+7.
+click on linkText=Brisanje i izmena sadržaja OK
+19:05:46
+8.
+click on linkText=Smeštaj OK
+19:05:48
+9.
+click on css=.even:nth-child(2) .btn-warning OK
+19:05:48
+10.
+click on id=validationDefaultType OK
+19:05:49
+11.
+select on id=validationDefaultType with value label=Macke OK
+19:05:49
+12.
+click on id=validationDefaultType OK
+19:05:50
+13.
+click on id=validationDefaultDescription OK
+19:05:50
+14.
+type on id=validationDefaultDescription with value Smestaj za macke OK
+19:05:50
+15.
+click on css=.btn OK
+19:05:50
+16.
+click on linkText=Početna OK
+19:05:50
+17.
+click on linkText=Brisanje i izmena sadržaja OK
+19:05:51
+18.
+click on linkText=Smeštaj OK
+19:05:53
+'Moderacija smestaja - izmena smestaja' completed successfully
+19:05:53
+Running 'Moderacija smestaja - brisanje smestaja'
+19:06:12
+1.
+open on / OK
+19:06:13
+2.
+setWindowSize on 1536x835 OK
+19:06:13
+3.
+click on id=username OK
+19:06:13
+4.
+type on id=username with value moderator123 OK
+19:06:14
+5.
+type on id=password with value sifra123 OK
+19:06:14
+6.
+click on css=.btn:nth-child(1) OK
+19:06:15
+7.
+click on linkText=Brisanje i izmena sadržaja OK
+19:06:15
+8.
+click on linkText=Smeštaj OK
+19:06:16
+9.
+click on css=.odd:nth-child(1) path OK
+19:06:16
+'Moderacija smestaja - brisanje smestaja' completed successfully
+19:06:17
